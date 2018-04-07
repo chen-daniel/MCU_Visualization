@@ -1,0 +1,17 @@
+bs4
+requests
+click==6.7
+configparser==3.5.0
+Flask==0.12.2
+Flask-SQLAlchemy==2.3.2
+Flask-WTF==0.14.2
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
+mysql-connector-python==8.0.6
+PyMySQL==0.8.0
+SQLAlchemy==1.2.3
+Werkzeug==0.14.1
+WTForms==2.1
+passlib==1.7.1
+Flask-mail==0.9.1
