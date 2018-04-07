@@ -51,10 +51,7 @@ def login():
                 return redirect(url_for('login'))
 
             if sha256_crypt.verify(str(form.password.data), user.password) and user.confirmed:
-                login_user(user)  # login user to current user
-
-                # testing if current user works
-                print(current_user)
+                login_user(user)  # login user to current user`
 
                 flash('Login requested for user {}, remember_me={}'.format(
                     form.username.data, user.confirmed))
