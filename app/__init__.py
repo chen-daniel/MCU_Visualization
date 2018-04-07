@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 import pymysql
 
 from flask_mail import Mail
-from flask_login import LoginManager
+#from flask_login import LoginManager
 from config import Config
 
 #initialize flask app
@@ -16,8 +16,8 @@ pymysql.install_as_MySQLdb()
 db = SQLAlchemy(app)
 
 #creating login manager
-login_manager = LoginManager()
-login_manager.init_app(app)
+#login_manager = LoginManager()
+#login_manager.init_app(app)
 
 #setup for email
 mail = Mail(app)
