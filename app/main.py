@@ -11,3 +11,7 @@ def main():
 @app.route('/index')
 def index():
     return render_template('index.html')
+
+@app.route('/guardians_of_galaxy')
+def guardians_of_galaxy():
+    return render_template('guardians_of_galaxy.html')

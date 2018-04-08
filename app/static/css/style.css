@@ -31,6 +31,7 @@ here you can change #f3ad00 main color.
   6. Settings
   7. Scrollbar
   8. Small Devices
+  9. Movie Pages
 -----------------------------------------------------------------*/
 
 /*----------------------------------------------------------------
@@ -704,3 +705,30 @@ footer.login-footer {
 
                                       }
 
+/*----------------------------------------------------------------
+9. Movie pages
+-----------------------------------------------------------------*/
+a { color: #e7b038; text-decoration: underline; cursor:pointer; }
+a:hover { text-decoration: none; }
+a img { border: 0; }
+
+.cl { display: block; height: 0; font-size: 0; line-height: 0; text-indent: -4000px; clear: both; }
+.notext { font-size: 0; line-height: 0; text-indent: -4000px; }
+
+.left, .alignleft { float: left; display: inline; }
+.right, .alignright { float: right; display: inline; }
+.text-right { text-align:right; }
+
+#shell { width:980px; margin:0 auto; }
+#content {  }
+
+.box { width:980px; border-bottom:1px; padding-bottom:21px; }
+
+.box .head { width:980px; padding-top:12px; padding-bottom:12px; }
+.box .head h2 { float:left; display:inline; }
+
+.box .movie { width:152px; float:left; padding-right:12px; }
+.movie-image img { width:152px; height:214px; }
+.movie span.name { font-weight:bold; color:#fff; font-size:14px; text-align:center; padding-top:160px; display:block; }
+
+.box .last { padding:0; }
