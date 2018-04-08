@@ -13,11 +13,11 @@ here you can change #f3ad00 main color.
 .btn-social, .badge, .btn-social, .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary,
 .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary,
 ::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb:window-inactive {
-    background: #f3ad00;
+    background: #09469b;
 }
 
 .btn-social {
-    border: #f3ad00;
+    border: #09469b;
 }
 
 
@@ -42,7 +42,7 @@ html, body, .sidebar-nav, .content-posts {
 }
 
 body {
-    background: #1d4ed3;
+    background: #a5d9ff;
     font-family: Poppins, sans-serif;
 }
 
