@@ -48,14 +48,13 @@ d3.json("{{ url_for('static', filename='guardians_of_galaxy.json')}}", function(
     .data(graph.nodes)
     .enter().append("circle")
       .attr("r", 30)
-      .attr("fill", "none")
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
           .on("end", dragended));
 
   var nodeEnter = node
-    .append("image")
+    .append("svg:image")
     .attr("xlink:href", function(d) { return d.image; })
     .attr("x", "-12px")
     .attr("y", "-44px")
