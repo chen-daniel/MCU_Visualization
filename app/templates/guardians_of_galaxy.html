@@ -48,7 +48,6 @@ d3.json("{{ url_for('static', filename='guardians_of_galaxy.json')}}", function(
     .data(graph.nodes)
     .enter().append("circle")
       .attr("r", 30)
-      .attr("fill", "none")
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
