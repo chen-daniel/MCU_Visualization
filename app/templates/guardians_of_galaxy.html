@@ -48,7 +48,7 @@ d3.json("{{ url_for('static', filename='guardians_of_galaxy.json')}}", function(
     .data(graph.nodes);
 
   var nodeEnter = 
-    node.enter()
+    node.enter()  
     .append("circle")
       .attr("r", 30)
       .call(d3.drag()
@@ -60,10 +60,12 @@ d3.json("{{ url_for('static', filename='guardians_of_galaxy.json')}}", function(
     .attr("xlink:href", function(d) { return d.image; })
     .attr("height", 60)
     .attr("width", 60)
-    .attr("x", "0")
-    .attr("y", "0")
-
-  nodeEnter.selectAll("image")
+    .attr("x", function(d) { return d.x; })
+    .attr("y", function(d) { return d.y; })
+          .call(d3.drag()
+          .on("start", dragstarted)
+          .on("drag", dragged)
+          .on("end", dragended));
 
   nodeEnter.append("title")
       .text(function(d) { return d.id; });
