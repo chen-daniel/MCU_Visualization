@@ -53,8 +53,6 @@ def login():
             if sha256_crypt.verify(str(form.password.data), user.password) and user.confirmed:
                 login_user(user)  # login user to current user`
 
-                flash('Login requested for user {}, remember_me={}'.format(
-                    form.username.data, user.confirmed))
                 flash('Welcome {}!'.format(
                     form.username.data), 'info')
 
