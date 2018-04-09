@@ -1,7 +1,7 @@
 {
   "nodes": [
     {"id": "drax", "group": 1, "image" : "../static/img/logo/guardians_of_galaxy_2/drax.jpg"},
-    {"id": "gamora", "group": 2, "image" : "../static/img/logo/guardians_of_galaxy_2/gamora.png"},
+    {"id": "gamora", "group": 2, "image" : "../static/img/logo/guardians_of_galaxy_2/gamora.jpg"},
     {"id": "groot", "group": 3, "image" : "../static/img/logo/guardians_of_galaxy_2/groot.jpg"},
     {"id": "nebula", "group": 4, "image" : "../static/img/logo/guardians_of_galaxy_2/nebula.jpg"},
     {"id": "rocket_raccoon", "group": 5, "image" : "../static/img/logo/guardians_of_galaxy_2/rocket_raccoon.jpg"},
