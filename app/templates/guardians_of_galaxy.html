@@ -25,8 +25,6 @@ var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
-var color = d3.scaleOrdinal(d3.schemeCategory20);
-
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(250))
     .force("charge", d3.forceManyBody())
@@ -35,6 +33,13 @@ var simulation = d3.forceSimulation()
 d3.json("{{ url_for('static', filename='guardians_of_galaxy.json')}}", function(error, graph) {
   if (error) throw error;
 
+  simulation
+      .nodes(graph.nodes)
+      .on("tick", ticked);
+
+  simulation.force("link")
+      .links(graph.links)
+
   var link = svg.append("g")
       .attr("class", "links")
     .selectAll("line")
@@ -42,40 +47,33 @@ d3.json("{{ url_for('static', filename='guardians_of_galaxy.json')}}", function(
     .enter().append("line")
       .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
 
-  var node = svg.append("g")
-      .attr("class", "nodes")
-    .selectAll("image")
-    .data(graph.nodes);
-
-  var nodeEnter = 
-    node.enter()  
-    .append("circle")
-      .attr("r", 30)
+var node = svg.selectAll(".node")
+      .data(graph.nodes)
+    .enter().append("g")
+      .attr("class", "node")
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
           .on("end", dragended));
 
-  nodeEnter.append("image")
-    .attr("xlink:href", function(d) { return d.image; })
-    .attr("height", 60)
-    .attr("width", 60)
-    .attr("x", function(d) { return d.x; })
-    .attr("y", function(d) { return d.y; })
-          .call(d3.drag()
-          .on("start", dragstarted)
-          .on("drag", dragged)
-          .on("end", dragended));
+  node.append('circle')
+      .attr("r", 40)
+      .attr("fill", "lightgrey")
 
-  nodeEnter.append("title")
-      .text(function(d) { return d.id; });
+  node.append("image")
+      .attr("xlink:href", function(d) { return d.image; })
+      .attr("x", -30)
+      .attr("y", -30)
+      .attr("width", 60)
+      .attr("height", 60);
 
-  simulation
-      .nodes(graph.nodes)
-      .on("tick", ticked);
+  node.append("text")
+      .attr("dx", 0)
+      .attr("dy", -30)
+      .style("text-anchor", "middle")
+      .text(function(d) { return d.id });
 
-  simulation.force("link")
-      .links(graph.links)
+
 
   function ticked() {
     link
@@ -84,9 +82,10 @@ d3.json("{{ url_for('static', filename='guardians_of_galaxy.json')}}", function(
         .attr("x2", function(d) { return d.target.x; })
         .attr("y2", function(d) { return d.target.y; });
 
-    nodeEnter
+    node
         .attr("cx", function(d) { return d.x; })
-        .attr("cy", function(d) { return d.y; });
+        .attr("cy", function(d) { return d.y; })
+        .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
   }
 });
 
