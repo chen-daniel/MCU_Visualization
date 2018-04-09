@@ -44,28 +44,36 @@ d3.json("{{ url_for('static', filename='guardians_of_galaxy.json')}}", function(
 
   var node = svg.append("g")
       .attr("class", "nodes")
-    .selectAll("image")
+    .selectAll("g")
     .data(graph.nodes);
 
   var nodeEnter = 
-    node.enter()  
-    .append("circle")
-      .attr("r", 30)
+    node.enter() 
+    .append("image")
+        .attr("xlink:href", function(d) { return d.image; })
+        .attr("width", 60)
+        .attr("height", 60)
+        .attr("x", "-30px")
+        .attr("y", "-30px")
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
           .on("end", dragended));
 
-  nodeEnter.append("image")
-    .attr("xlink:href", function(d) { return d.image; })
-    .attr("height", 60)
-    .attr("width", 60)
-    .attr("x", function(d) { return d.x; })
-    .attr("y", function(d) { return d.y; })
-          .call(d3.drag()
-          .on("start", dragstarted)
-          .on("drag", dragged)
-          .on("end", dragended));
+  console.log(node);
+
+  // nodeEnter.append("image")
+  //       .attr("xlink:href", function(d) { return d.image; })
+  //       .attr("r", 30)
+  //       .attr("x", "-30px")
+  //       .attr("y", "-30px")
+  //         .call(d3.drag()
+  //         .on("start", dragstarted)
+  //         .on("drag", dragged)
+  //         .on("end", dragended));
+
+  console.log(node);
+
 
   nodeEnter.append("title")
       .text(function(d) { return d.id; });
