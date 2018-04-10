@@ -6,6 +6,8 @@
 <meta charset="utf-8">
 <style>
 
+
+
 .links line {
   stroke: #999;
   stroke-opacity: 1500;
@@ -40,6 +42,7 @@ d3.json("{{ url_for('static', filename='guardians_of_galaxy.json')}}", function(
   simulation.force("link")
       .links(graph.links)
 
+
   var link = svg.append("g")
       .attr("class", "links")
     .selectAll("line")
@@ -56,11 +59,17 @@ var node = svg.selectAll(".node")
           .on("drag", dragged)
           .on("end", dragended));
 
+    node.on("mouseover", showText)
+      .on("mouseout", hideText)
+      .on("click", nodeClick);
+
+
   node.append('circle')
       .attr("r", 40)
       .attr("fill", "lightgrey")
 
   node.append("image")
+      .attr("class", "node_image")
       .attr("xlink:href", function(d) { return d.image; })
       .attr("x", -30)
       .attr("y", -30)
@@ -68,12 +77,21 @@ var node = svg.selectAll(".node")
       .attr("height", 60);
 
   node.append("text")
-      .attr("dx", 0)
+      .attr("class", "node_text")
       .attr("dy", -30)
       .style("text-anchor", "middle")
-      .text(function(d) { return d.id });
+      .text(function(d) { return d.id })
+      .style("display", "none");
 
+  function showText(d) {
+      d3.select(this).select(".node_text")
+      .style("display", null);
+  }
 
+  function hideText(d) {
+    d3.select(this).select(".node_text")
+        .style("display", "none");
+  }
 
   function ticked() {
     link
@@ -88,6 +106,31 @@ var node = svg.selectAll(".node")
         .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
   }
 });
+
+ function nodeClick(d) {
+
+    d3.selectAll(".node_image")
+        .attr("width", 60)
+        .attr("height", 60)
+        .attr("x", -30)
+        .attr("y", -30)
+
+    d3.select(this).interrupt().transition().duration(1000)
+            .attr('cx', function(d) {
+                return d.x = 750;
+            })
+            .attr('cy', function(d) {
+                return d.y = 300;
+            }).attr("transform", function (d) {
+                return "translate(" + d.x + "," + d.y + ")";
+            })
+
+    d3.select(this).select(".node_image").interrupt().transition().duration(1000)
+            .attr("width", 180)
+            .attr("height", 180)
+            .attr("x", -90)
+            .attr("y", -90);
+  }
 
 function dragstarted(d) {
   if (!d3.event.active) simulation.alphaTarget(0.3).restart();
@@ -105,6 +148,8 @@ function dragended(d) {
   d.fx = null;
   d.fy = null;
 }
+
+
 
 </script>
 {% endblock %}

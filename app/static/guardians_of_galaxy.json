@@ -1,17 +1,16 @@
 {
   "nodes": [
-    {"id": "drax", "group": 1, "image" : "../static/img/logo/guardians_of_galaxy_2/drax.png"},
-    {"id": "gamora", "group": 2, "image" : "../static/img/logo/guardians_of_galaxy_2/gamora.png"},
-    {"id": "groot", "group": 3, "image" : "../static/img/logo/guardians_of_galaxy_2/groot.png"},
-    {"id": "nebula", "group": 4, "image" : "../static/img/logo/guardians_of_galaxy_2/nebula.png"},
-    {"id": "rocket_raccoon", "group": 5, "image" : "../static/img/logo/guardians_of_galaxy_2/rocket raccoon.png"},
-    {"id": "star_lord", "group": 6, "image" : "../static/img/logo/guardians_of_galaxy_2/star lord.png"}
+    {"id": "drax", "group": 5, "image" : "../static/img/logo/guardians_of_galaxy_2/drax.png", "about" : ["drax is cool", " he is", "drax"]},
+    {"id": "gamora", "group": 2, "image" : "../static/img/logo/guardians_of_galaxy_2/gamora.png", "about" : ["gamora is cool", "gamora2"]},
+    {"id": "groot", "group": 5, "image" : "../static/img/logo/guardians_of_galaxy_2/groot.png", "about" : ["groot is cool"]},
+    {"id": "nebula", "group": 5, "image" : "../static/img/logo/guardians_of_galaxy_2/nebula.png", "about" : []},
+    {"id": "rocket_raccoon", "group": 5, "image" : "../static/img/logo/guardians_of_galaxy_2/rocket raccoon.png", "about" : ["rocket raccoon is cool"]},
+    {"id": "star_lord", "group": 5, "image" : "../static/img/logo/guardians_of_galaxy_2/star lord.png", "about" : ["star lord is cool"]}
   ],
   "links": [
     {"source": "gamora", "target": "drax", "value": 100},
     {"source": "groot", "target": "drax", "value": 80},
     {"source": "nebula", "target": "drax", "value": 100},
-    {"source": "nebula", "target": "groot", "value": 250},
     {"source": "rocket_raccoon", "target": "drax", "value": 150},
     {"source": "star_lord", "target": "drax", "value": 130}
   ]
