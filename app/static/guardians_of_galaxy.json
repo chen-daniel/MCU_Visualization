@@ -11,7 +11,6 @@
     {"source": "gamora", "target": "drax", "value": 100},
     {"source": "groot", "target": "drax", "value": 80},
     {"source": "nebula", "target": "drax", "value": 100},
-    {"source": "nebula", "target": "groot", "value": 250},
     {"source": "rocket_raccoon", "target": "drax", "value": 150},
     {"source": "star_lord", "target": "drax", "value": 130}
   ]
