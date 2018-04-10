@@ -32,6 +32,7 @@ here you can change #f3ad00 main color.
   7. Scrollbar
   8. Small Devices
   9. Movie Pages
+  10. force directed graph
 -----------------------------------------------------------------*/
 
 /*----------------------------------------------------------------
@@ -732,3 +733,21 @@ a img { border: 0; }
 .movie span.name { font-weight:bold; color:#fff; font-size:14px; text-align:center; padding-top:160px; display:block; }
 
 .box .last { padding:0; }
+
+/*----------------------------------------------------------------
+10. force directed graph
+-----------------------------------------------------------------*/
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}

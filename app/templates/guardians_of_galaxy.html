@@ -6,6 +6,8 @@
 <meta charset="utf-8">
 <style>
 
+
+
 .links line {
   stroke: #999;
   stroke-opacity: 1500;
@@ -21,6 +23,8 @@
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
+var nodeClicked;
+
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
@@ -32,6 +36,8 @@ var simulation = d3.forceSimulation()
 
 d3.json("{{ url_for('static', filename='guardians_of_galaxy.json')}}", function(error, graph) {
   if (error) throw error;
+
+  nodeClicked = false;
 
   simulation
       .nodes(graph.nodes)
@@ -56,24 +62,57 @@ var node = svg.selectAll(".node")
           .on("drag", dragged)
           .on("end", dragended));
 
+    node.on("mouseover", showText)
+      .on("mouseout", hideText)
+      .on("click", nodeClick);
+
+
   node.append('circle')
       .attr("r", 40)
       .attr("fill", "lightgrey")
 
   node.append("image")
+      .attr("class", "node_image")
       .attr("xlink:href", function(d) { return d.image; })
-      .attr("x", -35)
-      .attr("y", -35)
-      .attr("width", 70)
-      .attr("height", 70);
+      .attr("x", -30)
+      .attr("y", -30)
+      .attr("width", 60)
+      .attr("height", 60);
 
   node.append("text")
-      .attr("dx", 0)
+      .attr("class", "node_text")
       .attr("dy", -30)
       .style("text-anchor", "middle")
-      .text(function(d) { return d.id });
+      .text(function(d) { return d.id })
+      .style("display", "none");
 
+  function showText(d) {
+      d3.select(this).select(".node_text")
+      .style("display", null);
+  }
 
+  function hideText(d) {
+    d3.select(this).select(".node_text")
+        .style("display", "none");
+  }
+
+  function nodeClick(d) {
+    nodeClicked = !nodeClicked;
+
+    if(nodeClicked) {
+    d3.select(this).select(".node_image")
+        .attr("width", 100)
+        .attr("height", 100)
+        .attr("x", -50)
+        .attr("y", -50);
+      } else {
+    d3.select(this).select(".node_image")
+        .attr("width", 60)
+        .attr("height", 60)
+        .attr("x", -30)
+      . attr("y", -30);
+      }
+  }
 
   function ticked() {
     link
