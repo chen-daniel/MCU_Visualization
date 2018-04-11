@@ -4,10 +4,36 @@
 
 <!DOCTYPE html>
 <meta charset="utf-8">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+  {% if title %}
+  <title>{{ title }}</title>
+  {% else %}
+  <title>MCU VISUALIZATION</title>
+  {% endif %}
+</head>
+
+<body>
+
+<header>
+      <a href="{{ url_for('index') }}">
+        <h1>Marvel Characters (Guardians Of Galaxy)</h1>
+      </a>
+      <h2>Click to view character's information</h2>
+      <h3></h3>
+    </header>
+
 <style>
-
-
-
 .links line {
   stroke: #999;
   stroke-opacity: 1500;
@@ -92,6 +118,34 @@ var node = svg.selectAll(".node")
       .text(function(d) { return d.id })
       .style("display", "none");
 
+  node.append("text")
+      .attr("class", "node_description")
+      .attr("x", 500)
+      .attr("y", 500)
+      .text(function(d) {return d.about[0]})
+      .style("display", "none");
+
+
+
+
+
+  function ticked() {
+    link
+        .attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+
+    node
+        .attr("cx", function(d) { return d.x; })
+        .attr("cy", function(d) { return d.y; })
+        .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+  }
+
+
+});
+
+
   function showText(d) {
       clickOn = false;
       d3.select(this).select(".node_text")
@@ -118,26 +172,12 @@ var node = svg.selectAll(".node")
     }
   }
 
-  function ticked() {
-    link
-        .attr("x1", function(d) { return d.source.x; })
-        .attr("y1", function(d) { return d.source.y; })
-        .attr("x2", function(d) { return d.target.x; })
-        .attr("y2", function(d) { return d.target.y; });
-
-    node
-        .attr("cx", function(d) { return d.x; })
-        .attr("cy", function(d) { return d.y; })
-        .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
-  }
-
-
-});
-
-
- function nodeClick(d) {
+  function nodeClick(d) {
 
     clickOn = true;
+
+    d3.select("h2").html(d.id); 
+    d3.select("h3").html(d.about);
 
     initialSize(d)
 
@@ -192,4 +232,5 @@ function initialSize(d) {
 
 
 </script>
+</body>
 {% endblock %}
