@@ -60,7 +60,7 @@ var simulation = d3.forceSimulation()
     .force("center", d3.forceCenter(width / 2, height / 2));
 
   var tranDuration = 1000;
-  var toSize = 180;
+  var toSize = 300;
   var showSize = 100;
   var initSize = 60;
   var clickOn;
@@ -95,7 +95,7 @@ var node = svg.selectAll(".node")
           .on("drag", dragged)
           .on("end", dragended));
 
-    node.on("mouseover", showText)
+  node.on("mouseover", showText)
       .on("mouseout", hideText)
       .on("click", nodeClick);
 
@@ -182,15 +182,15 @@ var node = svg.selectAll(".node")
 
     initialSize(d)
 
-    d3.select(this).interrupt().transition().duration(tranDuration)
-            .attr('cx', function(d) {
-                return d.x = 750;
-            })
-            .attr('cy', function(d) {
-                return d.y = 300;
-            }).attr("transform", function (d) {
-                return "translate(" + d.x + "," + d.y + ")";
-            })
+    // d3.select(this).interrupt().transition().duration(tranDuration)
+    //         .attr('cx', function(d) {
+    //             return d.x = 750;
+    //         })
+    //         .attr('cy', function(d) {
+    //             return d.y = 300;
+    //         }).attr("transform", function (d) {
+    //             return "translate(" + d.x + "," + d.y + ")";
+    //         })
 
     d3.select(this).select(".node_image").interrupt().transition().duration(tranDuration)
             .attr("width", toSize)
