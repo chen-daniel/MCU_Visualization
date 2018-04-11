@@ -106,10 +106,10 @@ def eventToString(char):
 	query_event = ("SELECT description FROM events_characters WHERE character_id = '%s'") % char_id
 	cur.execute(query_event)
 	rv = cur.fetchall()
-	ans = ""
+	arr = []
 	for des in rv:
-		ans = ans + des[0];
-	return ans;
+		arr.append(des[0])
+	return arr;
 
 
 
