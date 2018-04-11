@@ -3,7 +3,9 @@ from app import app
 from app.user import views
 from flask import render_template, flash, redirect, url_for, request, current_app, session
 
+
 import mysql.connector
+from flask import jsonify,make_response
 from flask import jsonify,json
 
 cnn = mysql.connector.connect(
@@ -59,7 +61,8 @@ def captain_america_the_winter_soldier():
 
 @app.route('/guardians_of_galaxy')
 def guardians_of_the_galaxy():
-	return render_template('guardians_of_galaxy.html', jsondata=charInMovie(10))
+	jsondata=charInMovie(10)
+	return render_template('guardians_of_galaxy.html', jsondata=jsondata)
 
 @app.route('/avengers_age_of_ultron')
 def avengers_age_of_ultron():
@@ -101,32 +104,73 @@ def testing():
 	return charInMovie(15)
 
 def charInMovie(movie_ID):
-	query = "SELECT * FROM characters C JOIN movies_characters MC ON {} =  MC.movie_id WHERE C.character_id = MC.character_id".format(movie_ID)
 	cur = cnn.cursor()
-	cur.execute(query)
-	rv = cur.fetchall()
+	links = []
+	cur.callproc('org_movie_connections', [movie_ID])
+	for result in cur.stored_results():
+		links += result.fetchall()
+	cur.callproc('char_movie_connections', [movie_ID])
+	for result in cur.stored_results():
+		links += result.fetchall()
+	cur.callproc('char_org_connections', [movie_ID])
+	for result in cur.stored_results():
+		links += result.fetchall()
+	cur.callproc('events_movie_connections', [movie_ID])
+	for result in cur.stored_results():
+		links += result.fetchall()
 
-	result_json = json.dumps({'nodes': jsonifyChars(rv)
-		,"links" : linkChar(rv)})
-	
+
+	print("12371637")
+	print(links)
+	print(createLinks(links))
+
+	cur.callproc('char_in_movie', [movie_ID])
+	for result in cur.stored_results():
+		charNodes = result.fetchall()
+	cur.callproc('org_in_movie', [movie_ID])
+	for result in cur.stored_results():
+		orgNodes = result.fetchall()
+	cur.callproc('movie_info', [movie_ID])
+	for result in cur.stored_results():
+		movieNode = result.fetchall()
+	cur.callproc('events_in_movie', [movie_ID])
+	for result in cur.stored_results():
+		eventNodes = result.fetchall()
+	print(movieNode)
+
+	result_json = make_response(jsonify({'nodes': jsonifyNodes(charNodes, orgNodes, movieNode, eventNodes)
+		,"links" : createLinks(links)}), 201)
 	return result_json
 
-def linkChar(char):
+def createLinks(links):
 	payload = []
-	i = 0
-	for c1 in char:
-		# if i >= enumerate(char): 
-		# 	break
-		for c2 in char:
-			# if i >= enumerate(char) - 1: 
-			# 	break 
-			if c1[0] != c2[0]:
-				payload.append(makeLink(c1, c2))
-				i = i + 1
+	for link in links:
+		payload.append(makeLink(link[0], link[1]))
 	return payload
 
 def makeLink(char1, char2):
-	return {"source": char1[1], "target": char2[1], "value": 200}
+	return {"source": char1, "target": char2, "value": 200}
+
+def jsonifyNodes(chars, orgs, movie, events):
+	payload = []
+	for char in chars:
+		content = jsonifyAChar(char)
+		payload.append(content)
+		content = {}
+	for event in events:
+		content = jsonifyAEvent(event)
+		payload.append(content)
+		content = {}
+
+	for org in orgs:
+		content = jsonifyAOrg(char)
+		payload.append(content)
+		content = {}
+	for mov in movie:
+		content = jsonifyMovie(mov)
+		payload.append(content)
+		content = {}
+	return payload
 
 def jsonifyChars(char):
 	payload = []
@@ -139,12 +183,44 @@ def jsonifyChars(char):
 
 
 def jsonifyAChar(result):
+	if result[6]:
+		return {
+		'id': result[1],
+		'group': 1,
+		'image': result[6],
+		'about': jsonAbout(result),
+		'events': 'to connections'}
+	else:
+		return {
+		'id': result[1],
+		'group': 1,
+		'image': False,
+		'about': jsonAbout(result),
+		'events': 'to connections'}
+
+def jsonifyAEvent(result):
 	return {
 	'id': result[1],
-	'group': result[6],
-	'image': result[5],
-	'about': jsonAbout(result),
-	'events': eventToString(result)}
+	'group': 1,
+	'image': False,
+	'about': result[2],
+	'events': 'to connections'}
+
+def jsonifyAOrg(result):
+	return {
+	'id': result[1],
+	'group': 1,
+	'image': False,
+	'about': 'testText',
+	'events': 'to connections'}
+
+def jsonifyMovie(result):
+	return {
+	'id': result[1],
+	'group': 1,
+	'image': False,
+	'about': result[3],
+	'events': 'to connections'}
 
 def jsonAbout(char):
 	return [char[2], gender(char[3]), char[4]]
