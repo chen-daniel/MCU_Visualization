@@ -1,0 +1,20 @@
+{
+  "links": [
+    {
+      "source": "", 
+      "target": "", 
+      "value": 0
+    }
+  ], 
+  "nodes": [
+    {
+      "about": [
+        ""
+      ], 
+      "events": "", 
+      "group": 0, 
+      "id": "", 
+      "image": false
+    }
+  ]
+}
