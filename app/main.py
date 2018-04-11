@@ -22,9 +22,80 @@ def main():
 def index():
 	return render_template('index.html')
 
-@app.route('/guardians_of_galaxy')
+#===================================================================================
+@app.route('/iron_man')
+def iron_man():
+	return render_template('iron_man.html', jsondata=charInMovie(1))
+
+@app.route('/the_incredible_hulk')
 def guardians_of_galaxy():
-	return render_template('guardians_of_galaxy.html', jsondata=charInMovie(15))
+	return render_template('the_incredible_hulk.html', jsondata=charInMovie(2))
+
+@app.route('/iron_man_2')
+def guardians_of_galaxy():
+	return render_template('iron_man_2.html', jsondata=charInMovie(3))
+
+@app.route('/thor')
+def guardians_of_galaxy():
+	return render_template('thor.html', jsondata=charInMovie(4))
+
+@app.route('/captain_america_the_first_avenger')
+def guardians_of_galaxy():
+	return render_template('captain_america_the_first_avenger.html', jsondata=charInMovie(5))
+
+@app.route('/the_avengers')
+def guardians_of_galaxy():
+	return render_template('the_avengers.html', jsondata=charInMovie(6))
+
+@app.route('/iron_man_3')
+def guardians_of_galaxy():
+	return render_template('iron_man_3.html', jsondata=charInMovie(7))
+
+@app.route('/thor_dark_world')
+def guardians_of_galaxy():
+	return render_template('thor_dark_world.html', jsondata=charInMovie(8))
+
+@app.route('/captain_america_the_winter_soldier')
+def guardians_of_galaxy():
+	return render_template('captain_america_the_winter_soldier.html', jsondata=charInMovie(9))
+
+@app.route('/guardians_of_the_galaxy')
+def guardians_of_galaxy():
+	return render_template('guardians_of_the_galaxy.html', jsondata=charInMovie(10))
+
+@app.route('/avengers_age_of_ultron')
+def guardians_of_galaxy():
+	return render_template('avengers_age_of_ultron.html', jsondata=charInMovie(11))
+
+@app.route('/ant_man')
+def guardians_of_galaxy():
+	return render_template('ant_man.html', jsondata=charInMovie(12))
+
+@app.route('/captain_america_civil_war')
+def guardians_of_galaxy():
+	return render_template('captain_america_civil_war.html', jsondata=charInMovie(13))
+
+@app.route('/doctor_strange')
+def guardians_of_galaxy():
+	return render_template('doctor_strange.html', jsondata=charInMovie(14))
+
+@app.route('/guardians_of_the_galaxy_vol_2')
+def guardians_of_galaxy():
+	return render_template('guardians_of_the_galaxy_vol_2.html', jsondata=charInMovie(15))
+
+@app.route('/spider_man_homecoming')
+def guardians_of_galaxy():
+	return render_template('spider_man_homecoming.html', jsondata=charInMovie(16))
+
+@app.route('/thor_ragnarok')
+def guardians_of_galaxy():
+	return render_template('thor_ragnarok.html', jsondata=charInMovie(17))
+
+@app.route('/black_panther')
+def guardians_of_galaxy():
+	return render_template('black_panther.html', jsondata=charInMovie(18))
+
+#=================================================================================
 
 
 
