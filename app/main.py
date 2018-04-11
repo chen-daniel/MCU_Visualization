@@ -98,7 +98,7 @@ def black_panther():
 
 @app.route('/test')
 def testing():
-	return charInMovie(10)
+	return charInMovie(12)
 
 def charInMovie(movie_ID):
 	query = "SELECT * FROM characters C JOIN movies_characters MC ON {} =  MC.movie_id WHERE C.character_id = MC.character_id".format(movie_ID)
