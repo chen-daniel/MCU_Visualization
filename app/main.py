@@ -87,7 +87,17 @@ def jsonifyAChar(result):
 	'about': jsonAbout(result),
 	'events': eventToString(result)}
 
+def jsonAbout(char):
+	
 
+def eventToString(char):
+	cur = cnn.cursor()
+	cur.execute("CALL eventDes(%s)", (char), multi = True)
+	rv = cur.fetchone()
+	ans = ""
+	for des in rv:
+		ans = ans + des;
+	return ans;
 
 
 
