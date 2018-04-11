@@ -1,11 +1,11 @@
 {
   "nodes": [
-    {"id": "Drax", "group": 5, "image" : "../static/img/logo/guardians_of_galaxy_2/drax.png", "about" : ["drax is cool", " he is", "drax"]},
-    {"id": "Gamora", "group": 2, "image" : "../static/img/logo/guardians_of_galaxy_2/gamora.png", "about" : ["gamora is cool", "gamora2"]},
-    {"id": "Groot", "group": 5, "image" : "../static/img/logo/guardians_of_galaxy_2/groot.png", "about" : ["groot is cool"]},
-    {"id": "Nebula", "group": 5, "image" : "../static/img/logo/guardians_of_galaxy_2/nebula.png", "about" : []},
-    {"id": "Rocket Raccoon", "group": 5, "image" : "../static/img/logo/guardians_of_galaxy_2/rocket raccoon.png", "about" : ["rocket raccoon is cool"]},
-    {"id": "Star Lord", "group": 5, "image" : "../static/img/logo/guardians_of_galaxy_2/star lord.png", "about" : ["star lord is cool"]}
+    {"id": "Drax", "group": 5, "image" : "../static/img/logo/guardians_of_galaxy_2/drax.png", "about" : ["male", "tall", "cute"], "events" : ["he is alive"]},
+    {"id": "Gamora", "group": 2, "image" : "../static/img/logo/guardians_of_galaxy_2/gamora.png", "about" : ["female", "cute"], "events" : ["he is alive"]},
+    {"id": "Groot", "group": 5, "image" : "../static/img/logo/guardians_of_galaxy_2/groot.png", "about" : ["ugly"], "events" : ["he is alive"]},
+    {"id": "Nebula", "group": 5, "image" : "../static/img/logo/guardians_of_galaxy_2/nebula.png", "about" : ["gender unknonw"], "events" : ["he is alive"]},
+    {"id": "Rocket Raccoon", "group": 5, "image" : "../static/img/logo/guardians_of_galaxy_2/rocket raccoon.png", "about" : ["cute"], "events" : ["he is alive"]},
+    {"id": "Star Lord", "group": 5, "image" : "../static/img/logo/guardians_of_galaxy_2/star lord.png", "about" : ["cute"], "events" : ["he is alive"]}
   ],
   "links": [
     {"source": "Gamora", "target": "Drax", "value": 100},

@@ -31,6 +31,7 @@
       </a>
       <h2>Click to view more about the character</h2>
       <h3></h3>
+      <h4></h4>
     </header>
 
 <style>
@@ -177,6 +178,7 @@ var node = svg.selectAll(".node")
 
     d3.select("h2").html(d.id); 
     d3.select("h3").html(d.about);
+    d3.select("h4").html("EVENTS: " + d.events);
 
     initialSize(d)
 
@@ -214,6 +216,7 @@ function dragged(d) {
 
   d3.select("h2").html("Click to view more about the character"); 
   d3.select("h3").html("");
+  d3.select("h4").html("");
 }
 
 function dragended(d) {
