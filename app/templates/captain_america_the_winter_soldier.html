@@ -65,9 +65,8 @@ var simulation = d3.forceSimulation()
   var initSize = 60;
   var clickOn;
 
-
   // var jsondataset = {{jsondata|tojson|safe}}
-d3.json("{{ url_for('static', filename='guardians_of_galaxy.json')}}", function(error, graph) {
+d3.json("{{ url_for('static', filename='captain_america_the_winter_soldier.json')}}", function(error, graph) {
   if (error) throw error;
 
   clickOn= false;

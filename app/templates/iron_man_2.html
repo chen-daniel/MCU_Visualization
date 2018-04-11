@@ -27,7 +27,7 @@
 
 <header>
       <a href="{{ url_for('index') }}">
-        <h1>Marvel Characters</h1>
+        <h1>Marvel Characters (Iron Man 2)</h1>
       </a>
       <h2>Click to view more about the character</h2>
       <h3></h3>
@@ -65,9 +65,8 @@ var simulation = d3.forceSimulation()
   var initSize = 60;
   var clickOn;
 
-
   // var jsondataset = {{jsondata|tojson|safe}}
-d3.json("{{ url_for('static', filename='guardians_of_galaxy.json')}}", function(error, graph) {
+d3.json("{{ url_for('static', filename='iron_man_2.json')}}", function(error, graph) {
   if (error) throw error;
 
   clickOn= false;
