@@ -28,7 +28,10 @@ def guardians_of_galaxy():
 
 
 
-# 
+@app.route('/test')
+def testing():
+	return charInMovie(15)
+
 def charInMovie(movie_ID):
 	query = "SELECT * FROM characters C JOIN movies_characters MC ON {} =  MC.movie_id WHERE C.character_id = MC.character_id".format(movie_ID)
 	cur = cnn.cursor()
@@ -37,8 +40,6 @@ def charInMovie(movie_ID):
 
 	result_json = jsonify({'nodes': jsonifyChars(rv)
 		,"links" : linkChar(rv)})
-	
-	print(result_json)
 	return result_json
 
 def linkChar(char):
@@ -66,7 +67,7 @@ def jsonifyChars(char):
 		payload.append(content)
 		content = {}
 	return payload
-		#return jsonify(payload)
+
 
 def jsonifyAChar(result):
 	return {
@@ -93,6 +94,6 @@ def eventToString(char):
 	rv = cur.fetchall()
 	arr = []
 	for des in rv:
-		arr.append(des[0])
+		arr.append(des[0].replace('"', ''))
 	return arr;
 

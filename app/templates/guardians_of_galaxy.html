@@ -65,7 +65,8 @@ var simulation = d3.forceSimulation()
   var initSize = 60;
   var clickOn;
 
-d3.json(jsondata, function(error, graph) {
+  var jsondataset = {{jsondata}}
+d3.json(jsondataset, function(error, graph) {
   if (error) throw error;
 
   clickOn= false;
