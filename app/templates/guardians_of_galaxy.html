@@ -4,10 +4,36 @@
 
 <!DOCTYPE html>
 <meta charset="utf-8">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+  {% if title %}
+  <title>{{ title }}</title>
+  {% else %}
+  <title>MCU VISUALIZATION</title>
+  {% endif %}
+</head>
+
+<body>
+
+<header>
+      <a href="{{ url_for('index') }}">
+        <h1>Marvel Characters (Guardians Of Galaxy)</h1>
+      </a>
+      <h2>Click to view character's information</h2>
+      <h3></h3>
+    </header>
+
 <style>
-
-
-
 .links line {
   stroke: #999;
   stroke-opacity: 1500;
@@ -32,8 +58,17 @@ var simulation = d3.forceSimulation()
     .force("charge", d3.forceManyBody())
     .force("center", d3.forceCenter(width / 2, height / 2));
 
+  var tranDuration = 1000;
+  var toSize = 180;
+  var showSize = 100;
+  var initSize = 60;
+  var clickOn;
+
 d3.json("{{ url_for('static', filename='guardians_of_galaxy.json')}}", function(error, graph) {
   if (error) throw error;
+
+  clickOn= false;
+
 
   simulation
       .nodes(graph.nodes)
@@ -71,10 +106,10 @@ var node = svg.selectAll(".node")
   node.append("image")
       .attr("class", "node_image")
       .attr("xlink:href", function(d) { return d.image; })
-      .attr("x", -30)
-      .attr("y", -30)
-      .attr("width", 60)
-      .attr("height", 60);
+      .attr("x", -initSize/2)
+      .attr("y", -initSize/2)
+      .attr("width", initSize)
+      .attr("height", initSize);
 
   node.append("text")
       .attr("class", "node_text")
@@ -83,15 +118,16 @@ var node = svg.selectAll(".node")
       .text(function(d) { return d.id })
       .style("display", "none");
 
-  function showText(d) {
-      d3.select(this).select(".node_text")
-      .style("display", null);
-  }
+  node.append("text")
+      .attr("class", "node_description")
+      .attr("x", 500)
+      .attr("y", 500)
+      .text(function(d) {return d.about[0]})
+      .style("display", "none");
 
-  function hideText(d) {
-    d3.select(this).select(".node_text")
-        .style("display", "none");
-  }
+
+
+
 
   function ticked() {
     link
@@ -105,17 +141,47 @@ var node = svg.selectAll(".node")
         .attr("cy", function(d) { return d.y; })
         .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
   }
+
+
 });
 
- function nodeClick(d) {
 
-    d3.selectAll(".node_image")
-        .attr("width", 60)
-        .attr("height", 60)
-        .attr("x", -30)
-        .attr("y", -30)
+  function showText(d) {
+      clickOn = false;
+      d3.select(this).select(".node_text")
+        .style("display", null);
+      
+      d3.select(this).select(".node_image").interrupt().transition().duration(tranDuration/4)
+        .attr("width", showSize)
+        .attr("height", showSize)
+        .attr("x", -showSize / 2)
+        .attr("y", -showSize / 2);
 
-    d3.select(this).interrupt().transition().duration(1000)
+  }
+
+  function hideText(d) {
+    d3.select(this).select(".node_text")
+        .style("display", "none");
+
+    if(!clickOn) {
+    d3.select(this).select(".node_image").interrupt().transition().duration(tranDuration/4)
+      .attr("width", initSize)
+      .attr("height", initSize)
+      .attr("x", -initSize / 2)
+      .attr("y", -initSize / 2);
+    }
+  }
+
+  function nodeClick(d) {
+
+    clickOn = true;
+
+    d3.select("h2").html(d.id); 
+    d3.select("h3").html(d.about);
+
+    initialSize(d)
+
+    d3.select(this).interrupt().transition().duration(tranDuration)
             .attr('cx', function(d) {
                 return d.x = 750;
             })
@@ -125,14 +191,18 @@ var node = svg.selectAll(".node")
                 return "translate(" + d.x + "," + d.y + ")";
             })
 
-    d3.select(this).select(".node_image").interrupt().transition().duration(1000)
-            .attr("width", 180)
-            .attr("height", 180)
-            .attr("x", -90)
-            .attr("y", -90);
+    d3.select(this).select(".node_image").interrupt().transition().duration(tranDuration)
+            .attr("width", toSize)
+            .attr("height", toSize)
+            .attr("x", -toSize / 2)
+            .attr("y", -toSize / 2);
   }
 
 function dragstarted(d) {
+
+  initialSize(d)
+
+
   if (!d3.event.active) simulation.alphaTarget(0.3).restart();
   d.fx = d.x;
   d.fy = d.y;
@@ -149,7 +219,20 @@ function dragended(d) {
   d.fy = null;
 }
 
+function initialSize(d) {
+  d3.selectAll(".node_image")
+    .attr("width", 60)
+    .attr("height", 60)
+    .attr("x", -30)
+    .attr("y", -30)
+}
+
+
+
 
 
 </script>
+
+</body>
 {% endblock %}
+
