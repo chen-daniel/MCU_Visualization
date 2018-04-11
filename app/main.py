@@ -33,13 +33,22 @@ def guardians_of_galaxy():
 
 # Tam's stuff
 query = "CALL char_in_movie(1)"
-@app.route('/temp/<movie>')
+@app.route('/temp')
+def temp():
+	cur = cnn.cursor()
+	cur.execute(query, multi = True)
+	rv = cur.fetchall()
+	return(jsonify(rv))
+
+
 def charInMovie(movie):
+	
 	#cur = mysql.connection.cursor()
 	cur = cnn.cursor()
-	cur.execute("SELECT * FROM characters")
+	cur.execute(query, multi = True)
+	print("hi")
 	rv = cur.fetchall()
-	return {
+	print {
 	"nodes" : jsonifyChars(rv),
 	"links" : linkChar(rv)}
 
@@ -47,29 +56,21 @@ def linkChar(char):
 	payload = []
 	i = 0
 	for c1 in char:
-		if i >= enumerate(char) : 
+		if i >= enumerate(char) - 1 : 
 			break
 		for c2 in char:
-			if i >= enumerate(char): 
+			if i >= enumerate(char) - 1: 
 				break 
 			elif c1[0] != c2[0]:
 				payload.append(makeLink(c1, c2))
 				i = i + 1
-	return jsonify(nodes = json.dumps(payload))
+	return jsonify(payload)
 
 def makeLink(char1, char2):
 	return {"source": char1[1], "target": char2[1], "value": 100}
 
-def jsonifyAChar(result): 
-	return {
-	   'id': result[0], 
-	   'alias': result[1], 
-	   'name': result[2],
-	   'gender': result[3],
-	   'species': result[4],
-	   'first_movie': result[5]}
-
 def jsonifyChars(char):
+	print("hi")
    payload = []
    content = {}
    for result in char:
@@ -77,3 +78,17 @@ def jsonifyChars(char):
 	   payload.append(content)
 	   content = {}
    return jsonify(payload)
+
+def jsonifyAChar(result): 
+	return {
+	'id': result[0],
+	'group': result[6],
+	'image':result[5],
+	'about': jsonAbout(result),
+	'events': eventToString(result)}
+
+
+
+
+
+
