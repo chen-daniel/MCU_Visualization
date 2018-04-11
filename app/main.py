@@ -57,7 +57,7 @@ def thor_dark_world():
 def captain_america_the_winter_soldier():
 	return render_template('captain_america_the_winter_soldier.html', jsondata=charInMovie(9))
 
-@app.route('/guardians_of_the_galaxy')
+@app.route('/guardians_of_galaxy')
 def guardians_of_the_galaxy():
 	return render_template('guardians_of_galaxy.html', jsondata=charInMovie(10))
 
@@ -92,7 +92,6 @@ def thor_ragnarok():
 @app.route('/black_panther')
 def black_panther():
 	return render_template('black_panther.html', jsondata=charInMovie(18))
-
 #=================================================================================
 
 
