@@ -48,20 +48,23 @@ def charInMovie(movie):
 	cur = cnn.cursor()
 	cur.execute(query2)
 	rv = cur.fetchall()
-	print(rv)
+
+	cur1 = cnn.cursor()
+	cur1.execute("SELECT COUNT(*) FROM characters C JOIN movies_characters MC ON 1 =  MC.movie_id WHERE C.character_id = MC.character_id")
+	num_nodes = cur1.fetchone()
 	#return jsonifyChars(rv)
 	return jsonify({'nodes': jsonifyChars(rv)
-		,"links" : linkChar(rv)})
+		,"links" : linkChar(rv, num_nodes[0])})
 
-def linkChar(char):
+def linkChar(char,n):
 	payload = []
 	i = 0
 	for c1 in char:
-		# if i >= enumerate(char): 
-		# 	break
+		if i >= n-1: 
+		 	break
 		for c2 in char:
-			# if i >= enumerate(char) - 1: 
-			# 	break 
+			if i >= n-1:
+				break 
 			if c1[0] != c2[0]:
 				payload.append(makeLink(c1, c2))
 				i = i + 1
