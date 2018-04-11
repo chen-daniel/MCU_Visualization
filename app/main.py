@@ -67,7 +67,7 @@ def linkChar(char):
 	return jsonify(payload)
 
 def makeLink(char1, char2):
-	return {"source": char1[1], "target": char2[1], "value": 100}
+	return {"source": char1[1], "target": char2[1], "value": 200}
 
 def jsonifyChars(char):
 	print("hi")
