@@ -1,0 +1,317 @@
+{
+  "links": [
+    {
+      "source": "Adrian Toomes' Crew", 
+      "target": "\"Spider-Man: Homecoming\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Avengers", 
+      "target": "\"Spider-Man: Homecoming\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Stark Industries", 
+      "target": "\"Spider-Man: Homecoming\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Aunt May", 
+      "target": "\"Spider-Man: Homecoming\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Michelle Jones", 
+      "target": "\"Spider-Man: Homecoming\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Ned Leeds", 
+      "target": "\"Spider-Man: Homecoming\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Liz Toomes", 
+      "target": "\"Spider-Man: Homecoming\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Flash Thompson", 
+      "target": "\"Spider-Man: Homecoming\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Spider-Man", 
+      "target": "Avengers", 
+      "value": 200
+    }, 
+    {
+      "source": "Vulture", 
+      "target": "Adrian Toomes' Crew", 
+      "value": 200
+    }, 
+    {
+      "source": "Iron Man", 
+      "target": "Stark Industries", 
+      "value": 200
+    }, 
+    {
+      "source": "Happy Hogan", 
+      "target": "Stark Industries", 
+      "value": 200
+    }, 
+    {
+      "source": "Pepper Potts", 
+      "target": "Stark Industries", 
+      "value": 200
+    }, 
+    {
+      "source": "Shocker", 
+      "target": "Adrian Toomes' Crew", 
+      "value": 200
+    }, 
+    {
+      "source": "Captain America", 
+      "target": "Avengers", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Rescue at the Washington Monument\"", 
+      "target": "\"Spider-Man: Homecoming\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Skirmish on the Staten Island Ferry\"", 
+      "target": "\"Spider-Man: Homecoming\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Hijacking of the Stark Cargo Plane\"", 
+      "target": "\"Spider-Man: Homecoming\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Duel at Coney Island\"", 
+      "target": "\"Spider-Man: Homecoming\"", 
+      "value": 200
+    }
+  ], 
+  "nodes": [
+    {
+      "about": [
+        "Anthony Edward Stark", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Iron Man", 
+      "image": "../static/img/logo/characters/iron-man.jpg"
+    }, 
+    {
+      "about": [
+        "Virginia Potts", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Pepper Potts", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Harold Joseph Hogan", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Happy Hogan", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Steve Grant Rogers", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Captain America", 
+      "image": "../static/img/logo/characters/captain-america.jpg"
+    }, 
+    {
+      "about": [
+        "Peter Benjamin Parker", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Spider-Man", 
+      "image": "../static/img/logo/characters/spider-man.jpg"
+    }, 
+    {
+      "about": [
+        "May Parker", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Adrian Toomes", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Vulture", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Michelle Jones", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Michelle Jones", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Edward Leeds", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Ned Leeds", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Elizabeth Toomes", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Liz Toomes", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Eugene Thompson", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Flash Thompson", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Herman Schultz", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Shocker", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Rescue at the Washington Monument, dubbed the Attack at the Washington Monument by the media, was an attempt by Spider-Man to save both his classmates and his teacher from a damaged elevator in the Washington Monument.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Rescue at the Washington Monument\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Skirmish on the Staten Island Ferry was a conflict between Spider-Man, Vulture, Mac Gargan, and Iron Man that began when the web-slinger attempted to hijack an illegal arms deal between Gargan and Shocker.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Skirmish on the Staten Island Ferry\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Hijacking of the Stark Cargo Plane was an attempt by Vulture to take control of a transport aircraft and steal several advanced weapons from the Department of Damage Control.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Hijacking of the Stark Cargo Plane\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Duel at Coney Island was the third confrontation between Spider-Man and Vulture that took place after the hijacked cargo plane they were fighting on crashed.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Duel at Coney Island\"", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Shocker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Shocker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Shocker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Shocker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Shocker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Shocker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Shocker", 
+      "image": false
+    }, 
+    {
+      "about": "\"A young Peter Parker/Spider-Man, who made his sensational debut in Captain America: Civil War, begins to navigate his newfound identity as the web-slinging superhero in Spider-Man: Homecoming. Thrilled by his experience with the Avengers, Peter returns home, where he lives with his Aunt May, under the watchful eye of his new mentor Tony Stark. Peter tries to fall back into his normal daily routine ? distracted by thoughts of proving himself to be more than just your friendly neighborhood Spider-Man ? but when the Vulture (Michael Keaton) emerges as a new villain, everything that Peter holds most important will be threatened.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Spider-Man: Homecoming\"", 
+      "image": false
+    }
+  ]
+}

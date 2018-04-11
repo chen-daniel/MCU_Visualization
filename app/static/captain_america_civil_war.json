@@ -1,0 +1,608 @@
+{
+  "links": [
+    {
+      "source": "Avengers", 
+      "target": "\"Captain America: Civil War\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Captain America Faction", 
+      "target": "\"Captain America: Civil War\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Iron Man Faction", 
+      "target": "\"Captain America: Civil War\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Military", 
+      "target": "\"Captain America: Civil War\"", 
+      "value": 200
+    }, 
+    {
+      "source": "S.H.I.E.L.D", 
+      "target": "\"Captain America: Civil War\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Stark Industries", 
+      "target": "\"Captain America: Civil War\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Wakandan Tribes", 
+      "target": "\"Captain America: Civil War\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Crossbones", 
+      "target": "\"Captain America: Civil War\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Colonel Helmut Zemo", 
+      "target": "\"Captain America: Civil War\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Aunt May", 
+      "target": "\"Captain America: Civil War\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Captain America", 
+      "target": "Avengers", 
+      "value": 200
+    }, 
+    {
+      "source": "Iron Man", 
+      "target": "Stark Industries", 
+      "value": 200
+    }, 
+    {
+      "source": "Black Widow", 
+      "target": "Avengers", 
+      "value": 200
+    }, 
+    {
+      "source": "Falcon", 
+      "target": "Avengers", 
+      "value": 200
+    }, 
+    {
+      "source": "War Machine", 
+      "target": "Avengers", 
+      "value": 200
+    }, 
+    {
+      "source": "Vision", 
+      "target": "Avengers", 
+      "value": 200
+    }, 
+    {
+      "source": "Black Panther", 
+      "target": "Wakandan Tribes", 
+      "value": 200
+    }, 
+    {
+      "source": "Scarlet Witch", 
+      "target": "Avengers", 
+      "value": 200
+    }, 
+    {
+      "source": "Agent 13", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Spider-Man", 
+      "target": "Iron Man Faction", 
+      "value": 200
+    }, 
+    {
+      "source": "Thaddeus Ross", 
+      "target": "Military", 
+      "value": 200
+    }, 
+    {
+      "source": "Agent Ross", 
+      "target": "Military", 
+      "value": 200
+    }, 
+    {
+      "source": "King T'Chaka", 
+      "target": "Wakandan Tribes", 
+      "value": 200
+    }, 
+    {
+      "source": "Howard Stark", 
+      "target": "Stark Industries", 
+      "value": 200
+    }, 
+    {
+      "source": "Captain America", 
+      "target": "Captain America Faction", 
+      "value": 200
+    }, 
+    {
+      "source": "Iron Man", 
+      "target": "Iron Man Faction", 
+      "value": 200
+    }, 
+    {
+      "source": "Black Widow", 
+      "target": "Iron Man Faction", 
+      "value": 200
+    }, 
+    {
+      "source": "Winter Soldier", 
+      "target": "Captain America Faction", 
+      "value": 200
+    }, 
+    {
+      "source": "Falcon", 
+      "target": "Captain America Faction", 
+      "value": 200
+    }, 
+    {
+      "source": "War Machine", 
+      "target": "Iron Man Faction", 
+      "value": 200
+    }, 
+    {
+      "source": "Vision", 
+      "target": "Iron Man Faction", 
+      "value": 200
+    }, 
+    {
+      "source": "Black Panther", 
+      "target": "Iron Man Faction", 
+      "value": 200
+    }, 
+    {
+      "source": "Scarlet Witch", 
+      "target": "Captain America Faction", 
+      "value": 200
+    }, 
+    {
+      "source": "Ant-Man", 
+      "target": "Captain America Faction", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Attack on the IFID Headquarters\"", 
+      "target": "\"Captain America: Civil War\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Bombing of the Vienna International Centre\"", 
+      "target": "\"Captain America: Civil War\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Clash of the Avengers\"", 
+      "target": "\"Captain America: Civil War\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Battle at the HYDRA Siberian Facility\"", 
+      "target": "\"Captain America: Civil War\"", 
+      "value": 200
+    }
+  ], 
+  "nodes": [
+    {
+      "about": [
+        "Anthony Edward Stark", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Iron Man", 
+      "image": "../static/img/logo/characters/iron-man.jpg"
+    }, 
+    {
+      "about": [
+        "James Rhodes", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "War Machine", 
+      "image": "../static/img/logo/characters/war-machine.jpg"
+    }, 
+    {
+      "about": [
+        "Howard Anthony Walter Stark", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Howard Stark", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Thaddeus E. Ross", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Thaddeus Ross", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Natasha Romanoff", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Black Widow", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Steve Grant Rogers", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Captain America", 
+      "image": "../static/img/logo/characters/captain-america.jpg"
+    }, 
+    {
+      "about": [
+        "Bucky Barnes", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Winter Soldier", 
+      "image": "../static/img/logo/characters/winter-soldier.jpg"
+    }, 
+    {
+      "about": [
+        "Samuel Thomas Wilson", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Falcon", 
+      "image": "../static/img/logo/characters/falcon.jpg"
+    }, 
+    {
+      "about": [
+        "Brock Rumlow", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Crossbones", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Sharon Carter", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent 13", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Wanda Maximoff", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Scarlet Witch", 
+      "image": "../static/img/logo/characters/scarlet-witch.jpg"
+    }, 
+    {
+      "about": [
+        "Vision", 
+        "Male", 
+        "Android"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Vision", 
+      "image": "../static/img/logo/characters/vision.jpg"
+    }, 
+    {
+      "about": [
+        "Scott Edward Harris Lang", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Ant-Man", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "T'Challa", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Black Panther", 
+      "image": "../static/img/logo/characters/black-panther.jpg"
+    }, 
+    {
+      "about": [
+        "Helmut Zemo", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Colonel Helmut Zemo", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Peter Benjamin Parker", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Spider-Man", 
+      "image": "../static/img/logo/characters/spider-man.jpg"
+    }, 
+    {
+      "about": [
+        "Everett K. Ross", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent Ross", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "T'Chaka", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "King T'Chaka", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "May Parker", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Attack on the IFID Headquarters, also known as the Lagos Catastrophe, was an open confrontation between the Avengers and former HYDRA agent Brock Rumlow in Lagos, Nigeria.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Attack on the IFID Headquarters\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Bombing of the Vienna International Centre was a terrorist attack orchestrated by Helmut Zemo in his quest to divide and destroy the Avengers.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Bombing of the Vienna International Centre\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Clash of the Avengers was the first open confrontation between the two factions that once made up the Avengers.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Clash of the Avengers\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Battle of the HYDRA Siberian Facility was an open confrontation that pitted Captain America and the Winter Soldier against Iron Man.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Battle at the HYDRA Siberian Facility\"", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Aunt May", 
+      "image": false
+    }, 
+    {
+      "about": "\"Marvel?s Captain America: Civil War finds Steve Rogers leading the newly formed team of Avengers in their continued efforts to safeguard humanity. But after another incident involving the Avengers results in collateral damage, political pressure mounts to install a system of accountability, headed by a governing body to oversee and direct the team. The new status quo fractures the Avengers, resulting in two camps?one led by Steve Rogers and his desire for the Avengers to remain free to defend humanity without government interference, and the other following Tony Stark?s surprising decision to support government oversight and accountability.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Captain America: Civil War\"", 
+      "image": false
+    }
+  ]
+}

@@ -1,0 +1,402 @@
+{
+  "links": [
+    {
+      "source": "Asgardian Royal Family", 
+      "target": "\"Thor: The Dark World\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Dark Elves", 
+      "target": "\"Thor: The Dark World\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Warriors Three and Lady Sif", 
+      "target": "\"Thor: The Dark World\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Jane Foster", 
+      "target": "\"Thor: The Dark World\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Erik Selvig", 
+      "target": "\"Thor: The Dark World\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Darcy Lewis", 
+      "target": "\"Thor: The Dark World\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Heimdall", 
+      "target": "\"Thor: The Dark World\"", 
+      "value": 200
+    }, 
+    {
+      "source": "The Collector", 
+      "target": "\"Thor: The Dark World\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Carina", 
+      "target": "\"Thor: The Dark World\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Thor", 
+      "target": "Asgardian Royal Family", 
+      "value": 200
+    }, 
+    {
+      "source": "Loki", 
+      "target": "Asgardian Royal Family", 
+      "value": 200
+    }, 
+    {
+      "source": "Odin", 
+      "target": "Asgardian Royal Family", 
+      "value": 200
+    }, 
+    {
+      "source": "Malekith", 
+      "target": "Dark Elves", 
+      "value": 200
+    }, 
+    {
+      "source": "Lady Sif", 
+      "target": "Warriors Three and Lady Sif", 
+      "value": 200
+    }, 
+    {
+      "source": "Fandral the Dashing", 
+      "target": "Warriors Three and Lady Sif", 
+      "value": 200
+    }, 
+    {
+      "source": "Volstagg the Valiant", 
+      "target": "Warriors Three and Lady Sif", 
+      "value": 200
+    }, 
+    {
+      "source": "Hogun the Grim", 
+      "target": "Warriors Three and Lady Sif", 
+      "value": 200
+    }, 
+    {
+      "source": "Frigga", 
+      "target": "Asgardian Royal Family", 
+      "value": 200
+    }, 
+    {
+      "source": "Kurse", 
+      "target": "Dark Elves", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Battle of Vanaheim\"", 
+      "target": "\"Thor: The Dark World\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Sacking of Asgard\"", 
+      "target": "\"Thor: The Dark World\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Second Battle of Svartalfheim\"", 
+      "target": "\"Thor: The Dark World\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Battle of Greenwich\"", 
+      "target": "\"Thor: The Dark World\"", 
+      "value": 200
+    }
+  ], 
+  "nodes": [
+    {
+      "about": [
+        "Thor Odinson", 
+        "Male", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Thor", 
+      "image": "../static/img/logo/characters/thor.jpg"
+    }, 
+    {
+      "about": [
+        "Jane Foster", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Jane Foster", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Loki Laufeyson", 
+        "Male", 
+        "Frost Giant"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Loki", 
+      "image": "../static/img/logo/characters/loki.jpg"
+    }, 
+    {
+      "about": [
+        "Odin Borson", 
+        "Male", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Odin", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Erik Selvig", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Erik Selvig", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Darcy Lewis", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Darcy Lewis", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Heimdall", 
+        "Male", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Heimdall", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Volstagg", 
+        "Male", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Volstagg the Valiant", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Hogun", 
+        "Male", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Hogun the Grim", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Fandral", 
+        "Male", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Fandral the Dashing", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Sif", 
+        "Female", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Lady Sif", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Frigga", 
+        "Female", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Frigga", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Malekith", 
+        "Male", 
+        "Dark Elf"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Malekith", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Algrim", 
+        "Male", 
+        "Dark Elf"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Kurse", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Taneleer Tivan", 
+        "Male", 
+        "The First"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "The Collector", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Carina", 
+        "Female", 
+        "Krylorian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Carina", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Battle of Vanaheim was an open confrontation betwen the Marauders and the combined forces of the Asgardians and the Vanir and the final battle of the Marauders' War.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Battle of Vanaheim\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Sacking of Asgard was a full-scale assault against Asgard by the Dark Elves during the Second Dark Elf Conflict.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Sacking of Asgard\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Second Battle of Svartalfheim was an event that took place during the Second Dark Elf Conflict. Part of a plan orchestrated by Thor to defeat Malekith, the battle took place on Svartalfheim.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Second Battle of Svartalfheim\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Battle of Greenwich was the final battle of the Second Dark Elf Conflict. Taking place on Earth at the Old Royal Naval College in the Greenwich borough of London, the engagement was fought by Thor and his human allies against Malekith and his cohorts.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Battle of Greenwich\"", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Carina", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Carina", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Carina", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Carina", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Carina", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Carina", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Carina", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Carina", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Carina", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Carina", 
+      "image": false
+    }, 
+    {
+      "about": "\"Exploring Thor's relationship with the Asgardian All-Father Odin, as well as Earthbound companion Jane Foster, Thor: The Dark World follows the God of Thunder to The Nine Realms beyond Asgard and Earth. And as his evil adoptive brother, Loki, returns for Asgardian justice, a new threat rises. Also rejoining Thor are his fellow Asgardians, Lady Sif, gatekeeper Heimdall, and Warriors Three, as they encounter mythical Norse creatures among the evildoers.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Thor: The Dark World\"", 
+      "image": false
+    }
+  ]
+}

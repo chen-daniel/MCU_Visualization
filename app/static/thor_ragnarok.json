@@ -1,0 +1,408 @@
+{
+  "links": [
+    {
+      "source": "Asgardian Royal Family", 
+      "target": "\"Thor: Ragnarok\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Masters of the Mystic Arts", 
+      "target": "\"Thor: Ragnarok\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Sakaraan Rebelliion", 
+      "target": "\"Thor: Ragnarok\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Warriors Three and Lady Sif", 
+      "target": "\"Thor: Ragnarok\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Hulk", 
+      "target": "\"Thor: Ragnarok\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Heimdall", 
+      "target": "\"Thor: Ragnarok\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Grandmaster", 
+      "target": "\"Thor: Ragnarok\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Valkyrie", 
+      "target": "\"Thor: Ragnarok\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Executioner", 
+      "target": "\"Thor: Ragnarok\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Surtur", 
+      "target": "\"Thor: Ragnarok\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Thor", 
+      "target": "Asgardian Royal Family", 
+      "value": 200
+    }, 
+    {
+      "source": "Loki", 
+      "target": "Asgardian Royal Family", 
+      "value": 200
+    }, 
+    {
+      "source": "Hela", 
+      "target": "Asgardian Royal Family", 
+      "value": 200
+    }, 
+    {
+      "source": "Volstagg the Valiant", 
+      "target": "Warriors Three and Lady Sif", 
+      "value": 200
+    }, 
+    {
+      "source": "Hogun the Grim", 
+      "target": "Warriors Three and Lady Sif", 
+      "value": 200
+    }, 
+    {
+      "source": "Fandral the Dashing", 
+      "target": "Warriors Three and Lady Sif", 
+      "value": 200
+    }, 
+    {
+      "source": "Doctor Strange", 
+      "target": "Masters of the Mystic Arts", 
+      "value": 200
+    }, 
+    {
+      "source": "Korg", 
+      "target": "Sakaraan Rebelliion", 
+      "value": 200
+    }, 
+    {
+      "source": "Miek", 
+      "target": "Sakaraan Rebelliion", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Escape from Muspelheim\"", 
+      "target": "\"Thor: Ragnarok\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Siege of Asgard\"", 
+      "target": "\"Thor: Ragnarok\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Duel in the Sakaaran Arena\"", 
+      "target": "\"Thor: Ragnarok\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Duel in the Asgardian Palace\"", 
+      "target": "\"Thor: Ragnarok\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Battle of the Rainbow Bridge\"", 
+      "target": "\"Thor: Ragnarok\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Destruction of Asgard\"", 
+      "target": "\"Thor: Ragnarok\"", 
+      "value": 200
+    }
+  ], 
+  "nodes": [
+    {
+      "about": [
+        "Bruce Banner", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Hulk", 
+      "image": "../static/img/logo/characters/hulk.jpg"
+    }, 
+    {
+      "about": [
+        "Thor Odinson", 
+        "Male", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Thor", 
+      "image": "../static/img/logo/characters/thor.jpg"
+    }, 
+    {
+      "about": [
+        "Loki Laufeyson", 
+        "Male", 
+        "Frost Giant"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Loki", 
+      "image": "../static/img/logo/characters/loki.jpg"
+    }, 
+    {
+      "about": [
+        "Heimdall", 
+        "Male", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Heimdall", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Volstagg", 
+        "Male", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Volstagg the Valiant", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Hogun", 
+        "Male", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Hogun the Grim", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Fandral", 
+        "Male", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Fandral the Dashing", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Stephen Vincent Strange", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Doctor Strange", 
+      "image": "../static/img/logo/characters/doctor-strange.jpg"
+    }, 
+    {
+      "about": [
+        "Grandmaster", 
+        "Male", 
+        "The First"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Grandmaster", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Hela Odinsdottir", 
+        "Female", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Hela", 
+      "image": "../static/img/logo/characters/hela.jpg"
+    }, 
+    {
+      "about": [
+        "Valkyrie", 
+        "Female", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Valkyrie", 
+      "image": "../static/img/logo/characters/valkyrie.jpg"
+    }, 
+    {
+      "about": [
+        "Skurge", 
+        "Male", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Executioner", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Korg", 
+        "Male", 
+        "Kronan"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Korg", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Surtur", 
+        "Male", 
+        "Fire Demon"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Surtur", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Miek", 
+        "Male", 
+        "Sakaaran"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Miek", 
+      "image": "../static/img/logo/characters/miek.jpg"
+    }, 
+    {
+      "about": "\"The Escape from Muspelheim was a successful escape attempt orchestrated by Thor after extracting information about Ragnarok from the fire demon Surtur.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Escape from Muspelheim\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Siege of Asgard was a successful attempt by the Asgardian goddess Hela to invade Asgard.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Siege of Asgard\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Duel in the Sakaaran Arena was a gladiatorial fight between Thor and Hulk.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Duel in the Sakaaran Arena\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Duel in the Asgardian Palace was an open confrontation between Thor and Hela.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Duel in the Asgardian Palace\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Battle of the Rainbow Bridge was an open conflict that pitted the combined forces of the Revengers, Loki, Heimdall, Skurge, and the Sakaaran Rebels against Hela and her army.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Battle of the Rainbow Bridge\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Destruction of Asgard was an attempt by the fire demon Surtur to initiate the doomsday prophecy known as Ragnarok.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Destruction of Asgard\"", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Miek", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Miek", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Miek", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Miek", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Miek", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Miek", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Miek", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Miek", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Miek", 
+      "image": false
+    }, 
+    {
+      "about": "\"Thor's world is about to explode in Marvel's Thor: Ragnarok. His devious brother, Loki, has taken over Asgard, the powerful Hela has emerged to steal the throne for herself and Thor is imprisoned on the other side of the universe. To escape captivity and save his home from imminent destruction, Thor must first win a deadly alien contest by defeating his former ally and fellow Avenger... The Incredible Hulk!\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Thor: Ragnarok\"", 
+      "image": false
+    }
+  ]
+}

@@ -2,62 +2,37 @@
   "links": [
     {
       "source": "GotG", 
-      "target": "\"Guardians of the Galaxy\"", 
-      "value": 200
-    }, 
-    {
-      "source": "Nova Corps", 
-      "target": "\"Guardians of the Galaxy\"", 
+      "target": "\"Guardians of the Galaxy Vol. 2\"", 
       "value": 200
     }, 
     {
       "source": "Ravagers", 
-      "target": "\"Guardians of the Galaxy\"", 
+      "target": "\"Guardians of the Galaxy Vol. 2\"", 
       "value": 200
     }, 
     {
-      "source": "The Other", 
-      "target": "\"Guardians of the Galaxy\"", 
-      "value": 200
-    }, 
-    {
-      "source": "Thanos", 
-      "target": "\"Guardians of the Galaxy\"", 
-      "value": 200
-    }, 
-    {
-      "source": "The Collector", 
-      "target": "\"Guardians of the Galaxy\"", 
-      "value": 200
-    }, 
-    {
-      "source": "Carina", 
-      "target": "\"Guardians of the Galaxy\"", 
-      "value": 200
-    }, 
-    {
-      "source": "Ronan the Accuser", 
-      "target": "\"Guardians of the Galaxy\"", 
-      "value": 200
-    }, 
-    {
-      "source": "Nebula", 
-      "target": "\"Guardians of the Galaxy\"", 
-      "value": 200
-    }, 
-    {
-      "source": "Korath the Pursuer", 
-      "target": "\"Guardians of the Galaxy\"", 
+      "source": "Sovereign", 
+      "target": "\"Guardians of the Galaxy Vol. 2\"", 
       "value": 200
     }, 
     {
       "source": "Meredith Quill", 
-      "target": "\"Guardians of the Galaxy\"", 
+      "target": "\"Guardians of the Galaxy Vol. 2\"", 
       "value": 200
     }, 
     {
       "source": "Howard the Duck", 
-      "target": "\"Guardians of the Galaxy\"", 
+      "target": "\"Guardians of the Galaxy Vol. 2\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Ego", 
+      "target": "\"Guardians of the Galaxy Vol. 2\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Grandmaster", 
+      "target": "\"Guardians of the Galaxy Vol. 2\"", 
       "value": 200
     }, 
     {
@@ -86,18 +61,23 @@
       "value": 200
     }, 
     {
+      "source": "Mantis", 
+      "target": "GotG", 
+      "value": 200
+    }, 
+    {
       "source": "Yondu Udonta", 
       "target": "Ravagers", 
       "value": 200
     }, 
     {
-      "source": "Rhomann Dey", 
-      "target": "Nova Corps", 
+      "source": "Yondu Udonta", 
+      "target": "GotG", 
       "value": 200
     }, 
     {
-      "source": "Nova Prime Irani Rael", 
-      "target": "Nova Corps", 
+      "source": "Nebula", 
+      "target": "GotG", 
       "value": 200
     }, 
     {
@@ -106,76 +86,42 @@
       "value": 200
     }, 
     {
-      "source": "Garthan Saal", 
-      "target": "Nova Corps", 
+      "source": "Ayesha", 
+      "target": "Sovereign", 
       "value": 200
     }, 
     {
-      "source": "\"Battle of Morag\"", 
-      "target": "\"Guardians of the Galaxy\"", 
+      "source": "Taserface", 
+      "target": "Ravagers", 
       "value": 200
     }, 
     {
-      "source": "\"Escape from the Kyln\"", 
-      "target": "\"Guardians of the Galaxy\"", 
+      "source": "\"Battle on Sovereign\"", 
+      "target": "\"Guardians of the Galaxy Vol. 2\"", 
       "value": 200
     }, 
     {
-      "source": "\"Skirmish on Knowhere\"", 
-      "target": "\"Guardians of the Galaxy\"", 
+      "source": "\"Skirmish with the Sovereign\"", 
+      "target": "\"Guardians of the Galaxy Vol. 2\"", 
       "value": 200
     }, 
     {
-      "source": "\"Battle of Xandar\"", 
-      "target": "\"Guardians of the Galaxy\"", 
+      "source": "\"Attack on Berhert\"", 
+      "target": "\"Guardians of the Galaxy Vol. 2\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Escape from the Eclector\"", 
+      "target": "\"Guardians of the Galaxy Vol. 2\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Battle on Ego's Planet\"", 
+      "target": "\"Guardians of the Galaxy Vol. 2\"", 
       "value": 200
     }
   ], 
   "nodes": [
-    {
-      "about": [
-        "The Other", 
-        "Male", 
-        "Human"
-      ], 
-      "events": "to connections", 
-      "group": 1, 
-      "id": "The Other", 
-      "image": false
-    }, 
-    {
-      "about": [
-        "Thanos", 
-        "Male", 
-        "Titan"
-      ], 
-      "events": "to connections", 
-      "group": 1, 
-      "id": "Thanos", 
-      "image": "../static/img/logo/characters/thanos.jpg"
-    }, 
-    {
-      "about": [
-        "Taneleer Tivan", 
-        "Male", 
-        "The First"
-      ], 
-      "events": "to connections", 
-      "group": 1, 
-      "id": "The Collector", 
-      "image": false
-    }, 
-    {
-      "about": [
-        "Carina", 
-        "Female", 
-        "Krylorian"
-      ], 
-      "events": "to connections", 
-      "group": 1, 
-      "id": "Carina", 
-      "image": false
-    }, 
     {
       "about": [
         "Peter Jason Quill", 
@@ -233,17 +179,6 @@
     }, 
     {
       "about": [
-        "Ronan", 
-        "Male", 
-        "Kree"
-      ], 
-      "events": "to connections", 
-      "group": 1, 
-      "id": "Ronan the Accuser", 
-      "image": false
-    }, 
-    {
-      "about": [
         "Yondu Udonta", 
         "Male", 
         "Centaurian"
@@ -263,39 +198,6 @@
       "group": 1, 
       "id": "Nebula", 
       "image": "../static/img/logo/characters/nebula.png"
-    }, 
-    {
-      "about": [
-        "Korath", 
-        "Male", 
-        "Kree"
-      ], 
-      "events": "to connections", 
-      "group": 1, 
-      "id": "Korath the Pursuer", 
-      "image": false
-    }, 
-    {
-      "about": [
-        "Rhomann Dey", 
-        "Male", 
-        "Xandarian"
-      ], 
-      "events": "to connections", 
-      "group": 1, 
-      "id": "Rhomann Dey", 
-      "image": false
-    }, 
-    {
-      "about": [
-        "Irani Rael", 
-        "Female", 
-        "Xandarian"
-      ], 
-      "events": "to connections", 
-      "group": 1, 
-      "id": "Nova Prime Irani Rael", 
-      "image": false
     }, 
     {
       "about": [
@@ -321,17 +223,6 @@
     }, 
     {
       "about": [
-        "Garthan Saal", 
-        "Male", 
-        "Xandarian"
-      ], 
-      "events": "to connections", 
-      "group": 1, 
-      "id": "Garthan Saal", 
-      "image": false
-    }, 
-    {
-      "about": [
         "Howard", 
         "Male", 
         "Duckworldian"
@@ -342,108 +233,184 @@
       "image": false
     }, 
     {
-      "about": "\"The Battle of Morag was the first battle in the Quest for the Orb.\"", 
+      "about": [
+        "Mantis", 
+        "Female", 
+        "Unknown"
+      ], 
       "events": "to connections", 
       "group": 1, 
-      "id": "\"Battle of Morag\"", 
+      "id": "Mantis", 
       "image": false
     }, 
     {
-      "about": "\"The Escape from the Kyln was a prison break organized by the combined forces of Star-Lord, Rocket Raccoon, Groot, Gamora, and Drax.\"", 
+      "about": [
+        "Ego", 
+        "Male", 
+        "Celestial"
+      ], 
       "events": "to connections", 
       "group": 1, 
-      "id": "\"Escape from the Kyln\"", 
+      "id": "Ego", 
       "image": false
     }, 
     {
-      "about": "\"The Skirmish in Knowhere was an event caused by Drax the Destroyer during the Quest for the Orb. Taking place on Knowhere, the event was triggered when Drax, having traveled to Knowhere with the Guardians of the Galaxy in order to give the Orb to Taneleer Tivan, sent out a message to Ronan the Accuser in order to draw out and kill the Kree.\"", 
+      "about": [
+        "Ayesha", 
+        "Female", 
+        "Sovereign"
+      ], 
       "events": "to connections", 
       "group": 1, 
-      "id": "\"Skirmish on Knowhere\"", 
+      "id": "Ayesha", 
       "image": false
     }, 
     {
-      "about": "\"The Battle of Xandar was an open confrontation that pitted the combined forces of the Guardians of the Galaxy, Yondu Udonta's Ravager clan and the Nova Corps against Ronan the Accuser.\"", 
+      "about": [
+        "Taserface", 
+        "Male", 
+        "Stark"
+      ], 
       "events": "to connections", 
       "group": 1, 
-      "id": "\"Battle of Xandar\"", 
+      "id": "Taserface", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Grandmaster", 
+        "Male", 
+        "The First"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Grandmaster", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Battle on Sovereign was an open confrontation between the Guardians of the Galaxy, who had been hired by the Sovereign's High Priestess Ayesha, and the Abilisk.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Battle on Sovereign\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Skirmish with the Sovereign was an open confrontation between the Guardians of the Galaxy and the Sovereign fleet.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Skirmish with the Sovereign\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Attack on Berhert was an attempt by Yondu Udonta's faction of Ravagers, who were under orders from Ayesha, to find and kill the Guardians of the Galaxy.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Attack on Berhert\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Escape from the Eclector was an escape attempt and attack orchestrated by Yondu Udonta in order to exact retribution against the Ravagers who mutinied against him and took Rocket Raccoon and Groot prisoner.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Escape from the Eclector\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Battle on Ego's Planet was a three-sided conflict between the Guardians of the Galaxy, the Sovereign, and Ego.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Battle on Ego's Planet\"", 
       "image": false
     }, 
     {
       "about": "testText", 
       "events": "to connections", 
       "group": 1, 
-      "id": "Howard the Duck", 
+      "id": "Grandmaster", 
       "image": false
     }, 
     {
       "about": "testText", 
       "events": "to connections", 
       "group": 1, 
-      "id": "Howard the Duck", 
+      "id": "Grandmaster", 
       "image": false
     }, 
     {
       "about": "testText", 
       "events": "to connections", 
       "group": 1, 
-      "id": "Howard the Duck", 
+      "id": "Grandmaster", 
       "image": false
     }, 
     {
       "about": "testText", 
       "events": "to connections", 
       "group": 1, 
-      "id": "Howard the Duck", 
+      "id": "Grandmaster", 
       "image": false
     }, 
     {
       "about": "testText", 
       "events": "to connections", 
       "group": 1, 
-      "id": "Howard the Duck", 
+      "id": "Grandmaster", 
       "image": false
     }, 
     {
       "about": "testText", 
       "events": "to connections", 
       "group": 1, 
-      "id": "Howard the Duck", 
+      "id": "Grandmaster", 
       "image": false
     }, 
     {
       "about": "testText", 
       "events": "to connections", 
       "group": 1, 
-      "id": "Howard the Duck", 
+      "id": "Grandmaster", 
       "image": false
     }, 
     {
       "about": "testText", 
       "events": "to connections", 
       "group": 1, 
-      "id": "Howard the Duck", 
+      "id": "Grandmaster", 
       "image": false
     }, 
     {
       "about": "testText", 
       "events": "to connections", 
       "group": 1, 
-      "id": "Howard the Duck", 
+      "id": "Grandmaster", 
       "image": false
     }, 
     {
       "about": "testText", 
       "events": "to connections", 
       "group": 1, 
-      "id": "Howard the Duck", 
+      "id": "Grandmaster", 
       "image": false
     }, 
     {
-      "about": "\"Marvel?s Guardians of the Galaxy expands the Marvel Cinematic Universe into the cosmos, where brash adventurer Peter Quill finds himself the object of an unrelenting bounty hunt after stealing a mysterious orb coveted by Ronan, a powerful villain with ambitions that threaten the entire universe. To evade the ever-persistent Ronan, Quill is forced into an uneasy truce with a quartet of disparate misfits ? Rocket, a gun-toting raccoon; Groot, a humanoid tree; the deadly and enigmatic Gamora; and the rage/revenge-driven Drax the Destroyer. But when Peter discovers the true power of the orb and the menace it poses to the cosmos, he must do his best to rally his ragtag rivals for a last, desperate stand ? with the galaxy?s fate in the balance.\"", 
+      "about": "testText", 
       "events": "to connections", 
       "group": 1, 
-      "id": "\"Guardians of the Galaxy\"", 
+      "id": "Grandmaster", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Grandmaster", 
+      "image": false
+    }, 
+    {
+      "about": "\"Set to the backdrop of 'Awesome Mixtape #2', Marvel's Guardians of the Galaxy Vol. 2 continues the team's adventures as they traverse the outer reaches of the cosmos. The Guardians must fight to keep their newfound family together as they unravel the mysteries of Peter Quill's true parentage. Old foes become new allies and fan-favorite characters from the classic comics will come to our heroes' aid as the Marvel Cinematic Universe continues to expand.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Guardians of the Galaxy Vol. 2\"", 
       "image": false
     }
   ]

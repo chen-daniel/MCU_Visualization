@@ -1,0 +1,398 @@
+{
+  "links": [
+    {
+      "source": "HYDRA", 
+      "target": "\"Captain America: The Winter Soldier\"", 
+      "value": 200
+    }, 
+    {
+      "source": "S.H.I.E.L.D", 
+      "target": "\"Captain America: The Winter Soldier\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Falcon", 
+      "target": "\"Captain America: The Winter Soldier\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Captain America", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Nick Fury", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Black Widow", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Alexander Pierce", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Alexander Pierce", 
+      "target": "HYDRA", 
+      "value": 200
+    }, 
+    {
+      "source": "Winter Soldier", 
+      "target": "HYDRA", 
+      "value": 200
+    }, 
+    {
+      "source": "Crossbones", 
+      "target": "HYDRA", 
+      "value": 200
+    }, 
+    {
+      "source": "Agent Hill", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Crossbones", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Agent 13", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Peggy Carter", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Dr. Arnim Zola", 
+      "target": "HYDRA", 
+      "value": 200
+    }, 
+    {
+      "source": "Scarlet Witch", 
+      "target": "HYDRA", 
+      "value": 200
+    }, 
+    {
+      "source": "Quicksilver", 
+      "target": "HYDRA", 
+      "value": 200
+    }, 
+    {
+      "source": "Baron von Strucker", 
+      "target": "HYDRA", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Hijacking and Retaking of the Lemurian Star\"", 
+      "target": "\"Captain America: The Winter Soldier\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Battle of Washington, D.C.\"", 
+      "target": "\"Captain America: The Winter Soldier\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Battle at the Triskelion\"", 
+      "target": "\"Captain America: The Winter Soldier\"", 
+      "value": 200
+    }
+  ], 
+  "nodes": [
+    {
+      "about": [
+        "Nicholas Joseph Fury", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Nick Fury", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Natasha Romanoff", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Black Widow", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Steve Grant Rogers", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Captain America", 
+      "image": "../static/img/logo/characters/captain-america.jpg"
+    }, 
+    {
+      "about": [
+        "Margaret Elizabeth Carter", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Peggy Carter", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Bucky Barnes", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Winter Soldier", 
+      "image": "../static/img/logo/characters/winter-soldier.jpg"
+    }, 
+    {
+      "about": [
+        "Arnim Zola", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Dr. Arnim Zola", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Maria Hill", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent Hill", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Alexander Goodwin Pierce", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Alexander Pierce", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Samuel Thomas Wilson", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Falcon", 
+      "image": "../static/img/logo/characters/falcon.jpg"
+    }, 
+    {
+      "about": [
+        "Brock Rumlow", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Crossbones", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Sharon Carter", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent 13", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Wanda Maximoff", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Scarlet Witch", 
+      "image": "../static/img/logo/characters/scarlet-witch.jpg"
+    }, 
+    {
+      "about": [
+        "Pietro Maximoff", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Quicksilver", 
+      "image": "../static/img/logo/characters/quicksilver.jpg"
+    }, 
+    {
+      "about": [
+        "Wolfgang von Strucker", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Hijacking and Retaking of the Lemurian Star was an event that marked the beginning of the HYDRA Uprising.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Hijacking and Retaking of the Lemurian Star\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Battle of Washington, D.C. was a clash between Captain America and the brainwashed Winter Soldier during the HYDRA Uprising. After Arnim Zola revealed that HYDRA was active for the past seven decades, Captain America and Black Widow recruited Sam Wilson to fight alongside them as the Falcon.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Battle of Washington, D.C.\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Battle at the Triskelion, also referred as the Fall of S.H.I.E.L.D., was the first open battle between HYDRA and S.H.I.E.L.D., and a major event during the HYDRA Uprising. After HYDRA, thought dormant since the end of World War II in Europe, was revealed to be active inside of S.H.I.E.L.D., Nick Fury faked his death following an assassination attempt and recruited Captain America, Black Widow and Falcon to fight against the resurgent terrorist group. The Winter Soldier fought alongside his HYDRA captors while he was brainwashed.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Battle at the Triskelion\"", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "\"Two years after the Battle of New York, Captain America lives quietly in Washington, D.C., still struggling to adapt to the modern society. In hopes of fitting in, Captain America becomes an agent of S.H.I.E.L.D., as well as a close friend of Black Widow and a new hero, Falcon. However, when a shadowy enemy from within the chief offices of S.H.I.E.L.D. (with whom Nick Fury initially agrees) starts creating countless weapons of mass destruction to seemingly protect the world - but really wants to destroy it and rebuild it, Captain America and his colleagues must team up to stop him. But things get more complicated when Steve's thought deceased best friend Bucky is revealed to be alive and a villain like no other - the Winter Soldier.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Captain America: The Winter Soldier\"", 
+      "image": false
+    }
+  ]
+}

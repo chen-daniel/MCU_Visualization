@@ -1,0 +1,413 @@
+{
+  "links": [
+    {
+      "source": "Howling Commandos", 
+      "target": "\"Captain America: The First Avenger\"", 
+      "value": 200
+    }, 
+    {
+      "source": "HYDRA", 
+      "target": "\"Captain America: The First Avenger\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Military", 
+      "target": "\"Captain America: The First Avenger\"", 
+      "value": 200
+    }, 
+    {
+      "source": "S.H.I.E.L.D", 
+      "target": "\"Captain America: The First Avenger\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Stark Industries", 
+      "target": "\"Captain America: The First Avenger\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Dr. Abraham Erskine", 
+      "target": "\"Captain America: The First Avenger\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Captain America", 
+      "target": "Howling Commandos", 
+      "value": 200
+    }, 
+    {
+      "source": "Peggy Carter", 
+      "target": "Military", 
+      "value": 200
+    }, 
+    {
+      "source": "Winter Soldier", 
+      "target": "Howling Commandos", 
+      "value": 200
+    }, 
+    {
+      "source": "Colonel Chester Phillips", 
+      "target": "Military", 
+      "value": 200
+    }, 
+    {
+      "source": "Red Skull", 
+      "target": "HYDRA", 
+      "value": 200
+    }, 
+    {
+      "source": "Dr. Arnim Zola", 
+      "target": "HYDRA", 
+      "value": 200
+    }, 
+    {
+      "source": "Dum Dum Dugan", 
+      "target": "Howling Commandos", 
+      "value": 200
+    }, 
+    {
+      "source": "Private Gabe Jones", 
+      "target": "Howling Commandos", 
+      "value": 200
+    }, 
+    {
+      "source": "Private Jim Morita", 
+      "target": "Howling Commandos", 
+      "value": 200
+    }, 
+    {
+      "source": "Limey", 
+      "target": "Howling Commandos", 
+      "value": 200
+    }, 
+    {
+      "source": "Jacques Dernier", 
+      "target": "Howling Commandos", 
+      "value": 200
+    }, 
+    {
+      "source": "Howard Stark", 
+      "target": "Stark Industries", 
+      "value": 200
+    }, 
+    {
+      "source": "Nick Fury", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Project Rebirth\"", 
+      "target": "\"Captain America: The First Avenger\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Liberation of Allied Prisoners of War\"", 
+      "target": "\"Captain America: The First Avenger\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Attack on HYDRA Headquarters\"", 
+      "target": "\"Captain America: The First Avenger\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Battle in the Valkyrie\"", 
+      "target": "\"Captain America: The First Avenger\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Reawakening\"", 
+      "target": "\"Captain America: The First Avenger\"", 
+      "value": 200
+    }
+  ], 
+  "nodes": [
+    {
+      "about": [
+        "Nicholas Joseph Fury", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Nick Fury", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Howard Anthony Walter Stark", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Howard Stark", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Steve Grant Rogers", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Captain America", 
+      "image": "../static/img/logo/characters/captain-america.jpg"
+    }, 
+    {
+      "about": [
+        "Margaret Elizabeth Carter", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Peggy Carter", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Bucky Barnes", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Winter Soldier", 
+      "image": "../static/img/logo/characters/winter-soldier.jpg"
+    }, 
+    {
+      "about": [
+        "Chester Phillips", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Colonel Chester Phillips", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Johann Schmidt", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Red Skull", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Abraham Erskine", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Dr. Abraham Erskine", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Arnim Zola", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Dr. Arnim Zola", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Timothy Aloysius Cadwallader Dugan", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Dum Dum Dugan", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Gabriel Jones", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Private Gabe Jones", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "James Morita", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Private Jim Morita", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "James Montgomery Falsworth", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Limey", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Jacques Dernier", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Jacques Dernier", 
+      "image": false
+    }, 
+    {
+      "about": "\"Project: Rebirth, also called Operation: Rebirth, Weapons Plus, the Bio-Tech Force Enhancement Program, and the Erskine Program, was a highly-classified United States government project, the goal of which was the creation of Super-Soldiers to be deployed in the war against the Axis Powers. Administered by the United States Army's Infantry Weapons Development Program, their first and only success was a man named Steve Rogers, who would go on to become the special operator and superhero known as Captain America.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Project Rebirth\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Liberation of Allied Prisoners of War was the first war action of Steve Rogers, also known as Captain America, who infiltrated the weapons facility run by HYDRA behind the German lines. He successfully liberated four hundred soldiers, becoming a war hero as a result. He also confronted his greatest enemy, Johann Schmidt, the infamous Red Skull, for the first time. The battle took place during World War II.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Liberation of Allied Prisoners of War\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Attack on HYDRA Headquarters was a battle between HYDRA and the Western Allies at HYDRA Headquarters.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Attack on HYDRA Headquarters\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Battle in the Valkyrie was the final battle that Captain America participated in during World War II, where he battled and defeated Red Skull.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Battle in the Valkyrie\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"Captain America is reintroduced to the world 70 years later.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Reawakening\"", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Jacques Dernier", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Jacques Dernier", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Jacques Dernier", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Jacques Dernier", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Jacques Dernier", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Jacques Dernier", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Jacques Dernier", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Jacques Dernier", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Jacques Dernier", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Jacques Dernier", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Jacques Dernier", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Jacques Dernier", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Jacques Dernier", 
+      "image": false
+    }, 
+    {
+      "about": "\"In Marvel's Captain America: The First Avenger, Steve Rogers wants to do his part and join America's armed forces, but the military rejects him because of his small stature. Finally, Steve gets his chance when he is accepted into an experimental program that turns him into a supersoldier called Captain America. Joining forces with Bucky Barnes and Peggy Carter, Captain America leads the fight against the Nazi organization, HYDRA.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Captain America: The First Avenger\"", 
+      "image": false
+    }
+  ]
+}

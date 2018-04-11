@@ -1,0 +1,404 @@
+{
+  "links": [
+    {
+      "source": "Asgardian Royal Family", 
+      "target": "\"Thor\"", 
+      "value": 200
+    }, 
+    {
+      "source": "S.H.I.E.L.D", 
+      "target": "\"Thor\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Warriors Three and Lady Sif", 
+      "target": "\"Thor\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Jane Foster", 
+      "target": "\"Thor\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Erik Selvig", 
+      "target": "\"Thor\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Darcy Lewis", 
+      "target": "\"Thor\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Heimdall", 
+      "target": "\"Thor\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Thor", 
+      "target": "Asgardian Royal Family", 
+      "value": 200
+    }, 
+    {
+      "source": "Loki", 
+      "target": "Asgardian Royal Family", 
+      "value": 200
+    }, 
+    {
+      "source": "Odin", 
+      "target": "Asgardian Royal Family", 
+      "value": 200
+    }, 
+    {
+      "source": "Frigga", 
+      "target": "Asgardian Royal Family", 
+      "value": 200
+    }, 
+    {
+      "source": "Volstagg the Valiant", 
+      "target": "Warriors Three and Lady Sif", 
+      "value": 200
+    }, 
+    {
+      "source": "Hogun the Grim", 
+      "target": "Warriors Three and Lady Sif", 
+      "value": 200
+    }, 
+    {
+      "source": "Fandral the Dashing", 
+      "target": "Warriors Three and Lady Sif", 
+      "value": 200
+    }, 
+    {
+      "source": "Hawkeye", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Agent Coulson", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Agent Sitwell", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Nick Fury", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Lady Sif", 
+      "target": "Warriors Three and Lady Sif", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Attack on Jotunheim\"", 
+      "target": "\"Thor\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Battle of Puente Antiguo\"", 
+      "target": "\"Thor\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Destruction of the Bifrost Bridge\"", 
+      "target": "\"Thor\"", 
+      "value": 200
+    }
+  ], 
+  "nodes": [
+    {
+      "about": [
+        "Nicholas Joseph Fury", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Nick Fury", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Phillip J Coulson", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent Coulson", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Thor Odinson", 
+        "Male", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Thor", 
+      "image": "../static/img/logo/characters/thor.jpg"
+    }, 
+    {
+      "about": [
+        "Jane Foster", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Jane Foster", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Loki Laufeyson", 
+        "Male", 
+        "Frost Giant"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Loki", 
+      "image": "../static/img/logo/characters/loki.jpg"
+    }, 
+    {
+      "about": [
+        "Clinton Francis Barton", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Hawkeye", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Odin Borson", 
+        "Male", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Odin", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Erik Selvig", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Erik Selvig", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Darcy Lewis", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Darcy Lewis", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Heimdall", 
+        "Male", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Heimdall", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Volstagg", 
+        "Male", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Volstagg the Valiant", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Hogun", 
+        "Male", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Hogun the Grim", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Fandral", 
+        "Male", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Fandral the Dashing", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Sif", 
+        "Female", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Lady Sif", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Frigga", 
+        "Female", 
+        "Asgardian"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Frigga", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Jasper Sitwell", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent Sitwell", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Attack on Jotunheim was a failed attempt undertaken by Thor to attack Laufey after Frost Giants broke into Odin's Vault and tried to steal the Casket of Ancient Winters.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Attack on Jotunheim\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Battle of Puente Antiguo was an open confrontation that pitted S.H.I.E.L.D., Thor, Sif, and the Warriors Three against the Destroyer.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Battle of Puente Antiguo\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"Upon Thor's return to Asgard, he must put a stop to Loki's madness and save Jotunheim from destruction.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Destruction of the Bifrost Bridge\"", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent Sitwell", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent Sitwell", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent Sitwell", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent Sitwell", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent Sitwell", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent Sitwell", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent Sitwell", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent Sitwell", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent Sitwell", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent Sitwell", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent Sitwell", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent Sitwell", 
+      "image": false
+    }, 
+    {
+      "about": "\"As the son of Odin, king of the Norse gods, Thor will soon inherit the throne of Asgard from his aging father. However, on the day that he is to be crowned, Thor reacts with brutality when the gods' enemies, the Frost Giants, enter the palace in violation of their treaty. As punishment, Odin banishes Thor to Earth. While Loki, Thor's brother, plots mischief in Asgard, Thor, now stripped of his powers, faces his greatest threat.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Thor\"", 
+      "image": false
+    }
+  ]
+}

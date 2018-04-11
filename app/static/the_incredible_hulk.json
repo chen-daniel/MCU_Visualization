@@ -1,0 +1,168 @@
+{
+  "links": [
+    {
+      "source": "Military", 
+      "target": "\"The Incredible Hulk\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Hulk", 
+      "target": "\"The Incredible Hulk\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Betty Ross", 
+      "target": "\"The Incredible Hulk\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Thaddeus Ross", 
+      "target": "Military", 
+      "value": 200
+    }, 
+    {
+      "source": "Abomination", 
+      "target": "Military", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Becoming Hulk\"", 
+      "target": "\"The Incredible Hulk\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Chase of Bruce Banner\"", 
+      "target": "\"The Incredible Hulk\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Return to America\"", 
+      "target": "\"The Incredible Hulk\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Battle at Culver University\"", 
+      "target": "\"The Incredible Hulk\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Seeking a Cure\"", 
+      "target": "\"The Incredible Hulk\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Duel of Harlem\"", 
+      "target": "\"The Incredible Hulk\"", 
+      "value": 200
+    }
+  ], 
+  "nodes": [
+    {
+      "about": [
+        "Bruce Banner", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Hulk", 
+      "image": "../static/img/logo/characters/hulk.jpg"
+    }, 
+    {
+      "about": [
+        "Elizabeth Ross", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Betty Ross", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Emil Blonsky", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Abomination", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Thaddeus E. Ross", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Thaddeus Ross", 
+      "image": false
+    }, 
+    {
+      "about": "\"Bruce Banner decides to use a prototype Super Soldier Serum on himself, resulting in his transformation into the Hulk, wreaking havoc on those around him.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Becoming Hulk\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Chase of Bruce Banner, also known as the Bruce Banner Manhunt, was an organized search issued by the United States Army for scientist Bruce Banner, who transformed into the Hulk following the Bio-Tech Force Enhancement Project. The search was spearheaded by Thaddeus Ross, who was determined to dissect the Hulk and weaponize the transformation process.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Chase of Bruce Banner\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"Banner returns the America in order to get his research and reunites with Betty Ross.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Return to America\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"After retrieving his research, Banner is forced to swallow it as soldiers surround him, eventually pressuring him into transforming into the Hulk.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Battle at Culver University\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"Bruce and Betty meet up with the mysterious Dr. Blue, who had formulated an antidote.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Seeking a Cure\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Hulk and The Abomination face off in the streets of Harlem.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Duel of Harlem\"", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Thaddeus Ross", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Thaddeus Ross", 
+      "image": false
+    }, 
+    {
+      "about": "\"Scientist Bruce Banner desperately seeks a cure for the gamma radiation that contaminated his cells and turned him into The Hulk. Cut off from his true love Betty Ross and forced to hide from his nemesis, Gen. Thunderbolt Ross, Banner soon comes face-to-face with a new threat: a supremely powerful enemy known as The Abomination.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"The Incredible Hulk\"", 
+      "image": false
+    }
+  ]
+}

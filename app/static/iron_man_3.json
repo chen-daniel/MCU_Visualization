@@ -1,0 +1,253 @@
+{
+  "links": [
+    {
+      "source": "A.I.M", 
+      "target": "\"Iron Man 3\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Military", 
+      "target": "\"Iron Man 3\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Stark Industries", 
+      "target": "\"Iron Man 3\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Mandarin", 
+      "target": "\"Iron Man 3\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Iron Man", 
+      "target": "Stark Industries", 
+      "value": 200
+    }, 
+    {
+      "source": "Pepper Potts", 
+      "target": "Stark Industries", 
+      "value": 200
+    }, 
+    {
+      "source": "War Machine", 
+      "target": "Military", 
+      "value": 200
+    }, 
+    {
+      "source": "Mandarin", 
+      "target": "A.I.M", 
+      "value": 200
+    }, 
+    {
+      "source": "Maya Hansen", 
+      "target": "A.I.M", 
+      "value": 200
+    }, 
+    {
+      "source": "Happy Hogan", 
+      "target": "Stark Industries", 
+      "value": 200
+    }, 
+    {
+      "source": "Eric Savin", 
+      "target": "A.I.M", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Destruction of Tony Stark's Mansion\"", 
+      "target": "\"Iron Man 3\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Battle of Rose Hill\"", 
+      "target": "\"Iron Man 3\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Kidnapping of President Ellis\"", 
+      "target": "\"Iron Man 3\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Battle on the Norco\"", 
+      "target": "\"Iron Man 3\"", 
+      "value": 200
+    }
+  ], 
+  "nodes": [
+    {
+      "about": [
+        "Anthony Edward Stark", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Iron Man", 
+      "image": "../static/img/logo/characters/iron-man.jpg"
+    }, 
+    {
+      "about": [
+        "Virginia Potts", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Pepper Potts", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "James Rhodes", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "War Machine", 
+      "image": "../static/img/logo/characters/war-machine.jpg"
+    }, 
+    {
+      "about": [
+        "Harold Joseph Hogan", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Happy Hogan", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Aldrich Killian", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Mandarin", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Maya Hansen", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Maya Hansen", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Trevor Slattery", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Mandarin", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Eric Savin", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Eric Savin", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Destruction of Tony Stark's Mansion was a semi-successful assassination attempt committed by Eric Savin on Aldrich Killian's orders. While Stark's home was destroyed and the world became convinced the billionaire was dead, Stark survived the attack and set out to uncover the true identity of the Mandarin.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Destruction of Tony Stark's Mansion\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Battle of Rose Hill was an attempt by Eric Savin and Ellen Brandt to kill Tony Stark.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Battle of Rose Hill\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Kidnapping of President Ellis was an attack on Air Force One and an attempt by Eric Savin, who was acting on Aldrich Killian's orders, to abduct President Matthew Ellis. \"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Kidnapping of President Ellis\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Battle on the Norco was a confrontation that pitted Iron Man and War Machine, who infiltrated the impounded tanker Roxxon Norco in an attempt to rescue Pepper Potts and Matthew Ellis, against Aldrich Killian.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Battle on the Norco\"", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Eric Savin", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Eric Savin", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Eric Savin", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Eric Savin", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Eric Savin", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Eric Savin", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Eric Savin", 
+      "image": false
+    }, 
+    {
+      "about": "\"Tony Stark finds himself facing his most powerful enemy yet when he embarks on a harrowing quest to find those responsible for destroying his private world. Along the way, he discovers the answer to the question that has secretly haunted him: \"Does the man make the suit or does the suit make the man?\"\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Iron Man 3\"", 
+      "image": false
+    }
+  ]
+}
