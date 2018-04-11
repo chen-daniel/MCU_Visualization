@@ -106,8 +106,9 @@ def charInMovie(movie_ID):
 	cur.execute(query)
 	rv = cur.fetchall()
 
-	result_json = jsonify({'nodes': jsonifyChars(rv)
+	result_json = json.dumps({'nodes': jsonifyChars(rv)
 		,"links" : linkChar(rv)})
+	
 	return result_json
 
 def linkChar(char):

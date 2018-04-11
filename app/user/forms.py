@@ -20,7 +20,7 @@ class RegistrationForm(Form):
     ])
     confirm = PasswordField('Confirm Password')
     accept_tos = BooleanField(
-        'I acknowledge that I have read and fully understand the terms and conditions of the site',
+        'I love database',
         [validators.Required()])
 
     def validate(self):
@@ -36,6 +36,30 @@ class RegistrationForm(Form):
     		self.email.errors.append("Email already used")
     		return False
     	return True
+
+class ChangeUsernameForm(Form):
+    new_username = StringField('new username')
+    def validate(self):
+        initial_validation = super(ChangeUsernameForm, self).validate()
+        if not initial_validation:
+            return False
+        user_name = user_info.query.filter_by(username=self.new_username.data).first()
+        if user_name:
+            self.username.errors.append("Username is already taken")
+            return False
+
+
+class ChangePasswordF(Form):
+    old_password = PasswordField('Old Password', validators=[DataRequired()])
+    new_password = PasswordField(
+        'New Password',
+        validators=[
+            DataRequired(),
+            EqualTo('new_password2', 'Passwords must match')
+        ])
+    confirm_password = PasswordField(
+        'Confirm New Password')
+    submit = SubmitField('Update password')
 
 class ResetForm(Form):
     email = StringField(

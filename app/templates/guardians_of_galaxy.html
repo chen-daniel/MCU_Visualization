@@ -65,7 +65,7 @@ var simulation = d3.forceSimulation()
   var initSize = 60;
   var clickOn;
 
-  // var jsondataset = {{jsondata}}
+  // var jsondataset = {{jsondata|tojson|safe}}
 d3.json("{{ url_for('static', filename='test.json')}}", function(error, graph) {
   if (error) throw error;
 

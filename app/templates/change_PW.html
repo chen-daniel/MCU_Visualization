@@ -1,4 +1,5 @@
 {% from "_formhelpers.html" import render_field %}
+{% extends "base.html" %}
 
 {% block content %}
 <head>
@@ -24,7 +25,7 @@
     <header class="topnav">
       
       <div>
-          <a href="{{ url_for('login') }}" style="font-size: 25px">MCU VISUALIZATION</a>
+          <a href="{{ url_for('index') }}" style="font-size: 25px">MCU VISUALIZATION</a>
       </div>  
     
   </header>
@@ -41,19 +42,15 @@
   </body>
 <div id="main">  
 <center>
-  <h1>Register</h1><br> 
+  <h1>Change Password</h1><br> 
   <form method=post>
     <dl>
-      <p>{{ render_field(form.username) }}</p>
-      <p>{{ render_field(form.email) }}</p>
-      <p>{{ render_field(form.password) }}</p>
-      <p>{{ render_field(form.confirm) }}</p>
-      <p>{{ render_field(form.accept_tos) }}</p>
-
+      <p>{{ render_field(form.old_password) }}</p>
+      <p>{{ render_field(form.new_password) }}</p>
+      <p>{{ render_field(form.confirm_password) }}</p>
     </dl>
-    <p><input type=submit value=Register></p>
-    <div class="cointainer login">
-      <a href="{{ url_for('login') }}">Login</a>
+    <p>
+      <button class="btn btn-success" type="update">Updated your password!</button>
   </form>
 </center>
 </body>

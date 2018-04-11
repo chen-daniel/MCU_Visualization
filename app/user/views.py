@@ -7,7 +7,7 @@ from app import app, db
 from app.token import generate_confirmation_token, confirm_token
 from app.email import send_email
 
-from app.user.forms import LoginForm, RegistrationForm, ResetForm, ChangePasswordForm
+from app.user.forms import LoginForm, RegistrationForm, ResetForm, ChangePasswordForm,ChangePasswordF, ChangeUsernameForm
 from app.user.models import User
 from app.dbobjects import user_info
 
@@ -53,6 +53,8 @@ def login():
             if sha256_crypt.verify(str(form.password.data), user.password) and user.confirmed:
                 login_user(user)  # login user to current user`
 
+                print(current_user)
+
                 flash('Welcome {}!'.format(
                     form.username.data), 'info')
 
@@ -68,6 +70,37 @@ def logout():
     logout_user()
     flash('User logged out.', 'success')
     return redirect(url_for('login'))
+
+@app.route('/change-password', methods=['GET', 'POST'])
+@login_required
+def change_pw():
+    """Change an existing user's password."""
+    form = ChangePasswordF()
+    if form.validate():
+        user = User.query.filter_by(email=current_user.email).first()
+        if sha256_crypt.verify(str(form.new_password.data), user.password):
+            user.password = form.new_password.data
+            db.session.commit()
+            flash('Your password has been updated successfully.', 'success')
+            return redirect(url_for('index'))
+        else:
+            flash('Original password is invalid.', 'danger')
+    return render_template('change_PW.html', form=form)
+
+@app.route('/change-username', methods=['GET', 'POST'])
+@login_required
+def change_username():
+    """Change an existing user's password."""
+    print(current_user)
+    print("is on")
+    form = ChangeUsernameForm()
+    if form.validate():
+        user = User.query.filter_by(user_ID=current_user.user_ID).first()
+        user.username = form.new_username.data
+        db.session.commit()
+        flash('Your username has been updated successfully.', 'success')
+        redirect(url_for('index'))
+    return render_template('change_username.html', form=form)
 
 
 @app.route('/confirm/<token>')
@@ -147,3 +180,9 @@ def change_password(token):
         flash('unable to reset the password, try again.', 'danger')
 
     return redirect(url_for('login'))
+
+
+@app.route('/manage')
+@login_required
+def manage():
+    return render_template('manage.html')

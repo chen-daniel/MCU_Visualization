@@ -16,28 +16,11 @@
       <title>MCU VISUALIZATION</title>
       {% endif %}
     </head>
-    <body>
-      <header class="topnav">
-        <div>
-          <a href="{{ url_for('index')}}">MCU VISUALIZATION</a>
-        </div>
-        <a href="{{ url_for('logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i></a>&nbsp
-        <a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>&nbsp
-        <a href="{{ url_for('manage') }}"><i class="fa fa-user" aria-hidden="true"></i></a>&nbsp
-        <a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>&nbsp
-    </header>
-        <div class="alertdiv">
-        {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-        {% for category, message in messages %}
-      <div class="alert alert-{{ category }} alert-dismissible" role="alert">
-      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-      <!-- <strong>Title</strong> --> {{ message }}
-      </div>
-    {% endfor %}
-        {% endif %}
-        {% endwith %}
-        </div>
-        {% block content %}{% endblock %}
-    </body>
-</html>
+
+    <form>
+      <input type="button" value="Change Username" onclick="window.location.href='{{url_for('change_username')}}'" />
+      <input type="button" value="Change Password" onclick="window.location.href='{{url_for('change_pw')}}'" />
+    </form>
+
+    </html>
+
