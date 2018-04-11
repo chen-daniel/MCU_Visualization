@@ -109,11 +109,7 @@ var node = svg.selectAll(".node")
 
  function nodeClick(d) {
 
-    d3.selectAll(".node_image")
-        .attr("width", 60)
-        .attr("height", 60)
-        .attr("x", -30)
-        .attr("y", -30)
+    initialSize(d)
 
     d3.select(this).interrupt().transition().duration(1000)
             .attr('cx', function(d) {
@@ -133,6 +129,10 @@ var node = svg.selectAll(".node")
   }
 
 function dragstarted(d) {
+
+  initialSize(d)
+
+
   if (!d3.event.active) simulation.alphaTarget(0.3).restart();
   d.fx = d.x;
   d.fy = d.y;
@@ -147,6 +147,14 @@ function dragended(d) {
   if (!d3.event.active) simulation.alphaTarget(0);
   d.fx = null;
   d.fy = null;
+}
+
+function initialSize(d) {
+  d3.selectAll(".node_image")
+    .attr("width", 60)
+    .attr("height", 60)
+    .attr("x", -30)
+    .attr("y", -30)
 }
 
 
