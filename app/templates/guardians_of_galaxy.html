@@ -35,6 +35,8 @@ var simulation = d3.forceSimulation()
 d3.json("{{ url_for('static', filename='guardians_of_galaxy.json')}}", function(error, graph) {
   if (error) throw error;
 
+  var tranDuration = 1000;
+
   simulation
       .nodes(graph.nodes)
       .on("tick", ticked);
@@ -111,7 +113,7 @@ var node = svg.selectAll(".node")
 
     initialSize(d)
 
-    d3.select(this).interrupt().transition().duration(1000)
+    d3.select(this).interrupt().transition().duration(tranDuration)
             .attr('cx', function(d) {
                 return d.x = 750;
             })
@@ -121,7 +123,7 @@ var node = svg.selectAll(".node")
                 return "translate(" + d.x + "," + d.y + ")";
             })
 
-    d3.select(this).select(".node_image").interrupt().transition().duration(1000)
+    d3.select(this).select(".node_image").interrupt().transition().duration(tranDuration)
             .attr("width", 180)
             .attr("height", 180)
             .attr("x", -90)
