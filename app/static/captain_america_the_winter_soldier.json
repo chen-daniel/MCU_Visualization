@@ -1,1 +1,402 @@
+<<<<<<< HEAD
 {"links": [{"source": "The Other", "target": "Thanos", "value": 200}, {"source": "The Other", "target": "The Collector", "value": 200}, {"source": "The Other", "target": "Carina", "value": 200}, {"source": "The Other", "target": "Star-Lord", "value": 200}, {"source": "The Other", "target": "Gamora", "value": 200}, {"source": "The Other", "target": "Drax the Destroyer", "value": 200}, {"source": "The Other", "target": "Groot", "value": 200}, {"source": "The Other", "target": "Rocket Raccoon", "value": 200}, {"source": "The Other", "target": "Ronan the Accuser", "value": 200}, {"source": "The Other", "target": "Yondu Udonta", "value": 200}, {"source": "The Other", "target": "Nebula", "value": 200}, {"source": "The Other", "target": "Korath the Pursuer", "value": 200}, {"source": "The Other", "target": "Rhomann Dey", "value": 200}, {"source": "The Other", "target": "Nova Prime Irani Rael", "value": 200}, {"source": "The Other", "target": "Meredith Quill", "value": 200}, {"source": "The Other", "target": "Kraglin Obfonteri", "value": 200}, {"source": "The Other", "target": "Garthan Saal", "value": 200}, {"source": "The Other", "target": "Howard the Duck", "value": 200}, {"source": "Thanos", "target": "The Other", "value": 200}, {"source": "Thanos", "target": "The Collector", "value": 200}, {"source": "Thanos", "target": "Carina", "value": 200}, {"source": "Thanos", "target": "Star-Lord", "value": 200}, {"source": "Thanos", "target": "Gamora", "value": 200}, {"source": "Thanos", "target": "Drax the Destroyer", "value": 200}, {"source": "Thanos", "target": "Groot", "value": 200}, {"source": "Thanos", "target": "Rocket Raccoon", "value": 200}, {"source": "Thanos", "target": "Ronan the Accuser", "value": 200}, {"source": "Thanos", "target": "Yondu Udonta", "value": 200}, {"source": "Thanos", "target": "Nebula", "value": 200}, {"source": "Thanos", "target": "Korath the Pursuer", "value": 200}, {"source": "Thanos", "target": "Rhomann Dey", "value": 200}, {"source": "Thanos", "target": "Nova Prime Irani Rael", "value": 200}, {"source": "Thanos", "target": "Meredith Quill", "value": 200}, {"source": "Thanos", "target": "Kraglin Obfonteri", "value": 200}, {"source": "Thanos", "target": "Garthan Saal", "value": 200}, {"source": "Thanos", "target": "Howard the Duck", "value": 200}, {"source": "The Collector", "target": "The Other", "value": 200}, {"source": "The Collector", "target": "Thanos", "value": 200}, {"source": "The Collector", "target": "Carina", "value": 200}, {"source": "The Collector", "target": "Star-Lord", "value": 200}, {"source": "The Collector", "target": "Gamora", "value": 200}, {"source": "The Collector", "target": "Drax the Destroyer", "value": 200}, {"source": "The Collector", "target": "Groot", "value": 200}, {"source": "The Collector", "target": "Rocket Raccoon", "value": 200}, {"source": "The Collector", "target": "Ronan the Accuser", "value": 200}, {"source": "The Collector", "target": "Yondu Udonta", "value": 200}, {"source": "The Collector", "target": "Nebula", "value": 200}, {"source": "The Collector", "target": "Korath the Pursuer", "value": 200}, {"source": "The Collector", "target": "Rhomann Dey", "value": 200}, {"source": "The Collector", "target": "Nova Prime Irani Rael", "value": 200}, {"source": "The Collector", "target": "Meredith Quill", "value": 200}, {"source": "The Collector", "target": "Kraglin Obfonteri", "value": 200}, {"source": "The Collector", "target": "Garthan Saal", "value": 200}, {"source": "The Collector", "target": "Howard the Duck", "value": 200}, {"source": "Carina", "target": "The Other", "value": 200}, {"source": "Carina", "target": "Thanos", "value": 200}, {"source": "Carina", "target": "The Collector", "value": 200}, {"source": "Carina", "target": "Star-Lord", "value": 200}, {"source": "Carina", "target": "Gamora", "value": 200}, {"source": "Carina", "target": "Drax the Destroyer", "value": 200}, {"source": "Carina", "target": "Groot", "value": 200}, {"source": "Carina", "target": "Rocket Raccoon", "value": 200}, {"source": "Carina", "target": "Ronan the Accuser", "value": 200}, {"source": "Carina", "target": "Yondu Udonta", "value": 200}, {"source": "Carina", "target": "Nebula", "value": 200}, {"source": "Carina", "target": "Korath the Pursuer", "value": 200}, {"source": "Carina", "target": "Rhomann Dey", "value": 200}, {"source": "Carina", "target": "Nova Prime Irani Rael", "value": 200}, {"source": "Carina", "target": "Meredith Quill", "value": 200}, {"source": "Carina", "target": "Kraglin Obfonteri", "value": 200}, {"source": "Carina", "target": "Garthan Saal", "value": 200}, {"source": "Carina", "target": "Howard the Duck", "value": 200}, {"source": "Star-Lord", "target": "The Other", "value": 200}, {"source": "Star-Lord", "target": "Thanos", "value": 200}, {"source": "Star-Lord", "target": "The Collector", "value": 200}, {"source": "Star-Lord", "target": "Carina", "value": 200}, {"source": "Star-Lord", "target": "Gamora", "value": 200}, {"source": "Star-Lord", "target": "Drax the Destroyer", "value": 200}, {"source": "Star-Lord", "target": "Groot", "value": 200}, {"source": "Star-Lord", "target": "Rocket Raccoon", "value": 200}, {"source": "Star-Lord", "target": "Ronan the Accuser", "value": 200}, {"source": "Star-Lord", "target": "Yondu Udonta", "value": 200}, {"source": "Star-Lord", "target": "Nebula", "value": 200}, {"source": "Star-Lord", "target": "Korath the Pursuer", "value": 200}, {"source": "Star-Lord", "target": "Rhomann Dey", "value": 200}, {"source": "Star-Lord", "target": "Nova Prime Irani Rael", "value": 200}, {"source": "Star-Lord", "target": "Meredith Quill", "value": 200}, {"source": "Star-Lord", "target": "Kraglin Obfonteri", "value": 200}, {"source": "Star-Lord", "target": "Garthan Saal", "value": 200}, {"source": "Star-Lord", "target": "Howard the Duck", "value": 200}, {"source": "Gamora", "target": "The Other", "value": 200}, {"source": "Gamora", "target": "Thanos", "value": 200}, {"source": "Gamora", "target": "The Collector", "value": 200}, {"source": "Gamora", "target": "Carina", "value": 200}, {"source": "Gamora", "target": "Star-Lord", "value": 200}, {"source": "Gamora", "target": "Drax the Destroyer", "value": 200}, {"source": "Gamora", "target": "Groot", "value": 200}, {"source": "Gamora", "target": "Rocket Raccoon", "value": 200}, {"source": "Gamora", "target": "Ronan the Accuser", "value": 200}, {"source": "Gamora", "target": "Yondu Udonta", "value": 200}, {"source": "Gamora", "target": "Nebula", "value": 200}, {"source": "Gamora", "target": "Korath the Pursuer", "value": 200}, {"source": "Gamora", "target": "Rhomann Dey", "value": 200}, {"source": "Gamora", "target": "Nova Prime Irani Rael", "value": 200}, {"source": "Gamora", "target": "Meredith Quill", "value": 200}, {"source": "Gamora", "target": "Kraglin Obfonteri", "value": 200}, {"source": "Gamora", "target": "Garthan Saal", "value": 200}, {"source": "Gamora", "target": "Howard the Duck", "value": 200}, {"source": "Drax the Destroyer", "target": "The Other", "value": 200}, {"source": "Drax the Destroyer", "target": "Thanos", "value": 200}, {"source": "Drax the Destroyer", "target": "The Collector", "value": 200}, {"source": "Drax the Destroyer", "target": "Carina", "value": 200}, {"source": "Drax the Destroyer", "target": "Star-Lord", "value": 200}, {"source": "Drax the Destroyer", "target": "Gamora", "value": 200}, {"source": "Drax the Destroyer", "target": "Groot", "value": 200}, {"source": "Drax the Destroyer", "target": "Rocket Raccoon", "value": 200}, {"source": "Drax the Destroyer", "target": "Ronan the Accuser", "value": 200}, {"source": "Drax the Destroyer", "target": "Yondu Udonta", "value": 200}, {"source": "Drax the Destroyer", "target": "Nebula", "value": 200}, {"source": "Drax the Destroyer", "target": "Korath the Pursuer", "value": 200}, {"source": "Drax the Destroyer", "target": "Rhomann Dey", "value": 200}, {"source": "Drax the Destroyer", "target": "Nova Prime Irani Rael", "value": 200}, {"source": "Drax the Destroyer", "target": "Meredith Quill", "value": 200}, {"source": "Drax the Destroyer", "target": "Kraglin Obfonteri", "value": 200}, {"source": "Drax the Destroyer", "target": "Garthan Saal", "value": 200}, {"source": "Drax the Destroyer", "target": "Howard the Duck", "value": 200}, {"source": "Groot", "target": "The Other", "value": 200}, {"source": "Groot", "target": "Thanos", "value": 200}, {"source": "Groot", "target": "The Collector", "value": 200}, {"source": "Groot", "target": "Carina", "value": 200}, {"source": "Groot", "target": "Star-Lord", "value": 200}, {"source": "Groot", "target": "Gamora", "value": 200}, {"source": "Groot", "target": "Drax the Destroyer", "value": 200}, {"source": "Groot", "target": "Rocket Raccoon", "value": 200}, {"source": "Groot", "target": "Ronan the Accuser", "value": 200}, {"source": "Groot", "target": "Yondu Udonta", "value": 200}, {"source": "Groot", "target": "Nebula", "value": 200}, {"source": "Groot", "target": "Korath the Pursuer", "value": 200}, {"source": "Groot", "target": "Rhomann Dey", "value": 200}, {"source": "Groot", "target": "Nova Prime Irani Rael", "value": 200}, {"source": "Groot", "target": "Meredith Quill", "value": 200}, {"source": "Groot", "target": "Kraglin Obfonteri", "value": 200}, {"source": "Groot", "target": "Garthan Saal", "value": 200}, {"source": "Groot", "target": "Howard the Duck", "value": 200}, {"source": "Rocket Raccoon", "target": "The Other", "value": 200}, {"source": "Rocket Raccoon", "target": "Thanos", "value": 200}, {"source": "Rocket Raccoon", "target": "The Collector", "value": 200}, {"source": "Rocket Raccoon", "target": "Carina", "value": 200}, {"source": "Rocket Raccoon", "target": "Star-Lord", "value": 200}, {"source": "Rocket Raccoon", "target": "Gamora", "value": 200}, {"source": "Rocket Raccoon", "target": "Drax the Destroyer", "value": 200}, {"source": "Rocket Raccoon", "target": "Groot", "value": 200}, {"source": "Rocket Raccoon", "target": "Ronan the Accuser", "value": 200}, {"source": "Rocket Raccoon", "target": "Yondu Udonta", "value": 200}, {"source": "Rocket Raccoon", "target": "Nebula", "value": 200}, {"source": "Rocket Raccoon", "target": "Korath the Pursuer", "value": 200}, {"source": "Rocket Raccoon", "target": "Rhomann Dey", "value": 200}, {"source": "Rocket Raccoon", "target": "Nova Prime Irani Rael", "value": 200}, {"source": "Rocket Raccoon", "target": "Meredith Quill", "value": 200}, {"source": "Rocket Raccoon", "target": "Kraglin Obfonteri", "value": 200}, {"source": "Rocket Raccoon", "target": "Garthan Saal", "value": 200}, {"source": "Rocket Raccoon", "target": "Howard the Duck", "value": 200}, {"source": "Ronan the Accuser", "target": "The Other", "value": 200}, {"source": "Ronan the Accuser", "target": "Thanos", "value": 200}, {"source": "Ronan the Accuser", "target": "The Collector", "value": 200}, {"source": "Ronan the Accuser", "target": "Carina", "value": 200}, {"source": "Ronan the Accuser", "target": "Star-Lord", "value": 200}, {"source": "Ronan the Accuser", "target": "Gamora", "value": 200}, {"source": "Ronan the Accuser", "target": "Drax the Destroyer", "value": 200}, {"source": "Ronan the Accuser", "target": "Groot", "value": 200}, {"source": "Ronan the Accuser", "target": "Rocket Raccoon", "value": 200}, {"source": "Ronan the Accuser", "target": "Yondu Udonta", "value": 200}, {"source": "Ronan the Accuser", "target": "Nebula", "value": 200}, {"source": "Ronan the Accuser", "target": "Korath the Pursuer", "value": 200}, {"source": "Ronan the Accuser", "target": "Rhomann Dey", "value": 200}, {"source": "Ronan the Accuser", "target": "Nova Prime Irani Rael", "value": 200}, {"source": "Ronan the Accuser", "target": "Meredith Quill", "value": 200}, {"source": "Ronan the Accuser", "target": "Kraglin Obfonteri", "value": 200}, {"source": "Ronan the Accuser", "target": "Garthan Saal", "value": 200}, {"source": "Ronan the Accuser", "target": "Howard the Duck", "value": 200}, {"source": "Yondu Udonta", "target": "The Other", "value": 200}, {"source": "Yondu Udonta", "target": "Thanos", "value": 200}, {"source": "Yondu Udonta", "target": "The Collector", "value": 200}, {"source": "Yondu Udonta", "target": "Carina", "value": 200}, {"source": "Yondu Udonta", "target": "Star-Lord", "value": 200}, {"source": "Yondu Udonta", "target": "Gamora", "value": 200}, {"source": "Yondu Udonta", "target": "Drax the Destroyer", "value": 200}, {"source": "Yondu Udonta", "target": "Groot", "value": 200}, {"source": "Yondu Udonta", "target": "Rocket Raccoon", "value": 200}, {"source": "Yondu Udonta", "target": "Ronan the Accuser", "value": 200}, {"source": "Yondu Udonta", "target": "Nebula", "value": 200}, {"source": "Yondu Udonta", "target": "Korath the Pursuer", "value": 200}, {"source": "Yondu Udonta", "target": "Rhomann Dey", "value": 200}, {"source": "Yondu Udonta", "target": "Nova Prime Irani Rael", "value": 200}, {"source": "Yondu Udonta", "target": "Meredith Quill", "value": 200}, {"source": "Yondu Udonta", "target": "Kraglin Obfonteri", "value": 200}, {"source": "Yondu Udonta", "target": "Garthan Saal", "value": 200}, {"source": "Yondu Udonta", "target": "Howard the Duck", "value": 200}, {"source": "Nebula", "target": "The Other", "value": 200}, {"source": "Nebula", "target": "Thanos", "value": 200}, {"source": "Nebula", "target": "The Collector", "value": 200}, {"source": "Nebula", "target": "Carina", "value": 200}, {"source": "Nebula", "target": "Star-Lord", "value": 200}, {"source": "Nebula", "target": "Gamora", "value": 200}, {"source": "Nebula", "target": "Drax the Destroyer", "value": 200}, {"source": "Nebula", "target": "Groot", "value": 200}, {"source": "Nebula", "target": "Rocket Raccoon", "value": 200}, {"source": "Nebula", "target": "Ronan the Accuser", "value": 200}, {"source": "Nebula", "target": "Yondu Udonta", "value": 200}, {"source": "Nebula", "target": "Korath the Pursuer", "value": 200}, {"source": "Nebula", "target": "Rhomann Dey", "value": 200}, {"source": "Nebula", "target": "Nova Prime Irani Rael", "value": 200}, {"source": "Nebula", "target": "Meredith Quill", "value": 200}, {"source": "Nebula", "target": "Kraglin Obfonteri", "value": 200}, {"source": "Nebula", "target": "Garthan Saal", "value": 200}, {"source": "Nebula", "target": "Howard the Duck", "value": 200}, {"source": "Korath the Pursuer", "target": "The Other", "value": 200}, {"source": "Korath the Pursuer", "target": "Thanos", "value": 200}, {"source": "Korath the Pursuer", "target": "The Collector", "value": 200}, {"source": "Korath the Pursuer", "target": "Carina", "value": 200}, {"source": "Korath the Pursuer", "target": "Star-Lord", "value": 200}, {"source": "Korath the Pursuer", "target": "Gamora", "value": 200}, {"source": "Korath the Pursuer", "target": "Drax the Destroyer", "value": 200}, {"source": "Korath the Pursuer", "target": "Groot", "value": 200}, {"source": "Korath the Pursuer", "target": "Rocket Raccoon", "value": 200}, {"source": "Korath the Pursuer", "target": "Ronan the Accuser", "value": 200}, {"source": "Korath the Pursuer", "target": "Yondu Udonta", "value": 200}, {"source": "Korath the Pursuer", "target": "Nebula", "value": 200}, {"source": "Korath the Pursuer", "target": "Rhomann Dey", "value": 200}, {"source": "Korath the Pursuer", "target": "Nova Prime Irani Rael", "value": 200}, {"source": "Korath the Pursuer", "target": "Meredith Quill", "value": 200}, {"source": "Korath the Pursuer", "target": "Kraglin Obfonteri", "value": 200}, {"source": "Korath the Pursuer", "target": "Garthan Saal", "value": 200}, {"source": "Korath the Pursuer", "target": "Howard the Duck", "value": 200}, {"source": "Rhomann Dey", "target": "The Other", "value": 200}, {"source": "Rhomann Dey", "target": "Thanos", "value": 200}, {"source": "Rhomann Dey", "target": "The Collector", "value": 200}, {"source": "Rhomann Dey", "target": "Carina", "value": 200}, {"source": "Rhomann Dey", "target": "Star-Lord", "value": 200}, {"source": "Rhomann Dey", "target": "Gamora", "value": 200}, {"source": "Rhomann Dey", "target": "Drax the Destroyer", "value": 200}, {"source": "Rhomann Dey", "target": "Groot", "value": 200}, {"source": "Rhomann Dey", "target": "Rocket Raccoon", "value": 200}, {"source": "Rhomann Dey", "target": "Ronan the Accuser", "value": 200}, {"source": "Rhomann Dey", "target": "Yondu Udonta", "value": 200}, {"source": "Rhomann Dey", "target": "Nebula", "value": 200}, {"source": "Rhomann Dey", "target": "Korath the Pursuer", "value": 200}, {"source": "Rhomann Dey", "target": "Nova Prime Irani Rael", "value": 200}, {"source": "Rhomann Dey", "target": "Meredith Quill", "value": 200}, {"source": "Rhomann Dey", "target": "Kraglin Obfonteri", "value": 200}, {"source": "Rhomann Dey", "target": "Garthan Saal", "value": 200}, {"source": "Rhomann Dey", "target": "Howard the Duck", "value": 200}, {"source": "Nova Prime Irani Rael", "target": "The Other", "value": 200}, {"source": "Nova Prime Irani Rael", "target": "Thanos", "value": 200}, {"source": "Nova Prime Irani Rael", "target": "The Collector", "value": 200}, {"source": "Nova Prime Irani Rael", "target": "Carina", "value": 200}, {"source": "Nova Prime Irani Rael", "target": "Star-Lord", "value": 200}, {"source": "Nova Prime Irani Rael", "target": "Gamora", "value": 200}, {"source": "Nova Prime Irani Rael", "target": "Drax the Destroyer", "value": 200}, {"source": "Nova Prime Irani Rael", "target": "Groot", "value": 200}, {"source": "Nova Prime Irani Rael", "target": "Rocket Raccoon", "value": 200}, {"source": "Nova Prime Irani Rael", "target": "Ronan the Accuser", "value": 200}, {"source": "Nova Prime Irani Rael", "target": "Yondu Udonta", "value": 200}, {"source": "Nova Prime Irani Rael", "target": "Nebula", "value": 200}, {"source": "Nova Prime Irani Rael", "target": "Korath the Pursuer", "value": 200}, {"source": "Nova Prime Irani Rael", "target": "Rhomann Dey", "value": 200}, {"source": "Nova Prime Irani Rael", "target": "Meredith Quill", "value": 200}, {"source": "Nova Prime Irani Rael", "target": "Kraglin Obfonteri", "value": 200}, {"source": "Nova Prime Irani Rael", "target": "Garthan Saal", "value": 200}, {"source": "Nova Prime Irani Rael", "target": "Howard the Duck", "value": 200}, {"source": "Meredith Quill", "target": "The Other", "value": 200}, {"source": "Meredith Quill", "target": "Thanos", "value": 200}, {"source": "Meredith Quill", "target": "The Collector", "value": 200}, {"source": "Meredith Quill", "target": "Carina", "value": 200}, {"source": "Meredith Quill", "target": "Star-Lord", "value": 200}, {"source": "Meredith Quill", "target": "Gamora", "value": 200}, {"source": "Meredith Quill", "target": "Drax the Destroyer", "value": 200}, {"source": "Meredith Quill", "target": "Groot", "value": 200}, {"source": "Meredith Quill", "target": "Rocket Raccoon", "value": 200}, {"source": "Meredith Quill", "target": "Ronan the Accuser", "value": 200}, {"source": "Meredith Quill", "target": "Yondu Udonta", "value": 200}, {"source": "Meredith Quill", "target": "Nebula", "value": 200}, {"source": "Meredith Quill", "target": "Korath the Pursuer", "value": 200}, {"source": "Meredith Quill", "target": "Rhomann Dey", "value": 200}, {"source": "Meredith Quill", "target": "Nova Prime Irani Rael", "value": 200}, {"source": "Meredith Quill", "target": "Kraglin Obfonteri", "value": 200}, {"source": "Meredith Quill", "target": "Garthan Saal", "value": 200}, {"source": "Meredith Quill", "target": "Howard the Duck", "value": 200}, {"source": "Kraglin Obfonteri", "target": "The Other", "value": 200}, {"source": "Kraglin Obfonteri", "target": "Thanos", "value": 200}, {"source": "Kraglin Obfonteri", "target": "The Collector", "value": 200}, {"source": "Kraglin Obfonteri", "target": "Carina", "value": 200}, {"source": "Kraglin Obfonteri", "target": "Star-Lord", "value": 200}, {"source": "Kraglin Obfonteri", "target": "Gamora", "value": 200}, {"source": "Kraglin Obfonteri", "target": "Drax the Destroyer", "value": 200}, {"source": "Kraglin Obfonteri", "target": "Groot", "value": 200}, {"source": "Kraglin Obfonteri", "target": "Rocket Raccoon", "value": 200}, {"source": "Kraglin Obfonteri", "target": "Ronan the Accuser", "value": 200}, {"source": "Kraglin Obfonteri", "target": "Yondu Udonta", "value": 200}, {"source": "Kraglin Obfonteri", "target": "Nebula", "value": 200}, {"source": "Kraglin Obfonteri", "target": "Korath the Pursuer", "value": 200}, {"source": "Kraglin Obfonteri", "target": "Rhomann Dey", "value": 200}, {"source": "Kraglin Obfonteri", "target": "Nova Prime Irani Rael", "value": 200}, {"source": "Kraglin Obfonteri", "target": "Meredith Quill", "value": 200}, {"source": "Kraglin Obfonteri", "target": "Garthan Saal", "value": 200}, {"source": "Kraglin Obfonteri", "target": "Howard the Duck", "value": 200}, {"source": "Garthan Saal", "target": "The Other", "value": 200}, {"source": "Garthan Saal", "target": "Thanos", "value": 200}, {"source": "Garthan Saal", "target": "The Collector", "value": 200}, {"source": "Garthan Saal", "target": "Carina", "value": 200}, {"source": "Garthan Saal", "target": "Star-Lord", "value": 200}, {"source": "Garthan Saal", "target": "Gamora", "value": 200}, {"source": "Garthan Saal", "target": "Drax the Destroyer", "value": 200}, {"source": "Garthan Saal", "target": "Groot", "value": 200}, {"source": "Garthan Saal", "target": "Rocket Raccoon", "value": 200}, {"source": "Garthan Saal", "target": "Ronan the Accuser", "value": 200}, {"source": "Garthan Saal", "target": "Yondu Udonta", "value": 200}, {"source": "Garthan Saal", "target": "Nebula", "value": 200}, {"source": "Garthan Saal", "target": "Korath the Pursuer", "value": 200}, {"source": "Garthan Saal", "target": "Rhomann Dey", "value": 200}, {"source": "Garthan Saal", "target": "Nova Prime Irani Rael", "value": 200}, {"source": "Garthan Saal", "target": "Meredith Quill", "value": 200}, {"source": "Garthan Saal", "target": "Kraglin Obfonteri", "value": 200}, {"source": "Garthan Saal", "target": "Howard the Duck", "value": 200}, {"source": "Howard the Duck", "target": "The Other", "value": 200}, {"source": "Howard the Duck", "target": "Thanos", "value": 200}, {"source": "Howard the Duck", "target": "The Collector", "value": 200}, {"source": "Howard the Duck", "target": "Carina", "value": 200}, {"source": "Howard the Duck", "target": "Star-Lord", "value": 200}, {"source": "Howard the Duck", "target": "Gamora", "value": 200}, {"source": "Howard the Duck", "target": "Drax the Destroyer", "value": 200}, {"source": "Howard the Duck", "target": "Groot", "value": 200}, {"source": "Howard the Duck", "target": "Rocket Raccoon", "value": 200}, {"source": "Howard the Duck", "target": "Ronan the Accuser", "value": 200}, {"source": "Howard the Duck", "target": "Yondu Udonta", "value": 200}, {"source": "Howard the Duck", "target": "Nebula", "value": 200}, {"source": "Howard the Duck", "target": "Korath the Pursuer", "value": 200}, {"source": "Howard the Duck", "target": "Rhomann Dey", "value": 200}, {"source": "Howard the Duck", "target": "Nova Prime Irani Rael", "value": 200}, {"source": "Howard the Duck", "target": "Meredith Quill", "value": 200}, {"source": "Howard the Duck", "target": "Kraglin Obfonteri", "value": 200}, {"source": "Howard the Duck", "target": "Garthan Saal", "value": 200}], "nodes": [{"about": ["The Other", "Male", "Human"], "events": [], "group": null, "id": "The Other", "image": 6}, {"about": ["Thanos", "Male", "Titan"], "events": [], "group": "../static/img/logo/characters/thanos.jpg", "id": "Thanos", "image": 6}, {"about": ["Taneleer Tivan", "Male", "The First"], "events": [], "group": null, "id": "The Collector", "image": 8}, {"about": ["Carina", "Female", "Krylorian"], "events": [], "group": null, "id": "Carina", "image": 8}, {"about": ["Peter Jason Quill", "Male", "Human/Celestial"], "events": ["Star Lord steals the Orb and escapes the planet.", "Plans and executes a prison escape from the Kyln.", "Peter is involved in the aerial chase attempting to escape.", "Peter defends Xandar and defeats Ronan with the Infinity Stone.", "Defeats the Abilisk with the other Guardians.", "Escapes the Sovereigns after Rocket steals a battery.", "Fights against Ego."], "group": "../static/img/logo/characters/star-lord.png", "id": "Star-Lord", "image": 10}, {"about": ["Gamora", "Female", "Zehoberei"], "events": ["Executes a prison escape from the Kyln.", "Gamora is involved in the aerial chase attempting to escape.", "Gamora defends Xandar and defeats Ronan with the Infinity Stone.", "Defeats the Abilisk with the other Guardians.", "Escapes the Sovereigns after Rocket steals a battery.", "Fights against Ego."], "group": "../static/img/logo/characters/gamora.png", "id": "Gamora", "image": 10}, {"about": ["Drax", "Male", "Unknown"], "events": ["Executes a prison escape from the Kyln.", "Drax issues a challenge Ronan and bring him to Knowhere. He is easily defeated.", "Drax defends Xandar and defeats Ronan with the Infinity Stone.", "Defeats the Abilisk with the other Guardians.", "Escapes the Sovereigns after Rocket steals a battery.", "Fights against Ego."], "group": "../static/img/logo/characters/drax.png", "id": "Drax the Destroyer", "image": 10}, {"about": ["Groot", "Male", "Flora Colossus"], "events": ["Executes a prison escape from the Kyln.", "Defeats the Abilisk with the other Guardians.", "Escapes the Sovereigns after Rocket steals a battery.", "Is captured by the Ravagers.", "Escapes the Ravagers' capture with Yondu and Rocket.", "Fights against Ego."], "group": "../static/img/logo/characters/groot.png", "id": "Groot", "image": 10}, {"about": ["Subject: 89P13", "Male", "Halfworlder"], "events": ["Plans and executes a prison escape from the Kyln.", "Rocket is involved in the aerial chase attempting to escape.", "Rocket defends Xandar and defeats Ronan with the Infinity Stone.", "Defeats the Abilisk with the other Guardians.", "Escapes the Sovereigns afterstealing a battery.", "Lays traps to defend against the Ravagers but ends up captured.", "Escapes the Ravagers' capture with Yondu and Groot.", "Fights against Ego."], "group": "../static/img/logo/characters/rocket-raccoon.png", "id": "Rocket Raccoon", "image": 10}, {"about": ["Ronan", "Male", "Kree"], "events": ["Ronan responds to Drax's challenge and defeats him easily. He proceeds to obtain the Orb.", "Ronan attacks Xandar and is defeated by the Guardians."], "group": null, "id": "Ronan the Accuser", "image": 10}, {"about": ["Yondu Udonta", "Male", "Centaurian"], "events": ["Yondu and his Ravagers help defend against Ronan.", "Captures Rocket", "Escapes the Ravagers' capture with Rocket and Groot.", "Sacrifices himself to save Peter."], "group": null, "id": "Yondu Udonta", "image": 10}, {"about": ["Nebula", "Female", "Luphomoid"], "events": ["Nebula accompanies Ronan to Knowhere and attacks the team.", "Nebula fails to stop the Guardians from taking down the Dark Aster.", "Shoots off Udonta's Arrow Controller after his crew begins rebelling.", "Fights against Ego."], "group": "../static/img/logo/characters/nebula.png", "id": "Nebula", "image": 10}, {"about": ["Korath", "Male", "Kree"], "events": [], "group": null, "id": "Korath the Pursuer", "image": 10}, {"about": ["Rhomann Dey", "Male", "Xandarian"], "events": ["Rhomann Dey is part of the Xandarian defence."], "group": null, "id": "Rhomann Dey", "image": 10}, {"about": ["Irani Rael", "Female", "Xandarian"], "events": [], "group": null, "id": "Nova Prime Irani Rael", "image": 10}, {"about": ["Meredith Quill", "Female", "Human"], "events": [], "group": null, "id": "Meredith Quill", "image": 10}, {"about": ["Kraglin Obfonteri", "Male", "Xandarian"], "events": ["Kraglin defends Xandar along with the Ravagers.", "Helps Rocket"], "group": null, "id": "Kraglin Obfonteri", "image": 10}, {"about": ["Garthan Saal", "Male", "Xandarian"], "events": ["Garthan Saal is part of the Xandarian defence and is killed during the battle."], "group": null, "id": "Garthan Saal", "image": 10}, {"about": ["Howard", "Male", "Duckworldian"], "events": [], "group": null, "id": "Howard the Duck", "image": 10}]}
+=======
+{
+  "links": [
+    {
+      "source": "HYDRA", 
+      "target": "\"Captain America: The Winter Soldier\"", 
+      "value": 200
+    }, 
+    {
+      "source": "S.H.I.E.L.D", 
+      "target": "\"Captain America: The Winter Soldier\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Falcon", 
+      "target": "\"Captain America: The Winter Soldier\"", 
+      "value": 200
+    }, 
+    {
+      "source": "Captain America", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Nick Fury", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Black Widow", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Alexander Pierce", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Alexander Pierce", 
+      "target": "HYDRA", 
+      "value": 200
+    }, 
+    {
+      "source": "Winter Soldier", 
+      "target": "HYDRA", 
+      "value": 200
+    }, 
+    {
+      "source": "Crossbones", 
+      "target": "HYDRA", 
+      "value": 200
+    }, 
+    {
+      "source": "Agent Hill", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Crossbones", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Agent 13", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Peggy Carter", 
+      "target": "S.H.I.E.L.D", 
+      "value": 200
+    }, 
+    {
+      "source": "Dr. Arnim Zola", 
+      "target": "HYDRA", 
+      "value": 200
+    }, 
+    {
+      "source": "Scarlet Witch", 
+      "target": "HYDRA", 
+      "value": 200
+    }, 
+    {
+      "source": "Quicksilver", 
+      "target": "HYDRA", 
+      "value": 200
+    }, 
+    {
+      "source": "Baron von Strucker", 
+      "target": "HYDRA", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Hijacking and Retaking of the Lemurian Star\"", 
+      "target": "\"Captain America: The Winter Soldier\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Battle of Washington, D.C.\"", 
+      "target": "\"Captain America: The Winter Soldier\"", 
+      "value": 200
+    }, 
+    {
+      "source": "\"Battle at the Triskelion\"", 
+      "target": "\"Captain America: The Winter Soldier\"", 
+      "value": 200
+    }
+  ], 
+  "nodes": [
+    {
+      "about": [
+        "Nicholas Joseph Fury", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Nick Fury", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Natasha Romanoff", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Black Widow", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Steve Grant Rogers", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Captain America", 
+      "image": "../static/img/logo/characters/captain-america.jpg"
+    }, 
+    {
+      "about": [
+        "Margaret Elizabeth Carter", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Peggy Carter", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Bucky Barnes", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Winter Soldier", 
+      "image": "../static/img/logo/characters/winter-soldier.jpg"
+    }, 
+    {
+      "about": [
+        "Arnim Zola", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Dr. Arnim Zola", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Maria Hill", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent Hill", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Alexander Goodwin Pierce", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Alexander Pierce", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Samuel Thomas Wilson", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Falcon", 
+      "image": "../static/img/logo/characters/falcon.jpg"
+    }, 
+    {
+      "about": [
+        "Brock Rumlow", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Crossbones", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Sharon Carter", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Agent 13", 
+      "image": false
+    }, 
+    {
+      "about": [
+        "Wanda Maximoff", 
+        "Female", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Scarlet Witch", 
+      "image": "../static/img/logo/characters/scarlet-witch.jpg"
+    }, 
+    {
+      "about": [
+        "Pietro Maximoff", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Quicksilver", 
+      "image": "../static/img/logo/characters/quicksilver.jpg"
+    }, 
+    {
+      "about": [
+        "Wolfgang von Strucker", 
+        "Male", 
+        "Human"
+      ], 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Hijacking and Retaking of the Lemurian Star was an event that marked the beginning of the HYDRA Uprising.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Hijacking and Retaking of the Lemurian Star\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Battle of Washington, D.C. was a clash between Captain America and the brainwashed Winter Soldier during the HYDRA Uprising. After Arnim Zola revealed that HYDRA was active for the past seven decades, Captain America and Black Widow recruited Sam Wilson to fight alongside them as the Falcon.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Battle of Washington, D.C.\"", 
+      "image": false
+    }, 
+    {
+      "about": "\"The Battle at the Triskelion, also referred as the Fall of S.H.I.E.L.D., was the first open battle between HYDRA and S.H.I.E.L.D., and a major event during the HYDRA Uprising. After HYDRA, thought dormant since the end of World War II in Europe, was revealed to be active inside of S.H.I.E.L.D., Nick Fury faked his death following an assassination attempt and recruited Captain America, Black Widow and Falcon to fight against the resurgent terrorist group. The Winter Soldier fought alongside his HYDRA captors while he was brainwashed.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Battle at the Triskelion\"", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "testText", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "Baron von Strucker", 
+      "image": false
+    }, 
+    {
+      "about": "\"Two years after the Battle of New York, Captain America lives quietly in Washington, D.C., still struggling to adapt to the modern society. In hopes of fitting in, Captain America becomes an agent of S.H.I.E.L.D., as well as a close friend of Black Widow and a new hero, Falcon. However, when a shadowy enemy from within the chief offices of S.H.I.E.L.D. (with whom Nick Fury initially agrees) starts creating countless weapons of mass destruction to seemingly protect the world - but really wants to destroy it and rebuild it, Captain America and his colleagues must team up to stop him. But things get more complicated when Steve's thought deceased best friend Bucky is revealed to be alive and a villain like no other - the Winter Soldier.\"", 
+      "events": "to connections", 
+      "group": 1, 
+      "id": "\"Captain America: The Winter Soldier\"", 
+      "image": false
+    }
+  ]
+}
+>>>>>>> 468fd928ddff37be5b44733cdafdc6b78a720bce
