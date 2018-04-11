@@ -25,7 +25,7 @@ def index():
 #===================================================================================
 @app.route('/iron_man')
 def iron_man():
-	return render_template('moviepage.html', jsongraph=charInMovie(4), moviename="Iron Man")
+	return render_template('moviepage.html', jsongraph=charInMovie(1), moviename="Iron Man")
 
 @app.route('/the_incredible_hulk')
 def the_incredible_hulk():
