@@ -88,7 +88,11 @@ def jsonifyAChar(result):
 	'events': eventToString(result)}
 
 def jsonAbout(char):
-	
+	return [char[2], gender(char[3]), char[4]]
+
+def gender(code):
+	if code == "F": return "Female"
+	else return "Male"
 
 def eventToString(char):
 	cur = cnn.cursor()
