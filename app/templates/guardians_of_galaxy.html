@@ -29,7 +29,7 @@
       <a href="{{ url_for('index') }}">
         <h1>Marvel Characters (Guardians Of Galaxy)</h1>
       </a>
-      <h2>Click to view character's information</h2>
+      <h2>Click to view more about the character</h2>
       <h3></h3>
     </header>
 
@@ -156,7 +156,6 @@ var node = svg.selectAll(".node")
         .attr("height", showSize)
         .attr("x", -showSize / 2)
         .attr("y", -showSize / 2);
-
   }
 
   function hideText(d) {
@@ -211,6 +210,10 @@ function dragstarted(d) {
 function dragged(d) {
   d.fx = d3.event.x;
   d.fy = d3.event.y;
+
+
+  d3.select("h2").html("Click to view more about the character"); 
+  d3.select("h3").html("");
 }
 
 function dragended(d) {
