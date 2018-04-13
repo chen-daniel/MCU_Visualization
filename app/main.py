@@ -25,7 +25,7 @@ def index():
 #===================================================================================
 @app.route('/iron_man')
 def iron_man():
-	return render_template('moviepage.html', jsongraph=charInMovie(4), moviename="Iron Man")
+	return render_template('moviepage.html', jsongraph=charInMovie(1), moviename="Iron Man")
 
 @app.route('/the_incredible_hulk')
 def the_incredible_hulk():
@@ -116,6 +116,9 @@ def charInMovie(movie_ID):
 	cur.callproc('events_movie_connections', [movie_ID])
 	for result in cur.stored_results():
 		links += result.fetchall()
+	cur.callproc('characters_events_connections', [movie_ID])
+	for result in cur.stored_results():
+		links += result.fetchall()
 
 	cur.callproc('char_in_movie', [movie_ID])
 	for result in cur.stored_results():
@@ -177,25 +180,17 @@ def jsonifyChars(char):
 
 
 def jsonifyAChar(result):
-	if result[6]:
-		return {
-		'id': result[1],
-		'group': 1,
-		'image': result[6],
-		'about': jsonAbout(result),
-		'events': 'to connections'}
-	else:
-		return {
-		'id': result[1],
-		'group': 1,
-		'image': False,
-		'about': jsonAbout(result),
-		'events': 'to connections'}
+	return {
+	'id': result[1],
+	'group': 'character',
+	'image': result[6],
+	'about': jsonAbout(result),
+	'events': 'to connections'}
 
 def jsonifyAEvent(result):
 	return {
 	'id': result[1],
-	'group': 1,
+	'group': 'event',
 	'image': False,
 	'about': result[2],
 	'events': 'to connections'}
@@ -203,7 +198,7 @@ def jsonifyAEvent(result):
 def jsonifyAOrg(result):
 	return {
 	'id': result[1],
-	'group': 1,
+	'group': 'organization',
 	'image': False,
 	'about': 'testText',
 	'events': 'to connections'}
@@ -211,7 +206,7 @@ def jsonifyAOrg(result):
 def jsonifyMovie(result):
 	return {
 	'id': result[1],
-	'group': 1,
+	'group': 'movie',
 	'image': False,
 	'about': result[3],
 	'events': 'to connections'}
