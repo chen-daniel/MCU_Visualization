@@ -63,15 +63,15 @@ var simulation = d3.forceSimulation()
     .force("x", d3.forceX(function(d){
       switch(d.group){
         case "movie":
-          return 450
+          return 250
           break;
         case "organization":
-          return 600
+          return 800
           break;
         case "event":
-          return 950
+          return 1500
         default:
-          return 1400
+          return 3000
   }
     }))
     .force("center", d3.forceCenter(width / 2, height / 2));
@@ -196,15 +196,15 @@ var node = svg.selectAll(".node")
 
     initialSize(d)
 
-    // d3.select(this).interrupt().transition().duration(tranDuration)
-    //         .attr('cx', function(d) {
-    //             return d.x = 750;
-    //         })
-    //         .attr('cy', function(d) {
-    //             return d.y = 300;
-    //         }).attr("transform", function (d) {
-    //             return "translate(" + d.x + "," + d.y + ")";
-    //         })
+    d3.select(this).interrupt().transition().duration(tranDuration)
+            .attr('cx', function(d) {
+                return d.x = locationX(d);
+            })
+            .attr('cy', function(d) {
+                return d.y = 300;
+            }).attr("transform", function (d) {
+                return "translate(" + d.x + "," + d.y + ")";
+            })
 
     d3.select(this).select(".node_image").interrupt().transition().duration(tranDuration)
             .attr("width", toSize)
@@ -246,6 +246,22 @@ function initialSize(d) {
     .attr("x", -30)
     .attr("y", -30)
 }
+
+function locationX(d) {
+      switch(d.group){
+        case "movie":
+          return 250
+          break;
+        case "organization":
+          return 500
+          break;
+        case "event":
+          return 600
+        default:
+          return 700
+}
+}
+
 
 function sizeSetter(d) {
   switch(d.group) {
