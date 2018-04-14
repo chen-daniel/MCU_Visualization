@@ -58,7 +58,22 @@ var svg = d3.select("svg"),
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(250))
+    .force("collide",d3.forceCollide( function(d){return d.r + 500 }).iterations(16) )
     .force("charge", d3.forceManyBody())
+    .force("x", d3.forceX(function(d){
+      switch(d.group){
+        case "movie":
+          return 450
+          break;
+        case "organization":
+          return 600
+          break;
+        case "event":
+          return 950
+        default:
+          return 1400
+  }
+    }))
     .force("center", d3.forceCenter(width / 2, height / 2));
 
   var tranDuration = 1000;
@@ -128,9 +143,6 @@ var node = svg.selectAll(".node")
       .attr("y", 500)
       .text(function(d) {return d.about[0]})
       .style("display", "none");
-  }
-
-
 
   function ticked() {
     link
@@ -248,7 +260,7 @@ function sizeSetter(d) {
     default:
       return 30
   }
-
+}
 
 
 
@@ -256,4 +268,3 @@ function sizeSetter(d) {
 
 </body>
 {% endblock %}
-
