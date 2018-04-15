@@ -58,7 +58,7 @@ var svg = d3.select("svg"),
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(250))
-    .force("collide",d3.forceCollide( function(d){return d.r + 500 }).iterations(16) )
+    .force("collide",d3.forceCollide( function(d){ return 50 }).iterations(16) )
     .force("charge", d3.forceManyBody())
     .force("x", d3.forceX(function(d){
       switch(d.group){
@@ -66,12 +66,12 @@ var simulation = d3.forceSimulation()
           return 250
           break;
         case "organization":
-          return 800
+          return 600
           break;
         case "event":
-          return 1500
+          return 1200
         default:
-          return 3000
+          return 2000
   }
     }))
     .force("center", d3.forceCenter(width / 2, height / 2));
@@ -187,6 +187,7 @@ var node = svg.selectAll(".node")
   }
 
   function nodeClick(d) {
+    $(".links").fadeOut();
 
     clickOn = true;
 
@@ -196,21 +197,23 @@ var node = svg.selectAll(".node")
 
     initialSize(d)
 
-    d3.select(this).interrupt().transition().duration(tranDuration)
-            .attr('cx', function(d) {
-                return d.x = locationX(d);
-            })
-            .attr('cy', function(d) {
-                return d.y = 300;
-            }).attr("transform", function (d) {
-                return "translate(" + d.x + "," + d.y + ")";
-            })
+    // d3.select(this).interrupt().transition().duration(tranDuration)
+    //         .attr('cx', function(d) {
+    //             return d.x = locationX(d);
+    //         })
+    //         .attr('cy', function(d) {
+    //             return d.y = 300;
+    //         }).attr("transform", function (d) {
+    //             return "translate(" + d.x + "," + d.y + ")";
+    //         })
 
     d3.select(this).select(".node_image").interrupt().transition().duration(tranDuration)
             .attr("width", toSize)
             .attr("height", toSize)
             .attr("x", -toSize / 2)
             .attr("y", -toSize / 2);
+
+      $(".links").fadeIn();
   }
 
 function dragstarted(d) {
@@ -259,7 +262,7 @@ function locationX(d) {
           return 600
         default:
           return 700
-}
+  }
 }
 
 
