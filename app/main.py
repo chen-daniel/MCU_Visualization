@@ -99,7 +99,7 @@ def black_panther():
 
 @app.route('/test/<movie_id>')
 def testing(movie_id):
-	return charInMovie(movie_id)
+	return jsonify(charInMovie(movie_id))
 
 def charInMovie(movie_ID):
 	cur = cnn.cursor()
@@ -133,8 +133,8 @@ def charInMovie(movie_ID):
 	for result in cur.stored_results():
 		eventNodes = result.fetchall()
 
-	result_json = json.dumps({'nodes': jsonifyNodes(charNodes, orgNodes, movieNode, eventNodes)
-		,"links" : createLinks(links)}, ensure_ascii=False)
+	result_json = {'nodes': jsonifyNodes(charNodes, orgNodes, movieNode, eventNodes)
+		,"links" : createLinks(links)}
 
 
 	return result_json
