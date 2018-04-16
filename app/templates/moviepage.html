@@ -158,20 +158,20 @@ var node = svg.selectAll(".node")
   }
 
       //a map that allows constant-time lookup to test whether a and b are neighbors
-    var linkedByIndex = {};
+    var linkmap = {};
 
     graph.links.forEach((d) => {
-      linkedByIndex[d.source.index + "," + d.target.index] = true;
+      linkmap[d.source.index + "," + d.target.index] = true;
     });
 
     function neighboring(a, b) {
-      return linkedByIndex[a.index + "," + b.index];
+      return linkmap[a.index + "," + b.index];
     }
 
     function nodeClick(d) {
     $(".links").fadeOut();
 
-    console.log(linkedByIndex)
+    console.log(linkmap)
 
     clickOn = true;
 
