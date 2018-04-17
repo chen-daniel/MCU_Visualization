@@ -81,6 +81,7 @@ var simulation = d3.forceSimulation()
   var showSize = 100;
   var initSize = 60;
   var clickOn;
+  var link, node;
 
 d3.json("{{ url_for('static', filename='path.json')}}", function(error, graph) {
   if (error) throw error;
@@ -97,14 +98,14 @@ d3.json("{{ url_for('static', filename='path.json')}}", function(error, graph) {
       .links(graph.links)
 
 
-  var link = svg.append("g")
+  link = svg.append("g")
       .attr("class", "links")
     .selectAll("line")
     .data(graph.links)
     .enter().append("line")
       .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
-
-var node = svg.selectAll(".node")
+  
+  node = svg.selectAll(".node")
       .data(graph.nodes)
     .enter().append("g")
       .attr("class", "node")
@@ -143,8 +144,9 @@ var node = svg.selectAll(".node")
       .attr("y", 500)
       .text(function(d) {return d.about[0]})
       .style("display", "none");
+});
 
-  function ticked() {
+function ticked() {
     link
         .attr("x1", function(d) { return d.source.x; })
         .attr("y1", function(d) { return d.source.y; })
@@ -216,8 +218,6 @@ function dragended(d) {
   d.fx = null;
   d.fy = null;
 }
-
-});
 
 
   function showText(d) {
