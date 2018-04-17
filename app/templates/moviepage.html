@@ -157,21 +157,13 @@ var node = svg.selectAll(".node")
         .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
   }
 
-      //a map that allows constant-time lookup to test whether a and b are neighbors
-    var linkmap = {};
-
-    graph.links.forEach((d) => {
-      linkmap[d.source.index + "," + d.target.index] = true;
-    });
-
-    function neighboring(a, b) {
-      return linkmap[a.index + "," + b.index];
-    }
-
-    function nodeClick(d) {
-    $(".links").fadeOut();
-
-    console.log(linkmap)
+function nodeClick(d) {
+    link
+    .transition(500)
+      .style("stroke-opacity", function(o) {
+        return o.source === d || o.target === d ? 
+        1.0 : 0;
+      });
 
     clickOn = true;
 
@@ -196,9 +188,34 @@ var node = svg.selectAll(".node")
             .attr("height", toSize)
             .attr("x", -toSize / 2)
             .attr("y", -toSize / 2);
-
-      $(".links").fadeIn();
   }
+
+function dragstarted(d) {
+
+  initialSize(d)
+  link.style("stroke-opacity",(o) => 1.0);
+
+
+  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+  d.fx = d.x;
+  d.fy = d.y;
+}
+
+function dragged(d) {
+  d.fx = d3.event.x;
+  d.fy = d3.event.y;
+
+
+  d3.select("h2").html("Click to view more about the character"); 
+  d3.select("h3").html("");
+  d3.select("h4").html("");
+}
+
+function dragended(d) {
+  if (!d3.event.active) simulation.alphaTarget(0);
+  d.fx = null;
+  d.fy = null;
+}
 
 });
 
@@ -229,31 +246,7 @@ var node = svg.selectAll(".node")
   }
 
 
-function dragstarted(d) {
 
-  initialSize(d)
-
-
-  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-  d.fx = d.x;
-  d.fy = d.y;
-}
-
-function dragged(d) {
-  d.fx = d3.event.x;
-  d.fy = d3.event.y;
-
-
-  d3.select("h2").html("Click to view more about the character"); 
-  d3.select("h3").html("");
-  d3.select("h4").html("");
-}
-
-function dragended(d) {
-  if (!d3.event.active) simulation.alphaTarget(0);
-  d.fx = null;
-  d.fy = null;
-}
 
 function initialSize(d) {
   d3.selectAll(".node_image")
