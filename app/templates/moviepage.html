@@ -37,7 +37,7 @@
 <style>
 .links line {
   stroke: #999;
-  stroke-opacity: 1500;
+  stroke-opacity: 1;
 }
 
 .nodes circle {
@@ -164,8 +164,11 @@ function nodeClick(d) {
     .transition(500)
       .style("stroke-opacity", function(o) {
         return o.source === d || o.target === d ? 
-        1.0 : 0;
-      });
+        1.0 : 0.25;
+      })
+      .style("stroke", function(o) { 
+        return o.source === d || o.target === d ? 
+        '#f26f6f' : '#999999'; });
 
     clickOn = true;
 
@@ -195,7 +198,8 @@ function nodeClick(d) {
 function dragstarted(d) {
 
   initialSize(d)
-  link.style("stroke-opacity",(o) => 1.0);
+  link.style("stroke-opacity",(o) => 1.0)
+      .style("stroke", (o) => '#999999');
 
 
   if (!d3.event.active) simulation.alphaTarget(0.3).restart();
