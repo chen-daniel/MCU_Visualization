@@ -53,7 +53,7 @@
         type: 'GET',
         dataType: 'json',
         success: function(resp) {
-          console.log(resp);
+          // console.log(resp);
           let currentSVG = d3.select('svg')
           if (currentSVG) {
             currentSVG.remove();
@@ -74,7 +74,7 @@ function startSimulation(resp) {
   let graphHeight = $graphContainer.height();
 
 
-  console.log(d3.select(".graph-container").attr('class'));
+  // console.log(d3.select(".graph-container").attr('class'));
   d3.select(".graph-container").append("svg")
         .attr("width", graphWidth)
         .attr("height", graphHeight);
@@ -84,6 +84,13 @@ var color = d3.scaleOrdinal(d3.schemeCategory20);
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
+
+vis = d3.select("svg")
+.append("svg:svg")
+    .attr("width", width)
+    .attr("height", height)
+    .append("svg:g")
+    .on("click", dragstarted);
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(250).strength(1))
@@ -123,7 +130,7 @@ d3.json("{{ url_for('static', filename='path.json')}}", function(error, graph) {
   whileClicked = false;
   
   graph = resp;
-  console.log(graph);
+  // console.log(graph);
 
   simulation
       .nodes(graph.nodes)
@@ -162,6 +169,7 @@ d3.json("{{ url_for('static', filename='path.json')}}", function(error, graph) {
 
 
   node.append('circle')
+      .attr("class", "node_circle")
       .attr("r", (d) => sizeSetter(d))
       .attr("fill", (d) => color(d.group))
 
@@ -192,15 +200,15 @@ d3.json("{{ url_for('static', filename='path.json')}}", function(error, graph) {
 // ============================================================== //
 
 function displayClicked(d, clicked) {
-  var incidentCircleCenterX = width / 2;
-  var incidentCircleCenterY = 300;
+  var finalX = width / 2;
+  var finalY = 300;
   var transitionDuration = 500;
   whileClicked = true;
 
   simulation.force('x', d3.forceX().x(function(d) {
-    return incidentCircleCenterX;
+    return finalX;
   })).force('y', d3.forceY().y(function(d) {
-    return incidentCircleCenterY;
+    return finalY;
   }))
 
 
@@ -210,10 +218,10 @@ function displayClicked(d, clicked) {
 
   // d3.select(clicked).transition().duration(transitionDuration)
   //           .attr('cx', function(d) {
-  //               return d.x = incidentCircleCenterX;
+  //               return d.x = finalX;
   //           })
   //           .attr('cy', function(d) {
-  //               return d.y = incidentCircleCenterY;
+  //               return d.y = finalY;
   //           }).attr("transform", function (d) {
   //               return "translate(" + d.x + "," + d.y + ")";
   //           });
@@ -224,12 +232,9 @@ function displayClicked(d, clicked) {
             .attr("height", toSize)
             .attr("x", -toSize / 2)
             .attr("y", -toSize / 2);
-
-    simulation.stop();
-    simulation.start();
 }
 
-
+//when node is clicked
 function nodeClick(d) {
     clickOn = true;
 
@@ -242,6 +247,18 @@ function nodeClick(d) {
 
     displayClicked(d, this)
   }
+
+function checkTarget() {
+    return this == d3.event.target;
+}
+
+d3.select(".graph-container svg").on("click", function() {
+    var touchNode = svg.filter(checkTarget).empty();
+
+    if(!touchNode) {
+        dragstarted(d3)
+  }
+})
 
 // ============================================================== //
 
@@ -399,7 +416,3 @@ function sizeSetter(d) {
 
 }
 </script>
-
-
-
-{% endblock %}
