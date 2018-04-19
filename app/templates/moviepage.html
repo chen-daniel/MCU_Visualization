@@ -121,15 +121,16 @@ d3.json("{{ url_for('static', filename='path.json')}}", function(error, graph) {
 
   node.append("svg:circle")
       .attr("r", (d) => sizeSetter(d))
-      .style("fill", (d) => color_circle(d.group))//(d) => color(d.group));
+      .style("fill", 
+      (d) => color_circle(d.group))//(d) => color(d.group));
 
   node.append("image")
       .attr("class", "node_image")
       .attr("xlink:href", function(d) { return d.image; })
-      .attr("x", -initSize/2)
-      .attr("y", -initSize/2)
-      .attr("width", initSize)
-      .attr("height", initSize);
+      .attr("x", (d) => - sizeSetter(d))
+      .attr("y", (d) => - sizeSetter(d))
+      .attr("width", (d) => sizeSetter(d) * 2)
+      .attr("height", (d) => sizeSetter(d) * 2);
 
   node.append("text")
       .attr("class", "node_text")
@@ -294,10 +295,10 @@ function sizeSetter(d) {
 function color_circle(group) {
   switch(group) {
     case "movie":
-      return color(group)      
+      return "#66000000"      
       break;
     case "organization":
-      return "#ffffff"
+      return "#000000"
       break;
     case "event":
       return "#c45927"
@@ -306,6 +307,10 @@ function color_circle(group) {
   }
 }
 
+
+function set_fill(group) {
+  return "fill"
+}
 
 
 </script>
