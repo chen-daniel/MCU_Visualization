@@ -103,7 +103,7 @@ d3.json("{{ url_for('static', filename='path.json')}}", function(error, graph) {
     .selectAll("line")
     .data(graph.links)
     .enter().append("line")
-      .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+      .attr("stroke-width", function(d) { return Math.sqrt(d.value/4); });
   
   node = svg.selectAll(".node")
       .data(graph.nodes)
@@ -119,9 +119,9 @@ d3.json("{{ url_for('static', filename='path.json')}}", function(error, graph) {
       .on("click", nodeClick);
 
 
-  node.append('circle')
+  node.append("svg:circle")
       .attr("r", (d) => sizeSetter(d))
-      .attr("fill", (d) => color(d.group))
+      .style("fill", (d) => color_circle(d.group))//(d) => color(d.group));
 
   node.append("image")
       .attr("class", "node_image")
@@ -285,9 +285,24 @@ function sizeSetter(d) {
       return 50
       break;
     case "event":
-      return 40
+      return 20
     default:
       return 30
+  }
+}
+
+function color_circle(group) {
+  switch(group) {
+    case "movie":
+      return color(group)      
+      break;
+    case "organization":
+      return "#ffffff"
+      break;
+    case "event":
+      return "#c45927"
+    default:
+      return color(group) 
   }
 }
 

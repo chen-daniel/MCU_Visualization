@@ -192,7 +192,7 @@ def jsonifyAEvent(result):
 	return {
 	'id': result[1],
 	'group': 'event',
-	'image': False,
+	'image': '../static/img/event.png',
 	'about': result[2],
 	'events': 'to connections'}
 
