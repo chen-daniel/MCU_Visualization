@@ -138,12 +138,13 @@ d3.json("{{ url_for('static', filename='path.json')}}", function(error, graph) {
   mapConnection[d.source.index + "," + d.target.index] = 1;
   });
 
-
   link = svg.append("g")
       .attr("class", "links")
     .selectAll("line")
     .data(graph.links)
     .enter().append("line")
+      .attr("stroke", (d) => '#999')
+      .attr("stroke-opacity", (d) => 1)
       .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
   
   node = svg.selectAll(".node")
@@ -207,15 +208,15 @@ function displayClicked(d, clicked) {
         return isConnected(d, o) ? 1 : 0;
         });
 
-  d3.select(clicked).transition().duration(transitionDuration)
-            .attr('cx', function(d) {
-                return d.x = incidentCircleCenterX;
-            })
-            .attr('cy', function(d) {
-                return d.y = incidentCircleCenterY;
-            }).attr("transform", function (d) {
-                return "translate(" + d.x + "," + d.y + ")";
-            });
+  // d3.select(clicked).transition().duration(transitionDuration)
+  //           .attr('cx', function(d) {
+  //               return d.x = incidentCircleCenterX;
+  //           })
+  //           .attr('cy', function(d) {
+  //               return d.y = incidentCircleCenterY;
+  //           }).attr("transform", function (d) {
+  //               return "translate(" + d.x + "," + d.y + ")";
+  //           });
   
 
   d3.select(clicked).select(".node_image").transition().duration(tranDuration)
