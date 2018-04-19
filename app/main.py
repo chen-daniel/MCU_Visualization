@@ -16,11 +16,25 @@ cnn = mysql.connector.connect(
 
 @app.route('/')
 def main():
-	return redirect(url_for('login'))
+
+	return redirect(url_for('index'))
 
 @app.route('/index')
 def index():
-	return render_template('index.html')
+	cur = cnn.cursor()
+	movies = []
+	cur.callproc('all_movie_titles')
+	for result in cur.stored_results():
+		movies += result.fetchall()
+	
+	return render_template('index.html', movies=movies)
+
+@app.route('/api/movie/<movieId>')
+def movieAPI(movieId):
+	#return charInMovie(movieId)
+	return jsonify(charInMovie(movieId))
+
+
 
 #===================================================================================
 @app.route('/iron_man')
@@ -123,7 +137,7 @@ def charInMovie(movie_ID):
 	cur.callproc('char_in_movie', [movie_ID])
 	for result in cur.stored_results():
 		charNodes = result.fetchall()
-	cur.callproc('org_in_movie', [movie_ID])
+	cur.callproc('org_in_movie_img', [movie_ID])
 	for result in cur.stored_results():
 		orgNodes = result.fetchall()
 	cur.callproc('movie_info', [movie_ID])
@@ -191,7 +205,7 @@ def jsonifyAEvent(result):
 	return {
 	'id': result[1],
 	'group': 'event',
-	'image': False,
+	'image': '../static/img/event.png',
 	'about': result[2],
 	'events': 'to connections'}
 
@@ -199,7 +213,7 @@ def jsonifyAOrg(result):
 	return {
 	'id': result[1],
 	'group': 'organization',
-	'image': False,
+	'image': result[2],
 	'about': 'testText',
 	'events': 'to connections'}
 
@@ -207,7 +221,7 @@ def jsonifyMovie(result):
 	return {
 	'id': result[1],
 	'group': 'movie',
-	'image': False,
+	'image': result[7],
 	'about': result[3],
 	'events': 'to connections'}
 
