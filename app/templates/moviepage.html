@@ -57,9 +57,8 @@ var svg = d3.select("svg"),
     height = +svg.attr("height");
 
 var simulation = d3.forceSimulation()
-    .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(250))
+    .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(250).strength(1))
     .force("collide",d3.forceCollide( function(d){ return 50 }).iterations(16) )
-    .force("charge", d3.forceManyBody())
     .force("x", d3.forceX(function(d){
       switch(d.group){
         case "movie":
@@ -77,17 +76,24 @@ var simulation = d3.forceSimulation()
     .force("center", d3.forceCenter(width / 2, height / 2));
 
   var tranDuration = 1000;
-  var toSize = 300;
+  var toSize = 180;
   var showSize = 100;
   var initSize = 60;
   var clickOn;
   var link, node;
+  var mapConnection;
+  var whileClicked;
 
+
+// ====================================================== //
+// draw the force directed graph
 d3.json("{{ url_for('static', filename='path.json')}}", function(error, graph) {
   if (error) throw error;
 
   clickOn= false;
+  whileClicked = false;
 
+  //TODO once it works takes the commenting out!!!!!!!!!!!!
   graph = {{ jsongraph|tojson|safe }}
 
   simulation
@@ -96,6 +102,12 @@ d3.json("{{ url_for('static', filename='path.json')}}", function(error, graph) {
 
   simulation.force("link")
       .links(graph.links)
+
+  mapConnection = {};
+  // creating a map that contains all the connection
+  graph.links.forEach(function(d) {
+  mapConnection[d.source.index + "," + d.target.index] = 1;
+  });
 
 
   link = svg.append("g")
@@ -114,8 +126,8 @@ d3.json("{{ url_for('static', filename='path.json')}}", function(error, graph) {
           .on("drag", dragged)
           .on("end", dragended));
 
-  node.on("mouseover", showText)
-      .on("mouseout", hideText)
+  node.on("mouseover", mouseON)
+      .on("mouseout", mouseOUT)
       .on("click", nodeClick);
 
 
@@ -146,6 +158,69 @@ d3.json("{{ url_for('static', filename='path.json')}}", function(error, graph) {
       .style("display", "none");
 });
 
+// ============================================================== //
+
+function displayClicked(d, clicked) {
+  var incidentCircleCenterX = width / 2;
+  var incidentCircleCenterY = 300;
+  var transitionDuration = 500;
+  whileClicked = true;
+
+  simulation.force('x', d3.forceX().x(function(d) {
+    return incidentCircleCenterX;
+  })).force('y', d3.forceY().y(function(d) {
+    return incidentCircleCenterY;
+  }))
+
+
+
+  node.style("opacity", function(o) {
+        return isConnected(d, o) ? 1 : 0;
+        });
+
+  d3.select(clicked).transition().duration(transitionDuration)
+            .attr('cx', function(d) {
+                return d.x = incidentCircleCenterX;
+            })
+            .attr('cy', function(d) {
+                return d.y = incidentCircleCenterY;
+            }).attr("transform", function (d) {
+                return "translate(" + d.x + "," + d.y + ")";
+            });
+  // simulation.stop()
+
+  d3.select(clicked).select(".node_image").transition().duration(tranDuration)
+            .attr("width", toSize)
+            .attr("height", toSize)
+            .attr("x", -toSize / 2)
+            .attr("y", -toSize / 2);
+}
+
+
+function nodeClick(d) {
+    highlightLink(d, 0, '#f26f6f')
+
+    clickOn = true;
+
+    d3.select("h2").html(d.id); 
+    d3.select("h3").html(d.about);
+    // d3.select("h4").html("EVENTS: " + d.events);
+
+    initialSize(d)
+
+    displayClicked(d, this)
+  }
+
+// ============================================================== //
+
+// shows the adjacent nodes
+function isConnected(a, b) {
+    return mapConnection[a.index + "," + b.index] 
+    || mapConnection[b.index + "," + a.index] 
+    || a.index == b.index;
+}
+
+
 function ticked() {
     link
         .attr("x1", function(d) { return d.source.x; })
@@ -159,49 +234,32 @@ function ticked() {
         .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
   }
 
-function nodeClick(d) {
-    link
-    .transition(500)
-      .style("stroke-opacity", function(o) {
-        return o.source === d || o.target === d ? 
-        1.0 : 0.25;
-      })
-      .style("stroke", function(o) { 
-        return o.source === d || o.target === d ? 
-        '#f26f6f' : '#999999'; });
-
-    clickOn = true;
-
-    d3.select("h2").html(d.id); 
-    d3.select("h3").html(d.about);
-    // d3.select("h4").html("EVENTS: " + d.events);
-
-    initialSize(d)
-
-    // d3.select(this).interrupt().transition().duration(tranDuration)
-    //         .attr('cx', function(d) {
-    //             return d.x = locationX(d);
-    //         })
-    //         .attr('cy', function(d) {
-    //             return d.y = 300;
-    //         }).attr("transform", function (d) {
-    //             return "translate(" + d.x + "," + d.y + ")";
-    //         })
-
-    d3.select(this).select(".node_image").interrupt().transition().duration(tranDuration)
-            .attr("width", toSize)
-            .attr("height", toSize)
-            .attr("x", -toSize / 2)
-            .attr("y", -toSize / 2);
-  }
-
 function dragstarted(d) {
+  whileClicked = false;
+
+  // all the initial setup
+//==========================================
+  simulation.force("x", d3.forceX(function(d){
+      switch(d.group){
+        case "movie":
+          return 250
+          break;
+        case "organization":
+          return 600
+          break;
+        case "event":
+          return 1200
+        default:
+          return 2000
+  }
+    }))
+    .force("center", d3.forceCenter(width / 2, height / 2));
 
   initialSize(d)
   link.style("stroke-opacity",(o) => 1.0)
       .style("stroke", (o) => '#999999');
-
-
+  node.style("opacity", (o) => 1.0);
+//==============================================
   if (!d3.event.active) simulation.alphaTarget(0.3).restart();
   d.fx = d.x;
   d.fy = d.y;
@@ -224,21 +282,24 @@ function dragended(d) {
 }
 
 
-  function showText(d) {
+function mouseON(d) {
+  if(!whileClicked) {
       clickOn = false;
-      d3.select(this).select(".node_text")
-        .style("display", null);
-      
-      d3.select(this).select(".node_image").interrupt().transition().duration(tranDuration/4)
+      highlightLink(d, .25, '#f26f6f')
+      d3.select(this).select(".node_image").interrupt()
+  .transition().duration(tranDuration/4)
         .attr("width", showSize)
         .attr("height", showSize)
         .attr("x", -showSize / 2)
         .attr("y", -showSize / 2);
-  }
+      }
+  d3.select(this).select(".node_text")
+      .style("display", null);
+}
 
-  function hideText(d) {
-    d3.select(this).select(".node_text")
-        .style("display", "none");
+function mouseOUT(d) {
+  if(!whileClicked){
+    highlightLink(d, 1, '#999999')
 
     if(!clickOn) {
     d3.select(this).select(".node_image").interrupt().transition().duration(tranDuration/4)
@@ -248,8 +309,21 @@ function dragended(d) {
       .attr("y", -initSize / 2);
     }
   }
+      d3.select(this).select(".node_text")
+        .style("display", "none");
+  }
 
-
+function highlightLink(d, min, col) {
+    link
+    .transition(500)
+      .style("stroke-opacity", function(o) {
+        return o.source === d || o.target === d ? 
+        1.0 : min;
+      })
+      .style("stroke", function(o) { 
+        return o.source === d || o.target === d ? 
+        col : '#999999'; });
+  }
 
 
 function initialSize(d) {

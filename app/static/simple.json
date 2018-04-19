@@ -1,0 +1,45 @@
+{
+  "nodes": [
+        {
+      "about": [
+        ""
+      ], 
+      "events": "", 
+      "group": 0, 
+      "id": 1, 
+      "image": "/static/img/logo/simple.png"
+    },
+        {
+      "about": [
+        ""
+      ], 
+      "events": "", 
+      "group": 0, 
+      "id": 2, 
+      "image": "/static/img/logo/simple.png"
+    },
+        {
+      "about": [
+        ""
+      ], 
+      "events": "", 
+      "group": 0, 
+      "id": 3, 
+      "image": "/static/img/logo/simple.png"
+    },
+        {
+      "about": [
+        ""
+      ], 
+      "events": "", 
+      "group": 0, 
+      "id": 4, 
+      "image": "/static/img/logo/simple.png"
+    }
+  ],
+  "links": [
+    {"source": 1, "target": 2, "value": 30},
+    {"source": 2, "target": 3, "value": 30},
+    {"source": 2, "target": 4, "value": 30}
+  ]
+}
