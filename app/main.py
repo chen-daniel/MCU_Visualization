@@ -29,10 +29,31 @@ def index():
 	
 	return render_template('index.html', movies=movies)
 
-@app.route('/api/movie/<movieId>')
+@app.route('/api/v1/movie/<movieId>')
 def movieAPI(movieId):
 	#return charInMovie(movieId)
 	return jsonify(charInMovie(movieId))
+
+@app.route('/dbtables')
+def dbtables():
+	return render_template('dbtables.html')
+
+@app.route('/table/<tablename>')
+def table(tablename):
+	if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters"]:
+		return redirect(url_for('dbtables'))
+	cur = cnn.cursor()
+	tableData = []
+	query = "SELECT * FROM {}".format(tablename)
+	cur.execute(query)
+	columns = cur.description
+	print(columns)
+	tableData = cur.fetchall()
+	print(tableData)
+	tableName = tablename.upper()
+	tableName = tableName.replace('_', ' TO ')
+	print(tableName)
+	return render_template('table.html', tableData=tableData, columns=columns, tableName=tableName)
 
 
 
