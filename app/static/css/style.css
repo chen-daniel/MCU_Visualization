@@ -741,6 +741,14 @@ a img { border: 0; }
     display: block;
 }
 
+.graph-container {
+    position: absolute;
+    margin-right: 11em;
+    margin-bottom: 2em;
+    height: calc(100% - 9em);
+    width: calc(100% - 2em);
+}
+
 .container {
     background: white;
     opacity: 0.8;

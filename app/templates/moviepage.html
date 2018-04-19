@@ -89,6 +89,7 @@ d3.json("{{ url_for('static', filename='path.json')}}", function(error, graph) {
   clickOn= false;
 
   graph = {{ jsongraph|tojson|safe }}
+  console.log(graph);
 
   simulation
       .nodes(graph.nodes)
