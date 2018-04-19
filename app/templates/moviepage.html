@@ -156,6 +156,7 @@ d3.json("{{ url_for('static', filename='path.json')}}", function(error, graph) {
       .attr("y", 500)
       .text(function(d) {return d.about[0]})
       .style("display", "none");
+
 });
 
 // ============================================================== //
@@ -198,15 +199,14 @@ function displayClicked(d, clicked) {
 
 
 function nodeClick(d) {
-    highlightLink(d, 0, '#f26f6f')
-
     clickOn = true;
+
+    initialSize(d)
+    highlightLink(d, 0, '#f26f6f')
 
     d3.select("h2").html(d.id); 
     d3.select("h3").html(d.about);
     // d3.select("h4").html("EVENTS: " + d.events);
-
-    initialSize(d)
 
     displayClicked(d, this)
   }
@@ -364,8 +364,6 @@ function sizeSetter(d) {
       return 30
   }
 }
-
-
 
 </script>
 
