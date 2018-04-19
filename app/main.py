@@ -123,7 +123,8 @@ def charInMovie(movie_ID):
 	cur.callproc('char_in_movie', [movie_ID])
 	for result in cur.stored_results():
 		charNodes = result.fetchall()
-	cur.callproc('org_in_movie', [movie_ID])
+	#cur.callproc('org_in_movie', [movie_ID])
+	cur.callproc('org_in_movie_img', [movie_ID])
 	for result in cur.stored_results():
 		orgNodes = result.fetchall()
 	cur.callproc('movie_info', [movie_ID])
@@ -191,7 +192,7 @@ def jsonifyAEvent(result):
 	return {
 	'id': result[1],
 	'group': 'event',
-	'image': result[2],
+	'image': False,
 	'about': result[2],
 	'events': 'to connections'}
 
@@ -199,7 +200,7 @@ def jsonifyAOrg(result):
 	return {
 	'id': result[1],
 	'group': 'organization',
-	'image': False,
+	'image': result[2],
 	'about': 'testText',
 	'events': 'to connections'}
 
