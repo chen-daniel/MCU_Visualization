@@ -174,7 +174,6 @@ function displayClicked(d, clicked) {
   }))
 
 
-
   node.style("opacity", function(o) {
         return isConnected(d, o) ? 1 : 0;
         });
@@ -188,13 +187,16 @@ function displayClicked(d, clicked) {
             }).attr("transform", function (d) {
                 return "translate(" + d.x + "," + d.y + ")";
             });
-  // simulation.stop()
+  
 
   d3.select(clicked).select(".node_image").transition().duration(tranDuration)
             .attr("width", toSize)
             .attr("height", toSize)
             .attr("x", -toSize / 2)
             .attr("y", -toSize / 2);
+
+    simulation.stop();
+    simulation.start();
 }
 
 
@@ -213,7 +215,7 @@ function nodeClick(d) {
 
 // ============================================================== //
 
-// shows the adjacent nodes
+// shows the adjacent nodes (or itself)
 function isConnected(a, b) {
     return mapConnection[a.index + "," + b.index] 
     || mapConnection[b.index + "," + a.index] 
@@ -237,7 +239,7 @@ function ticked() {
 function dragstarted(d) {
   whileClicked = false;
 
-  // all the initial setup
+  // all steps to reverse to its initial setup
 //==========================================
   simulation.force("x", d3.forceX(function(d){
       switch(d.group){
