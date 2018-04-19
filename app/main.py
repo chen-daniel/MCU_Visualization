@@ -16,11 +16,25 @@ cnn = mysql.connector.connect(
 
 @app.route('/')
 def main():
-	return redirect(url_for('login'))
+
+	return redirect(url_for('index'))
 
 @app.route('/index')
 def index():
-	return render_template('index.html')
+	cur = cnn.cursor()
+	movies = []
+	cur.callproc('all_movie_titles')
+	for result in cur.stored_results():
+		movies += result.fetchall()
+	
+	return render_template('index.html', movies=movies)
+
+@app.route('/api/movie/<movieId>')
+def movieAPI(movieId):
+	#return charInMovie(movieId)
+	return jsonify(charInMovie(movieId))
+
+
 
 #===================================================================================
 @app.route('/iron_man')

@@ -1,3 +1,4 @@
+
 <html>
     <head>
             <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,10 +22,7 @@
         <div>
           <a href="{{ url_for('index')}}">MCU VISUALIZATION</a>
         </div>
-        <a href="{{ url_for('logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i></a>&nbsp
-        <a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>&nbsp
-        <a href="{{ url_for('manage') }}"><i class="fa fa-user" aria-hidden="true"></i></a>&nbsp
-        <a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>&nbsp
+        <a href="{{ url_for('login') }}">Manage database</a>&nbsp
     </header>
         <div class="alertdiv">
         {% with messages = get_flashed_messages(with_categories=true) %}
