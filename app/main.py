@@ -207,7 +207,7 @@ def jsonifyMovie(result):
 	return {
 	'id': result[1],
 	'group': 'movie',
-	'image': False,
+	'image': result[8],
 	'about': result[3],
 	'events': 'to connections'}
 
