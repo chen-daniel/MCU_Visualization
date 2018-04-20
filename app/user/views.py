@@ -39,7 +39,6 @@ def register():
 
 
 # route for the login URL that creates a form and passes it to the template for rendering
-@app.route('/', methods=['GET', 'POST'])
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
@@ -58,7 +57,7 @@ def login():
                 flash('Welcome {}!'.format(
                     form.username.data), 'info')
 
-                return redirect(url_for('index'))
+                return redirect(url_for('dbtables'))
         else:
             form.submit.error = 'Invalid username or password'
             return render_template('login.html', title='Sign In', form=form)

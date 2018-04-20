@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+columns, tableData
+<body class="main">
+<!-- Shell -->
+<div class="edit-container">
+  <div class="menu-header">{{ tableName }}</div>
+  <div class="menu-container">
+    <br>
+    <br>
+    <table>
+        <tr>
+            {% for column in columns %}
+            <th>{{ column[0] }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in tableData %}
+        <tr>
+            {% for data in row %}
+            <td>{{ data }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+
+  </div>
+</div>
+</body>
+
+{% endblock %}
