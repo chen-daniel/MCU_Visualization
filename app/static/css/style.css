@@ -58,11 +58,19 @@ b, strong {
     font-weight: 600;
 }
 
-h1, h2, h3 { font-weight: 600; }
+h1, h2, h3, h4, h5 { font-weight: 600; }
 
 h2 {  font-size:22px; }
 
 h3 { font-size: 15px;
+     margin-top:0;
+     margin-bottom:5px;}
+
+h4 { font-size: 22px;
+     margin-top:0;
+     margin-bottom:5px;}
+
+h5 { font-size: 15px;
      margin-top:0;
      margin-bottom:5px;}
 
@@ -763,6 +771,23 @@ a img { border: 0; }
     z-index: 1;
 }
 
+.node-info {
+    background-color: white;
+    position: absolute;
+    opacity: 0.75;
+    padding: 1em;
+    border-radius: 25px;
+    width: 25%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    transition: height 500ms, top 500ms;
+}
+
 /*----------------------------------------------------------------
 10. force directed graph
 -----------------------------------------------------------------*/
@@ -878,4 +903,38 @@ a img { border: 0; }
 .active-point .point-line-bottom {
     top: -3em;
     height: 4em;
+}
+
+/*----------------------------------------------------------------
+12. edit pages
+-----------------------------------------------------------------*/
+
+.edit-container {
+    background: white;
+    opacity: 0.8;
+    position: fixed;
+    padding: 1em;
+    top: 7em;
+    left: 5em;
+    height: calc(100% - 9em);
+    width: calc(100% - 10em);
+    border-radius: 25px;
+    box-sizing: border-box;
+    z-index: 1;
+    overflow: scroll;
+}
+
+.menu-header {
+    font-size: 2.5em;
+    text-align: center;
+    display: block;
+}
+
+.menu-container {
+    position: absolute;
+    margin-right: 11em;
+    margin-bottom: 2em;
+    height: calc(100% - 9em);
+    width: calc(100% - 2em);
+    text-align: center;
 }

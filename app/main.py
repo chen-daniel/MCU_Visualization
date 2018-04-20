@@ -16,7 +16,6 @@ cnn = mysql.connector.connect(
 
 @app.route('/')
 def main():
-
 	return redirect(url_for('index'))
 
 @app.route('/index')
@@ -29,87 +28,31 @@ def index():
 	
 	return render_template('index.html', movies=movies)
 
-@app.route('/api/movie/<movieId>')
+@app.route('/api/v1/movie/<movieId>')
 def movieAPI(movieId):
 	#return charInMovie(movieId)
 	return jsonify(charInMovie(movieId))
 
+@app.route('/dbtables')
+def dbtables():
+	return render_template('dbtables.html')
 
-
-#===================================================================================
-@app.route('/iron_man')
-def iron_man():
-	return render_template('moviepage.html', jsongraph=charInMovie(1), moviename="Iron Man")
-
-@app.route('/the_incredible_hulk')
-def the_incredible_hulk():
-	return render_template('moviepage.html', jsongraph=charInMovie(2), moviename="The Incredible Hulk")
-
-@app.route('/iron_man_2')
-def iron_man_2():
-	return render_template('moviepage.html', jsongraph=charInMovie(3), moviename="Iron Man 2")
-
-@app.route('/thor')
-def thor():
-	return render_template('moviepage.html', jsongraph=charInMovie(4), moviename="Thor")
-
-@app.route('/captain_america_the_first_avenger')
-def captain_america_the_first_avenger():
-	return render_template('moviepage.html', jsongraph=charInMovie(5), moviename="Captain America: The First Avenger")
-
-@app.route('/the_avengers')
-def the_avengers():
-	return render_template('moviepage.html', jsongraph=charInMovie(6), moviename="The Avengers")
-
-@app.route('/iron_man_3')
-def iron_man_3():
-	return render_template('moviepage.html', jsongraph=charInMovie(7), moviename="Iron Man 3")
-
-@app.route('/thor_dark_world')
-def thor_dark_world():
-	return render_template('moviepage.html', jsongraph=charInMovie(8), moviename="The Dark World")
-
-@app.route('/captain_america_the_winter_soldier')
-def captain_america_the_winter_soldier():
-	return render_template('moviepage.html', jsongraph=charInMovie(9), moviename="Captain America: The Winter Soldier")
-
-@app.route('/guardians_of_galaxy')
-def guardians_of_the_galaxy():
-	return render_template('moviepage.html', jsongraph=charInMovie(10), moviename="Guardians of The Galaxy")
-
-@app.route('/avengers_age_of_ultron')
-def avengers_age_of_ultron():
-	return render_template('moviepage.html', jsongraph=charInMovie(11), moviename="Avengers: Age of Ultron")
-
-@app.route('/ant_man')
-def ant_man():
-	return render_template('moviepage.html', jsongraph=charInMovie(12), moviename="Ant Man")
-
-@app.route('/captain_america_civil_war')
-def captain_america_civil_war():
-	return render_template('moviepage.html', jsongraph=charInMovie(13), moviename="Captain America: Civil War")
-
-@app.route('/doctor_strange')
-def doctor_strange():
-	return render_template('moviepage.html', jsongraph=charInMovie(14), moviename="Doctor Strange")
-
-@app.route('/guardians_of_the_galaxy_vol_2')
-def guardians_of_the_galaxy_vol_2():
-	return render_template('moviepage.html', jsongraph=charInMovie(15), moviename="Guardians of the Galaxy Vol.2")
-
-@app.route('/spider_man_homecoming')
-def spider_man_homecoming():
-	return render_template('moviepage.html', jsongraph=charInMovie(16), moviename="Spider Man: Homecoming")
-
-@app.route('/thor_ragnarok')
-def thor_ragnarok():
-	return render_template('moviepage.html', jsongraph=charInMovie(17), moviename="Thor: Ragnarok")
-
-@app.route('/black_panther')
-def black_panther():
-	return render_template('moviepage.html', jsongraph=charInMovie(18), moviename="Black Panther")
-#=================================================================================
-
+@app.route('/table/<tablename>')
+def table(tablename):
+	if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters"]:
+		return redirect(url_for('dbtables'))
+	cur = cnn.cursor()
+	tableData = []
+	query = "SELECT * FROM {}".format(tablename)
+	cur.execute(query)
+	columns = cur.description
+	print(columns)
+	tableData = cur.fetchall()
+	print(tableData)
+	tableName = tablename.upper()
+	tableName = tableName.replace('_', ' TO ')
+	print(tableName)
+	return render_template('table.html', tableData=tableData, columns=columns, tableName=tableName)
 
 @app.route('/test/<movie_id>')
 def testing(movie_id):
@@ -160,7 +103,7 @@ def createLinks(links):
 	return payload
 
 def makeLink(char1, char2):
-	return {"source": char1, "target": char2, "value": 	50}
+	return {"source": char1, "target": char2, "value": 	20}
 
 def jsonifyNodes(chars, orgs, movie, events):
 	payload = []
@@ -214,7 +157,7 @@ def jsonifyAOrg(result):
 	'id': result[1],
 	'group': 'organization',
 	'image': result[2],
-	'about': 'testText',
+	'about': '',
 	'events': 'to connections'}
 
 def jsonifyMovie(result):
@@ -226,7 +169,7 @@ def jsonifyMovie(result):
 	'events': 'to connections'}
 
 def jsonAbout(char):
-	return [char[2], gender(char[3]), char[4]]
+	return ', '.join([char[2], gender(char[3]), char[4]])
 
 def gender(code):
 	if code == 'F': return 'Female'
