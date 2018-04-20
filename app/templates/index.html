@@ -49,7 +49,7 @@
       $(this).addClass('active-point').siblings().removeClass('active-point');
       $('.graph-header').text($(this).attr('name'));
       $.ajax({
-        url: '/api/movie/v1/' + $(this).attr('data-movieId'),
+        url: '/api/v1/movie/' + $(this).attr('data-movieId'),
         type: 'GET',
         dataType: 'json',
         success: function(resp) {
@@ -416,3 +416,5 @@ function sizeSetter(d) {
 
 }
 </script>
+
+{% endblock %}
