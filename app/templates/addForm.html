@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<body class="main">
+<!-- Shell -->
+<div class="edit-container">
+  <div class="menu-header">{{ tableName }}</div>
+  <div class="menu-container">
+    <br>
+    <br>
+    
+    <form method="POST">
+        {% for type in formTypes %}
+        {{type[1]}}:<br>
+        <input type="{{type[0]}}" name="{{type[1]}}"><br>
+        {% endfor %}
+        <input type="submit" value="Submit">
+      </form>
+
+  </div>
+</div>
+</body>
+
+{% endblock %}

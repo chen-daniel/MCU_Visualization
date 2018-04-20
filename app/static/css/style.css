@@ -943,3 +943,7 @@ a img { border: 0; }
     width: calc(100% - 2em);
     text-align: center;
 }
+
+.add-button {
+    text-align: left;
+}

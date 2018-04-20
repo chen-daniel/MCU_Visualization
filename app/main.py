@@ -1,8 +1,8 @@
 import os
 from app import app
 from app.user import views
-from flask import render_template, flash, redirect, url_for, request, current_app, session
-
+from flask import render_template, flash, redirect, url_for, request, current_app, session, g
+from flask_login import login_required
 
 import mysql.connector
 from flask import jsonify,make_response
@@ -34,6 +34,7 @@ def movieAPI(movieId):
 	return jsonify(charInMovie(movieId))
 
 @app.route('/dbtables')
+@login_required
 def dbtables():
 	return render_template('dbtables.html')
 
@@ -46,13 +47,40 @@ def table(tablename):
 	query = "SELECT * FROM {}".format(tablename)
 	cur.execute(query)
 	columns = cur.description
-	print(columns)
 	tableData = cur.fetchall()
-	print(tableData)
 	tableName = tablename.upper()
 	tableName = tableName.replace('_', ' TO ')
-	print(tableName)
-	return render_template('table.html', tableData=tableData, columns=columns, tableName=tableName)
+	return render_template('table.html', tableData=tableData, columns=columns, tableName=tableName, url_name=tablename)
+
+@app.route('/table/<tablename>/add', methods=['GET', 'POST'])
+def tableAdd(tablename):
+	if request.method == 'POST':
+		if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters"]:
+			return redirect(url_for('dbtables'))
+		cur = cnn.cursor()
+		query = "INSERT INTO {} VALUES ({})".format(tablename)
+		cur.execute(query)
+		return redirect(url_for('dbtables'))
+	else:
+		if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters"]:
+			return redirect(url_for('dbtables'))
+		cur = cnn.cursor()
+		query = "SELECT DATA_TYPE, COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '{}' and table_schema = 'MCU_VISUALIZATION'".format(tablename)
+		cur.execute(query)
+		tableInfo = cur.fetchall()
+		print(tableInfo)
+		formTypes = []
+		for info in tableInfo:
+			if info[0] in ['int', 'decmal']:
+				formTypes += [["number", info[1]]]
+			elif info[0] in ['varchar', 'text']:
+				formTypes += [["text", info[1]]]
+			elif info[0] == 'date':
+				formTypes += [["date", info[1]]]
+		print(formTypes)
+		tableName = tablename.upper()
+		tableName = tableName.replace('_', ' TO ')
+		return render_template('addForm.html', formTypes=formTypes, tableName=tableName)
 
 @app.route('/test/<movie_id>')
 def testing(movie_id):
