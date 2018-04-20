@@ -29,6 +29,8 @@
   <div class="node-info">
     <h2></h2>
     <h3></h3>
+    <h4></h4>
+    <h5></h5>
   </div>
   <div class="graph-container"></div>
 </div>
@@ -247,7 +249,7 @@ function nodeClick(d) {
 
     d3.select("h2").html(d.id); 
     d3.select("h3").html(d.about);
-    // d3.select("h4").html("EVENTS: " + d.events);
+
 
     displayClicked(d, this)
   }
@@ -312,6 +314,12 @@ function dragstarted(d) {
   link.style("stroke-opacity",(o) => 1.0)
       .style("stroke", (o) => '#999999');
   node.style("opacity", (o) => 1.0);
+
+
+  d3.select("h2").html(""); 
+  d3.select("h3").html("");
+  d3.select("h4").html("");
+  d3.select("h5").html("");
 //==============================================
   if (!d3.event.active) simulation.alphaTarget(0.3).restart();
   d.fx = d.x;
@@ -321,11 +329,6 @@ function dragstarted(d) {
 function dragged(d) {
   d.fx = d3.event.x;
   d.fy = d3.event.y;
-
-
-  d3.select("h2").html("Click to view more about the character"); 
-  d3.select("h3").html("");
-  d3.select("h4").html("");
 }
 
 function dragended(d) {
@@ -346,6 +349,12 @@ function mouseON(d) {
         .attr("x", -showSize / 2)
         .attr("y", -showSize / 2);
       }
+
+  if(whileClicked && d3.select(this).style("opacity") == 1 && document.getElementsByTagName("h2")[0].innerHTML != d.id) {
+      d3.select("h4").html(d.id); 
+      d3.select("h5").html(d.about);
+  }
+
   d3.select(this).select(".node_text")
       .style("display", null);
 }
@@ -364,6 +373,8 @@ function mouseOUT(d) {
   }
       d3.select(this).select(".node_text")
         .style("display", "none");
+      d3.select("h4").html(""); 
+      d3.select("h5").html("");
   }
 
 function highlightLink(d, min, col) {

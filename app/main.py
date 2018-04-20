@@ -16,7 +16,6 @@ cnn = mysql.connector.connect(
 
 @app.route('/')
 def main():
-
 	return redirect(url_for('index'))
 
 @app.route('/index')
@@ -54,83 +53,6 @@ def table(tablename):
 	tableName = tableName.replace('_', ' TO ')
 	print(tableName)
 	return render_template('table.html', tableData=tableData, columns=columns, tableName=tableName)
-
-
-
-#===================================================================================
-@app.route('/iron_man')
-def iron_man():
-	return render_template('moviepage.html', jsongraph=charInMovie(1), moviename="Iron Man")
-
-@app.route('/the_incredible_hulk')
-def the_incredible_hulk():
-	return render_template('moviepage.html', jsongraph=charInMovie(2), moviename="The Incredible Hulk")
-
-@app.route('/iron_man_2')
-def iron_man_2():
-	return render_template('moviepage.html', jsongraph=charInMovie(3), moviename="Iron Man 2")
-
-@app.route('/thor')
-def thor():
-	return render_template('moviepage.html', jsongraph=charInMovie(4), moviename="Thor")
-
-@app.route('/captain_america_the_first_avenger')
-def captain_america_the_first_avenger():
-	return render_template('moviepage.html', jsongraph=charInMovie(5), moviename="Captain America: The First Avenger")
-
-@app.route('/the_avengers')
-def the_avengers():
-	return render_template('moviepage.html', jsongraph=charInMovie(6), moviename="The Avengers")
-
-@app.route('/iron_man_3')
-def iron_man_3():
-	return render_template('moviepage.html', jsongraph=charInMovie(7), moviename="Iron Man 3")
-
-@app.route('/thor_dark_world')
-def thor_dark_world():
-	return render_template('moviepage.html', jsongraph=charInMovie(8), moviename="The Dark World")
-
-@app.route('/captain_america_the_winter_soldier')
-def captain_america_the_winter_soldier():
-	return render_template('moviepage.html', jsongraph=charInMovie(9), moviename="Captain America: The Winter Soldier")
-
-@app.route('/guardians_of_galaxy')
-def guardians_of_the_galaxy():
-	return render_template('moviepage.html', jsongraph=charInMovie(10), moviename="Guardians of The Galaxy")
-
-@app.route('/avengers_age_of_ultron')
-def avengers_age_of_ultron():
-	return render_template('moviepage.html', jsongraph=charInMovie(11), moviename="Avengers: Age of Ultron")
-
-@app.route('/ant_man')
-def ant_man():
-	return render_template('moviepage.html', jsongraph=charInMovie(12), moviename="Ant Man")
-
-@app.route('/captain_america_civil_war')
-def captain_america_civil_war():
-	return render_template('moviepage.html', jsongraph=charInMovie(13), moviename="Captain America: Civil War")
-
-@app.route('/doctor_strange')
-def doctor_strange():
-	return render_template('moviepage.html', jsongraph=charInMovie(14), moviename="Doctor Strange")
-
-@app.route('/guardians_of_the_galaxy_vol_2')
-def guardians_of_the_galaxy_vol_2():
-	return render_template('moviepage.html', jsongraph=charInMovie(15), moviename="Guardians of the Galaxy Vol.2")
-
-@app.route('/spider_man_homecoming')
-def spider_man_homecoming():
-	return render_template('moviepage.html', jsongraph=charInMovie(16), moviename="Spider Man: Homecoming")
-
-@app.route('/thor_ragnarok')
-def thor_ragnarok():
-	return render_template('moviepage.html', jsongraph=charInMovie(17), moviename="Thor: Ragnarok")
-
-@app.route('/black_panther')
-def black_panther():
-	return render_template('moviepage.html', jsongraph=charInMovie(18), moviename="Black Panther")
-#=================================================================================
-
 
 @app.route('/test/<movie_id>')
 def testing(movie_id):
