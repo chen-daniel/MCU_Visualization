@@ -1,5 +1,10 @@
 
 # CS3200 Project  
+## Installing required libraries  
+```sh
+sudo pip install -r requirements.txt  
+
+```
 
 ## To Run:  
 ```sh
