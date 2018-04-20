@@ -57,13 +57,31 @@ def tableAdd(tablename):
 	if request.method == 'POST':
 		if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters"]:
 			return redirect(url_for('dbtables'))
-		data = []
-		for data in request.form:
-			data += request
-		data = ", ".join(data)	
 		cur = cnn.cursor()
-		query = "INSERT INTO {} VALUES ({})".format(tablename, data)
+		query = "SELECT DATA_TYPE, COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '{}' and table_schema = 'MCU_VISUALIZATION'".format(tablename)
 		cur.execute(query)
+		tableInfo = cur.fetchall()
+		print(request.form)
+		print(tableInfo)
+		s = "("
+		for info in tableInfo:
+			#f info[0] in ['int', 'decimal', 'date']:
+			#	s += request.form[info[1]]
+			#elif info[0] in ['varchar', 'text']:
+			s += "'"
+			s += request.form[info[1]]
+			s += "'"
+			s += ", "
+			print(s)
+		s = s[:-2]
+		s += ")"
+		print(s)
+			
+		cur = cnn.cursor()
+		query = "INSERT INTO {} VALUES {}".format(tablename, s)
+		print(query)
+		cur.execute(query)
+		cnn.commit()
 		return redirect(url_for('dbtables'))
 	else:
 		if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters"]:
@@ -75,7 +93,7 @@ def tableAdd(tablename):
 		print(tableInfo)
 		formTypes = []
 		for info in tableInfo:
-			if info[0] in ['int', 'decmal']:
+			if info[0] in ['int', 'decimal']:
 				formTypes += [["number", info[1]]]
 			elif info[0] in ['varchar', 'text']:
 				formTypes += [["text", info[1]]]
