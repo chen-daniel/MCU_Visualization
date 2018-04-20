@@ -1,9 +1,13 @@
 
-# CS3200 Project  
+# CS3200 Project
+## Installing Flask  
+```sh
+$ sudo pip install Flask  
+```
+  
 ## Installing required libraries  
 ```sh
-sudo pip install -r requirements.txt  
-
+$ sudo pip install -r requirements.txt  
 ```
 
 ## To Run:  
