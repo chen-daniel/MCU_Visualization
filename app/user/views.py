@@ -64,10 +64,11 @@ def login():
     return render_template('login.html', title='Sign In', form=form)
 
 @app.route('/logout')
-@login_required
+
 def logout():
-    logout_user()
-    flash('User logged out.', 'success')
+    if current_user.is_authenticated:
+        logout_user()
+        flash('User logged out.', 'success')
     return redirect(url_for('login'))
 
 
