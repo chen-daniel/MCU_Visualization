@@ -2,7 +2,7 @@ import os
 from app import app
 from app.user import views
 from flask import render_template, flash, redirect, url_for, request, current_app, session, g
-from flask_login import login_required
+from flask_login import login_required, current_user
 
 import mysql.connector
 from flask import jsonify,make_response
@@ -34,9 +34,10 @@ def movieAPI(movieId):
 	return jsonify(charInMovie(movieId))
 
 @app.route('/dbtables')
-@login_required
 def dbtables():
-	return render_template('dbtables.html')
+	if current_user.is_authenticated:
+		return render_template('dbtables.html')
+	return redirect(url_for('login'))	
 
 @app.route('/table/<tablename>')
 def table(tablename):
