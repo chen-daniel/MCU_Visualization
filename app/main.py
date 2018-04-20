@@ -57,8 +57,12 @@ def tableAdd(tablename):
 	if request.method == 'POST':
 		if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters"]:
 			return redirect(url_for('dbtables'))
+		data = []
+		for data in request.form:
+			data += request
+		data = ", ".join(data)	
 		cur = cnn.cursor()
-		query = "INSERT INTO {} VALUES ({})".format(tablename)
+		query = "INSERT INTO {} VALUES ({})".format(tablename, data)
 		cur.execute(query)
 		return redirect(url_for('dbtables'))
 	else:
