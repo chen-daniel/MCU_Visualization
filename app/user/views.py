@@ -7,7 +7,7 @@ from app import app, db
 from app.token import generate_confirmation_token, confirm_token
 from app.email import send_email
 
-from app.user.forms import LoginForm, RegistrationForm, ResetForm, ChangePasswordForm,ChangePasswordF, ChangeUsernameForm
+from app.user.forms import LoginForm, RegistrationForm, ResetForm, ChangePasswordForm, EditProfileForm
 from app.user.models import User
 from app.dbobjects import user_info
 
@@ -69,37 +69,6 @@ def logout():
     logout_user()
     flash('User logged out.', 'success')
     return redirect(url_for('login'))
-
-@app.route('/change-password', methods=['GET', 'POST'])
-@login_required
-def change_pw():
-    """Change an existing user's password."""
-    form = ChangePasswordF()
-    if form.validate():
-        user = User.query.filter_by(email=current_user.email).first()
-        if sha256_crypt.verify(str(form.new_password.data), user.password):
-            user.password = form.new_password.data
-            db.session.commit()
-            flash('Your password has been updated successfully.', 'success')
-            return redirect(url_for('index'))
-        else:
-            flash('Original password is invalid.', 'danger')
-    return render_template('change_PW.html', form=form)
-
-@app.route('/change-username', methods=['GET', 'POST'])
-@login_required
-def change_username():
-    """Change an existing user's password."""
-    print(current_user)
-    print("is on")
-    form = ChangeUsernameForm()
-    if form.validate():
-        user = User.query.filter_by(user_ID=current_user.user_ID).first()
-        user.username = form.new_username.data
-        db.session.commit()
-        flash('Your username has been updated successfully.', 'success')
-        redirect(url_for('index'))
-    return render_template('change_username.html', form=form)
 
 
 @app.route('/confirm/<token>')
@@ -191,7 +160,29 @@ def manage():
 @login_required
 def user_profile():
     # Fix user with no data
-    conn = db.engine.raw_connection()
-    cur = conn.cursor()
     user = current_user
     return render_template('user_profile.html', user=user)
+
+
+@app.route('/edit_profile', methods=['GET', 'POST'])
+@login_required
+def edit_profile():
+    form = EditProfileForm(request.form)
+    if form.validate():
+        current_user.username = form.username.data
+        db.session.commit()
+        flash('Your changes have been saved.')
+        return redirect(url_for('user_profile'))
+    elif request.method == 'GET':
+        form.username.data = current_user.username
+    return render_template('edit_profile.html', title='Edit Profile',
+                           form=form)
+
+@app.route('/delete_user', methods=['GET', 'POST'])
+@login_required
+def delete_user():
+    user_info.query.filter_by(username=current_user.username).delete()
+    db.session.commit()
+    flash('Your account has been deleted!')
+
+    return redirect(url_for('login'))
