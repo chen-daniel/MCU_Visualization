@@ -7,6 +7,7 @@ from flask_login import login_required, current_user
 import mysql.connector
 from flask import jsonify,make_response
 from flask import jsonify,json
+import json as js
 
 cnn = mysql.connector.connect(
 	user = os.environ['RDS_USERNAME'], 
@@ -33,6 +34,26 @@ def movieAPI(movieId):
 	#return charInMovie(movieId)
 	return jsonify(charInMovie(movieId))
 
+@app.route('/api/v1/<tablename>/delete', methods=['POST'])
+def tableDelete(tablename):
+	if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters"] or not current_user.is_authenticated:
+		return None
+	#return charInMovie(movieId)
+	print(request.json)
+	clause = ''
+	for key, value in request.json.items():
+		clause += '`{}` = "{}" and '.format(key, value)
+	clause = clause[:-5]
+	print(clause)
+	cur = cnn.cursor()
+	query = "DELETE FROM {} WHERE {}".format(tablename, clause)
+	try:
+		cur.execute(query)
+		cnn.commit()
+	except:
+		return json.dumps({'success':False}), 400, {'ContentType':'application/json'}
+	return json.dumps({'success':True}), 200, {'ContentType':'application/json'}
+
 @app.route('/dbtables')
 def dbtables():
 	if current_user.is_authenticated:
@@ -41,7 +62,7 @@ def dbtables():
 
 @app.route('/table/<tablename>')
 def table(tablename):
-	if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters"]:
+	if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters"] or not current_user.is_authenticated:
 		return redirect(url_for('dbtables'))
 	cur = cnn.cursor()
 	tableData = []
@@ -55,6 +76,8 @@ def table(tablename):
 
 @app.route('/table/<tablename>/add', methods=['GET', 'POST'])
 def tableAdd(tablename):
+	if not current_user.is_authenticated:
+		return redirect(url_for('login'))
 	if request.method == 'POST':
 		if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters"]:
 			return redirect(url_for('dbtables'))

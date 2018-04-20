@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-columns, tableData
 <body class="main">
 <!-- Shell -->
 <div class="edit-container">
@@ -11,16 +10,18 @@ columns, tableData
     <br>
     <h1 class="add-button"><a href="/table/{{url_name}}/add">Add</a></h1>
     <table>
-        <tr>
+        <tr class='cols'>
             {% for column in columns %}
             <th>{{ column[0] }}</th>
             {% endfor %}
+            <th>Delete</th>
         </tr>
         {% for row in tableData %}
-        <tr>
+        <tr class="row-{{loop.index}}">
             {% for data in row %}
             <td>{{ data }}</td>
             {% endfor %}
+            <td><button onClick='deleteEntry({{ loop.index }})' class="delete-button">Delete Entry</button></td>
         </tr>
         {% endfor %}
     </table>
@@ -28,5 +29,42 @@ columns, tableData
   </div>
 </div>
 </body>
+
+<script>
+function deleteEntry(index) {
+    var r = confirm("Are you sure you want to delete this entry?");
+    if (r == true) {
+    
+        let cols = $('.cols').children('th');
+
+        dataid = [];
+
+        for (let i = 0; i < cols.length - 1; i++) {
+            dataid.push(cols[i].innerText);
+        }
+
+        console.log(dataid);
+
+        let row = $('.row-' + index).children('td');
+        console.log(row);
+        let data = {};
+        for (let i = 0; i < dataid.length; i++) {
+            data[dataid[i]] = row[i].innerText;
+        }
+        console.log(data);
+        $.ajax({
+            url: '/api/v1/{{url_name}}/delete',
+            data: JSON.stringify(data),
+            contentType: 'application/json;charset=UTF-8',
+            type: 'POST',
+            success: function(resp) {
+                location.reload();
+            }
+        })
+    }
+}
+
+
+</script>
 
 {% endblock %}
