@@ -39,7 +39,6 @@ def register():
 
 
 # route for the login URL that creates a form and passes it to the template for rendering
-@app.route('/', methods=['GET', 'POST'])
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm()
