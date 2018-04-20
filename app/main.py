@@ -103,7 +103,7 @@ def createLinks(links):
 	return payload
 
 def makeLink(char1, char2):
-	return {"source": char1, "target": char2, "value": 	50}
+	return {"source": char1, "target": char2, "value": 	20}
 
 def jsonifyNodes(chars, orgs, movie, events):
 	payload = []
@@ -157,7 +157,7 @@ def jsonifyAOrg(result):
 	'id': result[1],
 	'group': 'organization',
 	'image': result[2],
-	'about': 'testText',
+	'about': '',
 	'events': 'to connections'}
 
 def jsonifyMovie(result):
@@ -169,7 +169,7 @@ def jsonifyMovie(result):
 	'events': 'to connections'}
 
 def jsonAbout(char):
-	return [char[2], gender(char[3]), char[4]]
+	return ', '.join([char[2], gender(char[3]), char[4]])
 
 def gender(code):
 	if code == 'F': return 'Female'

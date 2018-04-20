@@ -763,6 +763,23 @@ a img { border: 0; }
     z-index: 1;
 }
 
+.node-info {
+    background-color: white;
+    position: absolute;
+    opacity: 0.75;
+    padding: 1em;
+    border-radius: 25px;
+    width: 25%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    transition: height 500ms, top 500ms;
+}
+
 /*----------------------------------------------------------------
 10. force directed graph
 -----------------------------------------------------------------*/
