@@ -58,7 +58,7 @@ def login():
                 flash('Welcome {}!'.format(
                     form.username.data), 'info')
 
-                return redirect(url_for('index'))
+                return redirect(url_for('dbtables'))
         else:
             form.submit.error = 'Invalid username or password'
             return render_template('login.html', title='Sign In', form=form)
