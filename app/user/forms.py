@@ -37,16 +37,24 @@ class RegistrationForm(Form):
     		return False
     	return True
 
-class ChangeUsernameForm(Form):
-    new_username = StringField('new username')
-    def validate(self):
-        initial_validation = super(ChangeUsernameForm, self).validate()
-        if not initial_validation:
+# form for editing a user's information
+class EditProfileForm(Form):
+    username = StringField('Username', validators=[DataRequired()])
+    submit = SubmitField('Submit')
+
+    def check_initial_validation(self, iv):
+        if not iv:
+            print('iv issue')
             return False
-        user_name = user_info.query.filter_by(username=self.new_username.data).first()
-        if user_name:
+        return True
+
+    # check if username is taken.
+    def check_username_registered(self, user):
+        if user:
+            print('username issue')
             self.username.errors.append("Username is already taken")
             return False
+        return True
 
 
 class ChangePasswordF(Form):
