@@ -379,6 +379,11 @@ header .badge {
     padding-left: 130px;
 }
 
+.profile_pic {
+  width: 250px;
+  height: 250px;
+}
+
 .profile-data {
     list-style: none;
     padding: 0px;
@@ -943,3 +948,5 @@ a img { border: 0; }
     width: calc(100% - 2em);
     text-align: center;
 }
+
+
