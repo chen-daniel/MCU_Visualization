@@ -185,3 +185,13 @@ def change_password(token):
 @login_required
 def manage():
     return render_template('manage.html')
+
+# current user's profile
+@app.route('/user_profile', methods=['GET', 'POST'])
+@login_required
+def user_profile():
+    # Fix user with no data
+    conn = db.engine.raw_connection()
+    cur = conn.cursor()
+    user = current_user
+    return render_template('user_profile.html', user=user)
