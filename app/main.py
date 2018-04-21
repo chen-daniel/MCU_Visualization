@@ -38,7 +38,9 @@ def movieAPI(movieId):
 def tableDelete(tablename):
 	if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters", "user_info"] or not current_user.is_authenticated:
 		return None
-	#return charInMovie(movieId)
+	if tablename == "user_info" and current_user.username != "admin":
+		flash("Access Denied")
+		return redirect(url_for('dbtables'))
 	print(request.json)
 	clause = ''
 	for key, value in request.json.items():
@@ -65,6 +67,9 @@ def dbtables():
 def table(tablename):
 	if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters", "user_info"] or not current_user.is_authenticated:
 		return redirect(url_for('dbtables'))
+	if tablename == "user_info" and current_user.username != "admin":
+		flash("Access Denied")
+		return redirect(url_for('dbtables'))
 	cur = cnn.cursor()
 	tableData = []
 	query = "SELECT * FROM {}".format(tablename)
@@ -80,7 +85,10 @@ def tableAdd(tablename):
 	if not current_user.is_authenticated:
 		return redirect(url_for('login'))
 	if request.method == 'POST':
-		if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters"]:
+		if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters", "user_info"]:
+			return redirect(url_for('dbtables'))
+		if tablename == "user_info" and current_user.username != "admin":
+			flash("Access Denied")
 			return redirect(url_for('dbtables'))
 		cur = cnn.cursor()
 		query = "SELECT DATA_TYPE, COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '{}' and table_schema = 'MCU_VISUALIZATION'".format(tablename)
@@ -109,7 +117,10 @@ def tableAdd(tablename):
 		cnn.commit()
 		return redirect(url_for('dbtables'))
 	else:
-		if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters"]:
+		if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters", "user_info"]:
+			return redirect(url_for('dbtables'))
+		if tablename == "user_info" and current_user.username != "admin":
+			flash("Access Denied")
 			return redirect(url_for('dbtables'))
 		cur = cnn.cursor()
 		query = "SELECT DATA_TYPE, COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE table_name = '{}' and table_schema = 'MCU_VISUALIZATION'".format(tablename)
