@@ -27,7 +27,7 @@
 <div class="container">
   <div class="graph-header">SELECT A VISUALIZATION</div>
   <div class="node-info">
-    <h2></h2>
+    <h2>Timeline On the Right</h2>
     <h3></h3>
     <h4></h4>
     <h5></h5>
@@ -53,6 +53,12 @@
 <script>
   $(document).ready(function() {
     $(".point").on('click', function() {
+      d3.select("h2").html("")
+      d3.select("h3").html("")
+      d3.select("h4").html("")
+      d3.select("h5").html("")
+      d3.select("h6").html("")
+
       $(this).addClass('active-point').siblings().removeClass('active-point');
       $('.graph-header').text($(this).attr('name'));
       $.ajax({
@@ -92,6 +98,15 @@ var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
+view = svg.append("g")
+        .attr("class", "view");
+
+var zoom_handler = d3.zoom()
+    .on("zoom", zooming);
+
+zoom_handler(svg); 
+
+
 vis = d3.select("svg")
 .append("svg:svg")
     .attr("width", width)
@@ -100,7 +115,7 @@ vis = d3.select("svg")
     .on("click", dragstarted);
 
 var simulation = d3.forceSimulation()
-    .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(250).strength(1))
+    .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(120).strength(1))
     .force("collide",d3.forceCollide( function(d){ return 50 }).iterations(16) )
     .force("x", d3.forceX(function(d){
       switch(d.group){
@@ -127,6 +142,7 @@ var simulation = d3.forceSimulation()
   var mapConnection;
   var whileClicked;
 
+
 // ====================================================== //
 // draw the force directed graph
 d3.json("{{ url_for('static', filename='path.json')}}", function(error, graph) {
@@ -151,7 +167,7 @@ d3.json("{{ url_for('static', filename='path.json')}}", function(error, graph) {
   mapConnection[d.source.index + "," + d.target.index] = 1;
   });
 
-  link = svg.append("g")
+  link = view.append("g")
       .attr("class", "links")
     .selectAll("line")
     .data(graph.links)
@@ -160,7 +176,7 @@ d3.json("{{ url_for('static', filename='path.json')}}", function(error, graph) {
       .attr("stroke-opacity", (d) => 1)
       .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
   
-  node = svg.selectAll(".node")
+  node = view.selectAll(".node")
       .data(graph.nodes)
     .enter().append("g")
       .attr("class", "node")
@@ -338,6 +354,9 @@ function dragended(d) {
   d.fy = null;
 }
 
+function zooming(){
+    view.attr("transform", d3.event.transform)
+}
 
 function mouseON(d) {
   if(!whileClicked) {
@@ -359,6 +378,7 @@ function mouseON(d) {
   d3.select(this).select(".node_text")
       .style("display", null);
 }
+
 
 function mouseOUT(d) {
   if(!whileClicked){
