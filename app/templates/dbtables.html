@@ -8,7 +8,6 @@
   <div class="menu-header">Tables</div>
   <div class="menu-container">
     <br>
-    <br>
     <h2>Nodes</h2>
     <br>
     <p><a href="/table/movies">Movies</a></p>
@@ -16,13 +15,18 @@
     <p><a href="/table/events">Events</a></p>
     <p><a href="/table/organizations">Organizations</a></p>
     <br>
-    <br>
     <h2>Connections</h2>
     <br>
     <p><a href="/table/movies_characters">Movies to Characters</a></p>
     <p><a href="/table/movies_events">Movies to Events</a></p>
     <p><a href="/table/events_characters">Events to Characters</a></p>
     <p><a href="/table/movies_organizations_characters">Movies to Organizations to Characters</a></p>
+    <br>
+    {% if isAdmin == True %}
+    <h2>Users(ADMIN ONLY)</h2>
+    <br>
+    <p><a href="/table/user_info">User Information</a></p>
+    {% endif %}
   </div>
 </div>
 </body>

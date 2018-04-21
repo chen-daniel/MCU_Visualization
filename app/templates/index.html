@@ -102,6 +102,7 @@ view = svg.append("g")
         .attr("class", "view");
 
 var zoom_handler = d3.zoom()
+    .scaleExtent([.3, 3])
     .on("zoom", zooming);
 
 zoom_handler(svg); 
@@ -115,7 +116,7 @@ vis = d3.select("svg")
     .on("click", dragstarted);
 
 var simulation = d3.forceSimulation()
-    .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(120).strength(1))
+    .force("link", d3.forceLink().id(function(d) { return d.id; }).distance(180).strength(1))
     .force("collide",d3.forceCollide( function(d){ return 50 }).iterations(16) )
     .force("x", d3.forceX(function(d){
       switch(d.group){

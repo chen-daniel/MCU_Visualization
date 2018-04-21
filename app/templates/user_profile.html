@@ -9,7 +9,7 @@
 <section id="name_image">
     {% if user == current_user %}
     <input type="button" value="Edit Profile" onclick="window.location.href='{{ url_for('edit_profile') }}'" />
-    <input type="button" value="Delet User" onclick="window.location.href='{{ url_for('delete_user') }}'" />
+    <input type="button" value="Delete User" onclick="window.location.href='{{ url_for('delete_user') }}'" />
     {% endif %}
   <tr valign="top">
   <h1>User: {{ user.username }}</h1>

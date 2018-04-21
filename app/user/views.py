@@ -171,9 +171,12 @@ def user_profile():
 def edit_profile():
     form = EditProfileForm(request.form)
     if form.validate():
-        current_user.username = form.username.data
-        db.session.commit()
-        flash('Your changes have been saved.')
+        if(current_user.username == "admin"):
+            flash("Can't edit username for admin!")
+        else:
+            current_user.username = form.username.data
+            db.session.commit()
+            flash('Your changes have been saved.')
         return redirect(url_for('user_profile'))
     elif request.method == 'GET':
         form.username.data = current_user.username
@@ -183,8 +186,11 @@ def edit_profile():
 @app.route('/delete_user', methods=['GET', 'POST'])
 @login_required
 def delete_user():
-    user_info.query.filter_by(username=current_user.username).delete()
-    db.session.commit()
-    flash('Your account has been deleted!')
-
+    if(current_user.username == "admin"):
+        flash("Can't remove admin!")
+        return redirect(url_for('user_profile'))
+    else:
+        user_info.query.filter_by(username=current_user.username).delete()
+        db.session.commit()
+        flash('Your account has been deleted!')
     return redirect(url_for('login'))

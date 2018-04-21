@@ -36,7 +36,7 @@ def movieAPI(movieId):
 
 @app.route('/api/v1/<tablename>/delete', methods=['POST'])
 def tableDelete(tablename):
-	if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters"] or not current_user.is_authenticated:
+	if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters", "user_info"] or not current_user.is_authenticated:
 		return None
 	#return charInMovie(movieId)
 	print(request.json)
@@ -57,12 +57,13 @@ def tableDelete(tablename):
 @app.route('/dbtables')
 def dbtables():
 	if current_user.is_authenticated:
-		return render_template('dbtables.html')
+		is_admin = (current_user.username == "admin")
+		return render_template('dbtables.html', isAdmin = is_admin)
 	return redirect(url_for('login'))	
 
 @app.route('/table/<tablename>')
 def table(tablename):
-	if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters"] or not current_user.is_authenticated:
+	if tablename not in ["movies", "characters", "events", "organizations", "movies_characters", "movies_events", "events_characters", "movies_organizations_characters", "user_info"] or not current_user.is_authenticated:
 		return redirect(url_for('dbtables'))
 	cur = cnn.cursor()
 	tableData = []
