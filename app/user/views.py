@@ -158,11 +158,12 @@ def manage():
 
 # current user's profile
 @app.route('/user_profile', methods=['GET', 'POST'])
-@login_required
 def user_profile():
-    # Fix user with no data
-    user = current_user
-    return render_template('user_profile.html', user=user)
+    if current_user.is_authenticated:
+        user = current_user
+        return render_template('user_profile.html', user=user)
+    return redirect(url_for('login'))
+    
 
 
 @app.route('/edit_profile', methods=['GET', 'POST'])
